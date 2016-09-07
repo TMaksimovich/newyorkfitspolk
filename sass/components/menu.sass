@@ -63,6 +63,7 @@ body
 	transition: transform .25s
 .site-menu-item
 	line-height: 36px
+	padding: 11px 0 3px
 	transition: transform .1s, all .25s, border 0
 	&>a
 		white-space: nowrap
@@ -73,17 +74,21 @@ body
 	margin-right: 16px
 	text-align: center
 .site-menu-title
+	font-size: 16px
 	display: inline-block
 	max-width: 160px
 	overflow: hidden
 	text-overflow: ellipsis
 	white-space: nowrap
-	vertical-align: middle
+	vertical-align: inherit
+	line-height: 20px
 	transition: visibility .25s, opacity .25s
 	&:first-child
 		margin-left: 25px
 .mm-navbar .mm-prev,
-.site-menu-arrow
+.site-menu-arrow,
+[class*=" md-"],
+[class^=md-]
 	position: relative
 	display: inline-block
 	font-family: 'Material Icons'
@@ -98,13 +103,27 @@ body
 	font-feature-settings: "liga"
 	text-transform: none
 	font-size: 20px
-	overflow: hidden
 .site-menu-arrow
 	&:before
 		content: '\e315'
+
+[class*=" md-"],
+[class^=md-]
+	transform: translate(0,0)
+	font-size: 22px
+
+.md-view-group:before
+	content: '\E5C3'
+.md-view-user:before
+	content: '\E7FD'
+.md-view-setting:before
+	content: '\E8B8'
+
 .mm-navbar .mm-prev
 	position: absolute
 	left: 20px
+	line-height: 66px
+	color: $menu_side_link_light
 	&:before
 		content: '\e314'
 .site-menu-arrow,
@@ -126,30 +145,28 @@ body
 	white-space: nowrap
 	a
 		display: block
-		color: rgba(117, 117, 117, .9)
+		color: $menu_side_link
 	&:hover>a
-		color: #424242
+		color: $menu_side_link_light
 	&.active
-		background: rgba(33, 33, 33, .05)
+		background: $menu_side_bg_item
 		&>a
-			color: #424242
-			background: 0 0
-		&.hover>a
-			background: 0 0
+			color: $menu_side_link_light
 
 .site-menu
 	&>.site-menu-item
 		padding: 0
 		font-size: 16px
+		height: 50px
 		&>a
-			padding: 0 25px
+			padding: 0 20px
 			line-height: 50px
 		&.active
 			border-top: 1px solid $menu_side_bg_item
 			border-bottom: 1px solid $menu_side_bg_item
 
 .site-menu-item>.site-menu-sub
-	background-color: rgba(33, 33, 33, .05)
+	background-color: $menu_side_bg
 
 .site-menubar-dark
 	.site-menu-item
@@ -161,7 +178,7 @@ body
 			&>a
 				color: $menu_side_link_light
 		&>.site-menu-sub
-			background-color: #1e1e1e
+			background-color: $menu_side_bg
 
 .site-menubar-fold
 	.page
@@ -170,7 +187,7 @@ body
 		&>.site-menu-item
 			font-size: 16px
 			&>a
-				height: 46px
+				height: 50px
 				.site-menu-arrow,
 				.site-menu-badge,
 				.site-menu-title
@@ -260,6 +277,11 @@ body
 	.slidePanel-right
 		top: 66px
 
+.mm-navbar .mm-title
+	padding: 10px 35px
+	font-size: 18px
+	color: $menu_side_link_light
+
 .hamburger
 	font-size: 29px
 	vertical-align: middle
@@ -281,13 +303,7 @@ body
 	width: 1em
 	height: .1em
 	margin: 0
-	background: #757575
 	border-radius: 1px
-
-.navbar-default .hamburger .hamburger-bar,
-.navbar-default .hamburger:after,
-.navbar-default .hamburger:before
-	background: #757575
 
 .hamburger .hamburger-bar
 	margin: .2em 0
@@ -426,7 +442,7 @@ body
 			&>.site-menu-item
 				font-size: 14px
 				&>a
-					height: 46px
+					height: 50px
 					.site-menu-arrow,
 					.site-menu-badge,
 					.site-menu-title
