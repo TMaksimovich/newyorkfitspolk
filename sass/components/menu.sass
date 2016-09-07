@@ -30,6 +30,8 @@ body
 			display: none
 	.navbar-container
 		background-color: #fff
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.13), 0 2px 4px 0 rgba(0,0,0,0.10)
+		height: 66px
 
 .site-menubar
 	position: fixed
@@ -118,6 +120,12 @@ body
 	content: '\E7FD'
 .md-view-setting:before
 	content: '\E8B8'
+.md-notifications:before
+	content: '\E7F4'
+.md-home:before
+	content: '\E88A'
+.md-power:before
+	content: '\E154'
 
 .mm-navbar .mm-prev
 	position: absolute
@@ -221,6 +229,9 @@ body
 		display: none
 
 .site-menubar-unfold
+	.navbar-brand-logo-black
+		margin-left: -336px
+		transition: margin-left .25s
 	.page
 		margin-left: 336px
 		transition: margin-left .25s
@@ -272,6 +283,9 @@ body
 		.navbar-toolbar>li>a.navbar-avatar
 			padding-top: 15px
 			padding-bottom: 15px
+		.navbar-toolbar-right>li
+			display: inline-block
+			vertical-align: top
 	.site-menubar,
 	.slidePanel-left,
 	.slidePanel-right

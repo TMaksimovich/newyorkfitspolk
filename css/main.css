@@ -1304,6 +1304,8 @@ body {
 
 .site-navbar .navbar-container {
   background-color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  height: 66px;
 }
 
 .site-menubar {
@@ -1433,6 +1435,18 @@ body {
 
 .md-view-setting:before {
   content: '\E8B8';
+}
+
+.md-notifications:before {
+  content: '\E7F4';
+}
+
+.md-home:before {
+  content: '\E88A';
+}
+
+.md-power:before {
+  content: '\E154';
 }
 
 .mm-navbar .mm-prev {
@@ -1587,6 +1601,12 @@ body {
   display: none;
 }
 
+.site-menubar-unfold .navbar-brand-logo-black {
+  margin-left: -336px;
+  -webkit-transition: margin-left 0.25s;
+          transition: margin-left 0.25s;
+}
+
 .site-menubar-unfold .page {
   margin-left: 336px;
   -webkit-transition: margin-left 0.25s;
@@ -1670,6 +1690,11 @@ body {
 .site-navbar-small .site-navbar .navbar-toolbar > li > a.navbar-avatar {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.site-navbar-small .site-navbar .navbar-toolbar-right > li {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .site-navbar-small .site-menubar,
