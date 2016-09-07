@@ -1,0 +1,101 @@
+//Цвет шрифтов
+$h_color: #494949
+$text_color: #585858
+$sub_text_color:#949494
+
+//Цвет шрифтов на темном фоне
+$h_color_dark: #ffffff
+$text_color_dark: #d7d7d7
+
+//Фон
+$main_bg: #5fc7ae
+$grey_bg: #949494
+$light_grey_bg: #dddddd
+$dark_bg: #212121
+
+$danger: #f55145
+$warning: #fbc53c
+$success: #55b559
+$info: #0ab1fc
+
+//Боковое меню
+$menu_side_bg: #262b33
+$menu_side_bg_item: #1f242a
+$menu_side_link: #929498
+$menu_side_link_light: #d2d3d4
+
+
+
+body
+	font-family: "LatoRegular", Arial, sans-serif
+	font-weight: normal
+	color: $text_color
+	background-color: #fff
+	font-size: 14px
+	position: relative
+	line-height: 1.6
+	-webkit-font-smoothing: antialiased
+	overflow-x: hidden
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1>a,
+h2>a,
+h3>a,
+h4>a,
+h5>a,
+h6>a
+	color: $h_color
+
+p
+	color: $text_color
+
+.sub-text
+	color: $sub_text_color
+
+.bg-black
+	background-color: $dark_bg
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	h1>a,
+	h2>a,
+	h3>a,
+	h4>a,
+	h5>a,
+	h6>a
+		color: $h_color_dark
+	p
+		color: $text_color_dark
+
+.danger-text
+	color: $danger
+.warning-text
+	color: $warning
+.success-text
+	color: $success
+.info-text
+	color: $info
+
+.danger-bg
+	background-color: $danger
+.warning-bg
+	background-color: $warning
+.success-bg
+	background-color: $success
+.info-bg
+	background-color: $info
+.grey-bg
+	background-color: #eee
+.dark-grey-bg
+	background-color: rgba(0,0,0,0.3)
+
+.circle
+	border-radius: 50%

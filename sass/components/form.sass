@@ -1,0 +1,314 @@
+//Input
+.group
+	position: relative
+	margin-bottom: 15px
+	input,
+	textarea
+		font-size: 16px
+		font-family: "LatoLight", sans-serif
+		padding: 10px 10px 5px 0
+		-webkit-appearance: none
+		display: block
+		color: $text_color
+		width: 100%
+		border: none
+		border-radius: 0
+		border-bottom: 1px solid $sub_text_color
+		&:focus
+			outline: none
+			border-bottom: none
+	label
+		color: $sub_text_color
+		font-size: 16px
+		font-family: "LatoLight", sans-serif
+		font-weight: normal
+		position: absolute
+		pointer-events: none
+		left: 0
+		top: 10px
+		transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
+	input:focus ~ label,
+	textarea:focus ~ label
+		top: -13px
+		transform: scale(.75)
+		left: -17px
+		color: $main_bg
+	input.used ~ label,
+	textarea.used ~ label
+		display: none
+	input.used:focus ~ label,
+	textarea.used:focus ~ label
+		display: block
+	.bar
+		position: relative
+		display: block
+		width: 100%
+		&:before,
+		&:after
+			content: ''
+			height: 2px
+			width: 0
+			bottom: 1px
+			position: absolute
+			background: $main_bg
+			transition: all 0.2s ease
+		&:before
+			left: 50%
+		&:after
+			right: 50%
+	input:focus ~ .bar:before,
+	input:focus ~ .bar:after,
+	textarea:focus ~ .bar:before,
+	textarea:focus ~ .bar:after,
+		width: 50%
+	textarea
+		resize: none
+		min-height: 10px
+		overflow: hidden
+		box-sizing: content-box
+		transition: height 450ms cubic-bezier(0.23, 1, 0.32, 1)
+		padding-bottom: 0
+
+	.has-error,
+	.has-error:focus,
+	.required,
+	.required:focus
+		border-bottom: 2px solid $danger
+	.error-text,
+	.required-text
+		color: $danger
+		font-size: 11px
+		// position: absolute
+		// left: 0
+		// top: 46px
+		// top: 25px
+		// transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
+		// z-index: -5
+		// opacity: 0
+	// .has-error:focus + .error-text
+	// 	top: 46px
+	// 	transform: scale(1)
+	// 	left: 0
+	// 	color: $danger
+	// 	z-index: 10
+	// 	opacity: 1
+	.required:focus ~ label
+		color: $danger
+	input.has-error:focus ~ label
+		display: none
+
+
+// Чекбоксы, радиокнопки
+.rkmd-checkbox
+	color: #aeaeae
+	font-size: 15px
+	font-weight: bold
+	font-family: 'LatoRegular', sans-serif
+	letter-spacing: .5px
+	span.checkbox
+		margin-top: 0
+		margin-bottom: 0
+	.input-checkbox
+		position: relative
+		display: inline-block
+		width: 32px
+		height: 32px
+		text-align: center
+		input[type="checkbox"]
+			visibility: hidden
+			position: absolute
+			left: 0
+			top: 0
+			margin: 0
+			padding: 0
+			outline: none
+			cursor: pointer
+			opacity: 0
+			& + .checkbox:before
+				position: absolute
+				left: 0
+				top: 0
+				width: 21px
+				height: 21px
+				font-family: 'Material Icons'
+				font-weight: normal
+				font-style: normal
+				font-size: 30px
+				line-height: 1
+				text-transform: none
+				letter-spacing: normal
+				word-wrap: normal
+				white-space: nowrap
+				direction: ltr
+				vertical-align: -6px
+				-webkit-font-smoothing: antialiased
+				text-rendering: optimizeLegibility
+				-moz-osx-font-smoothing: grayscale
+				-webkit-font-feature-settings: 'liga'
+				font-feature-settings: 'liga'
+				-webkit-transition: all .2s ease
+				transition: all .2s ease
+				z-index: 1
+				content: "\e835"
+				color: #454545
+				cursor: pointer
+			&:checked + .checkbox:before
+				content: "\e834"
+			&:active:not(:disabled) + .checkbox:before
+				-webkit-transform: scale3d(0.88, 0.88, 1)
+				transform: scale3d(0.88, 0.88, 1)
+			&:disabled + .checkbox:before
+				color: rgba(0, 0, 0, 0.157) !important
+	.checkbox-aquamarine input[type="checkbox"]:checked + .checkbox:before
+		color: $main_bg
+	&.checkbox-ripple .ripple
+		position: absolute
+		top: -2px
+		left: 0
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		-webkit-transform: scale(0)
+		transform: scale(0)
+		&.animated
+			display: block
+			-webkit-animation-name: checkbox-ripple
+			animation-name: checkbox-ripple
+			-webkit-animation-duration: 400ms
+			animation-duration: 400ms
+			-webkit-animation-timing-function: ease-out
+			animation-timing-function: ease-out
+	.checkbox-aquamarine .ripple
+		background-color: $main_bg !important
+
+@-webkit-keyframes checkbox-ripple
+	100%
+		opacity: 0
+		-webkit-transform: scale(1.6)
+		transform: scale(1.6)
+
+@keyframes checkbox-ripple
+	100%
+		opacity: 0
+		-webkit-transform: scale(1.6)
+		transform: scale(1.6)
+
+
+// Радиокнопка
+.rkmd-radio
+	color: #aeaeae
+	font-size: 15px
+	font-weight: bold
+	font-family: 'LatoRegular', sans-serif
+	letter-spacing: .5px
+	span.radio
+		margin-top: 0
+		margin-bottom: 0
+	.input-radio
+		position: relative
+		display: inline-block
+		width: 32px
+		height: 32px
+		text-align: center
+		input[type="radio"]
+			visibility: hidden
+			position: absolute
+			left: 0
+			top: 0
+			margin: 0
+			padding: 0
+			outline: none
+			cursor: pointer
+			opacity: 0
+			& + .radio:before
+				position: absolute
+				left: 0
+				top: 0
+				width: 21px
+				height: 21px
+				font-family: 'Material Icons'
+				font-weight: normal
+				font-style: normal
+				font-size: 30px
+				line-height: 1
+				text-transform: none
+				letter-spacing: normal
+				word-wrap: normal
+				white-space: nowrap
+				direction: ltr
+				vertical-align: -6px
+				-webkit-font-smoothing: antialiased
+				text-rendering: optimizeLegibility
+				-moz-osx-font-smoothing: grayscale
+				-webkit-font-feature-settings: 'liga'
+				font-feature-settings: 'liga'
+				-webkit-transition: all .2s ease
+				transition: all .2s ease
+				z-index: 1
+				content: "\e836"
+				color: #454545
+				cursor: pointer
+			&:checked + .radio:before
+				content: "\e837"
+			&:active:not(:disabled) + .radio:before
+				-webkit-transform: scale3d(0.88, 0.88, 1)
+				transform: scale3d(0.88, 0.88, 1)
+			&:disabled + .radio:before
+				color: rgba(0, 0, 0, 0.157) !important
+	.radio-aquamarine input[type="radio"]:checked + .radio:before
+		color: $main_bg
+	&.radio-ripple .ripple
+		position: absolute
+		top: -2px
+		left: 0
+		width: 32px
+		height: 32px
+		border-radius: 50%
+		-webkit-transform: scale(0)
+		transform: scale(0)
+		&.animated
+			display: block
+			-webkit-animation-name: checkbox-ripple
+			animation-name: checkbox-ripple
+			-webkit-animation-duration: 400ms
+			animation-duration: 400ms
+			-webkit-animation-timing-function: ease-out
+			animation-timing-function: ease-out
+	.radio-aquamarine .ripple
+		background-color: $main_bg !important
+
+
+// Переключатель
+.switch
+	display: inline-block
+	position: relative
+	width: 36px
+	height: 16px
+	border-radius: 8px
+	background: #b9b8b8
+	-webkit-transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1)
+	transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1)
+	vertical-align: middle
+	cursor: pointer
+	&:before
+		content: ''
+		position: absolute
+		top: -4px
+		left: -4px
+		width: 24px
+		height: 24px
+		background: #f1f1f1
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.31)
+		border-radius: 50%
+		-webkit-transition: transform 0.28s ease, left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1)
+		transition: transform 0.28s ease, left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1)
+	&:active:before
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.31), 0 0 0 20px rgba(128, 128, 128, 0.1)
+		transform: scale3d(0.88, 0.88, 1)
+.toggle-checkbox:checked + .switch
+	background: #8ae3cd
+	&::before
+		left: 18px
+		background: #5fc7ae
+	&:active:before
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.31), 0 0 0 20px rgba(138, 227, 205, 0.2)

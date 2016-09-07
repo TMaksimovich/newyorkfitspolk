@@ -1,0 +1,101 @@
+body {
+  font-family: "LatoRegular", Arial, sans-serif;
+  font-weight: normal;
+  color: #585858;
+  background-color: #fff;
+  font-size: 14px;
+  position: relative;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  color: #494949;
+}
+
+p {
+  color: #585858;
+}
+
+.sub-text {
+  color: #949494;
+}
+
+.bg-black {
+  background-color: #212121;
+}
+
+.bg-black h1,
+.bg-black h2,
+.bg-black h3,
+.bg-black h4,
+.bg-black h5,
+.bg-black h6,
+.bg-black h1 > a,
+.bg-black h2 > a,
+.bg-black h3 > a,
+.bg-black h4 > a,
+.bg-black h5 > a,
+.bg-black h6 > a {
+  color: #ffffff;
+}
+
+.bg-black p {
+  color: #d7d7d7;
+}
+
+.danger-text {
+  color: #f55145;
+}
+
+.warning-text {
+  color: #fbc53c;
+}
+
+.success-text {
+  color: #55b559;
+}
+
+.info-text {
+  color: #0ab1fc;
+}
+
+.danger-bg {
+  background-color: #f55145;
+}
+
+.warning-bg {
+  background-color: #fbc53c;
+}
+
+.success-bg {
+  background-color: #55b559;
+}
+
+.info-bg {
+  background-color: #0ab1fc;
+}
+
+.grey-bg {
+  background-color: #eee;
+}
+
+.dark-grey-bg {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.circle {
+  border-radius: 50%;
+}

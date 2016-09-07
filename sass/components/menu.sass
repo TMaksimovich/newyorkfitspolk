@@ -1,0 +1,451 @@
+//Боковое меню
+body, html
+	height: 100%
+body
+	padding-top: 66px
+.site-navbar
+	background-color: #fff
+	.navbar-header
+		color: #fff
+		background-color: $main_bg
+		.navbar-toggle
+			color: #fff
+		.hamburger .hamburger-bar,
+		.hamburger:after,
+		.hamburger:before
+			background-color: #fff
+		.navbar-brand
+			float: none
+			overflow: hidden
+			font-family: "LatoRegular", Arial, sans-serif
+			color: #fff
+			text-align: center
+			text-overflow: ellipsis
+			white-space: nowrap
+			cursor: pointer
+		.navbar-brand-logo
+			height: 22px
+			transition: height .25s
+		.navbar-brand-text
+			display: none
+	.navbar-container
+		background-color: #fff
+
+.site-menubar
+	position: fixed
+	top: 66px
+	z-index: 1400
+	width: 336px
+	height: 100%
+	height: calc(100% - 66px)
+	font-family: "LatoRegular", Arial, sans-serif
+	color: $menu_side_link
+	transition: width .25s, opacity .25s, transform .25s
+	ul
+		padding: 0
+		margin: 0
+		list-style: none
+	a
+		outline: 0
+		&:focus,
+		&:hover
+			text-decoration: none
+	.scrollable-inverse.scrollable .scrollable-bar-handle
+		background: $menu_side_bg
+
+	&.site-menubar-dark
+		background: $menu_side_bg
+		box-shadow: 0 2px 8px rgba(0, 0, 0, .15), 0 5px 6px rgba(0, 0, 0, .20)
+.site-menu
+	padding-bottom: 20px
+	overflow: visible
+	font-size: 16px
+	transition: transform .25s
+.site-menu-item
+	line-height: 36px
+	transition: transform .1s, all .25s, border 0
+	&>a
+		white-space: nowrap
+		cursor: pointer
+.site-menu-icon
+	display: inline-block
+	width: 1em
+	margin-right: 16px
+	text-align: center
+.site-menu-title
+	display: inline-block
+	max-width: 160px
+	overflow: hidden
+	text-overflow: ellipsis
+	white-space: nowrap
+	vertical-align: middle
+	transition: visibility .25s, opacity .25s
+	&:first-child
+		margin-left: 25px
+.mm-navbar .mm-prev,
+.site-menu-arrow
+	position: relative
+	display: inline-block
+	font-family: 'Material Icons'
+	font-style: normal
+	font-weight: 400
+	transform: translate(0, 0)
+	text-rendering: auto
+	speak: none
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	text-rendering: optimizeLegibility
+	font-feature-settings: "liga"
+	text-transform: none
+	font-size: 20px
+	overflow: hidden
+.site-menu-arrow
+	&:before
+		content: '\e315'
+.mm-navbar .mm-prev
+	position: absolute
+	left: 20px
+	&:before
+		content: '\e314'
+.site-menu-arrow,
+.site-menu-badge,
+.site-menu-label
+	position: absolute
+	right: 25px
+	display: inline-block
+	vertical-align: middle
+	transition: visibility cubic-bezier(.76, .1, 1, -.16) .25s, opacity cubic-bezier(.76, .1, 1, -.16) .5s
+.site-menu .badge,
+.site-menu .label
+	padding: 2px 5px 3px
+	font-size: 12px
+	font-weight: 300
+
+.site-menu-item
+	position: relative
+	white-space: nowrap
+	a
+		display: block
+		color: rgba(117, 117, 117, .9)
+	&:hover>a
+		color: #424242
+	&.active
+		background: rgba(33, 33, 33, .05)
+		&>a
+			color: #424242
+			background: 0 0
+		&.hover>a
+			background: 0 0
+
+.site-menu
+	&>.site-menu-item
+		padding: 0
+		font-size: 16px
+		&>a
+			padding: 0 25px
+			line-height: 50px
+		&.active
+			border-top: 1px solid $menu_side_bg_item
+			border-bottom: 1px solid $menu_side_bg_item
+
+.site-menu-item>.site-menu-sub
+	background-color: rgba(33, 33, 33, .05)
+
+.site-menubar-dark
+	.site-menu-item
+		a
+			color: $menu_side_link
+		&:hover,
+		&.active
+			background-color: $menu_side_bg_item
+			&>a
+				color: $menu_side_link_light
+		&>.site-menu-sub
+			background-color: #1e1e1e
+
+.site-menubar-fold
+	.page
+		margin-left: 65px
+	.site-menu
+		&>.site-menu-item
+			font-size: 16px
+			&>a
+				height: 46px
+				.site-menu-arrow,
+				.site-menu-badge,
+				.site-menu-title
+					visibility: hidden
+					opacity: 0
+	.site-menubar
+		width: 65px
+	&.site-menubar-hover
+		.site-navbar
+			.navbar-brand
+				float: left
+				text-align: left
+			.navbar-brand-logo
+				height: 26px
+			.navbar-brand-text
+				display: inline-block
+		.site-menubar
+			width: 336px
+		.site-menu>.site-menu-item>a .site-menu-arrow,
+		.site-menu>.site-menu-item>a .site-menu-badge,
+		.site-menu>.site-menu-item>a .site-menu-title
+			visibility: visible
+			opacity: 1
+	&:not(.site-menubar-hover) .mm-panels>.mm-panel
+		transform: translate3d(100%, 0, 0)
+	&:not(.site-menubar-hover) .mm-panels>.mm-panel.mm-current:first-child,
+	&:not(.site-menubar-hover) .mm-panels>.mm-panel.mm-subopened:first-child
+		display: block!important
+		transform: translate3d(0, 0, 0)
+	&.site-menubar-changing .site-menu>.site-menu-item>.site-menu-sub
+		display: none
+
+.site-menubar-unfold
+	.page
+		margin-left: 336px
+		transition: margin-left .25s
+	.site-navbar
+		.navbar-brand
+			float: left
+			text-align: left
+		.navbar-brand-logo
+			height: 18px
+		.navbar-brand-text
+			display: inline-block
+	&.site-menubar-native
+		.site-menubar-body
+			overflow-y: scroll
+	.site-menubar
+		width: 336px
+
+.site-menubar-unfold [data-toggle=menubar]
+	.hamburger-arrow-left
+		transform: rotate(180deg)
+		&:before
+			width: .6em
+			transform: translate3d(-0.1em, 0.15em, 0) rotate(-45deg)
+		&:after
+			width: .6em
+			transform: translate3d(-0.1em, -0.1em, 0) rotate(45deg)
+		.hamburger-bar
+			border-radius: .2em
+
+.site-navbar-small
+	padding-top: 60px
+	.site-navbar
+		height: 66px
+		min-height: 66px
+		.navbar-brand
+			height: 66px
+			padding: 24px 20px 19px
+		.navbar-nav
+			margin: 9.5px -15px
+		.navbar-toggle
+			height: 66px
+			padding: 19px 15px
+			margin: 0
+			width: 65px
+		.navbar-toolbar>li>a
+			padding-top: 19px
+			padding-bottom: 19px
+		.navbar-nav>li>a.navbar-avatar,
+		.navbar-toolbar>li>a.navbar-avatar
+			padding-top: 15px
+			padding-bottom: 15px
+	.site-menubar,
+	.slidePanel-left,
+	.slidePanel-right
+		top: 66px
+
+.hamburger
+	font-size: 29px
+	vertical-align: middle
+
+.hamburger,
+.hamburger .hamburger-bar,
+.hamburger:after,
+.hamburger:before
+	transition: transform .2s ease-in-out
+
+.hamburger:after,
+.hamburger:before
+	content: ""
+
+.hamburger .hamburger-bar,
+.hamburger:after,
+.hamburger:before
+	display: block
+	width: 1em
+	height: .1em
+	margin: 0
+	background: #757575
+	border-radius: 1px
+
+.navbar-default .hamburger .hamburger-bar,
+.navbar-default .hamburger:after,
+.navbar-default .hamburger:before
+	background: #757575
+
+.hamburger .hamburger-bar
+	margin: .2em 0
+
+.hamburger-close:before
+	transform: rotate(45deg)
+	transform-origin: 8%
+
+.hamburger-close .hamburger-bar
+	opacity: 0
+
+.hamburger-close:after
+	transform: rotate(-45deg)
+	transform-origin: 8%
+
+.hamburger-close.collapsed:before,
+.hamburger-close.hided:before
+	transform: rotate(0)
+
+.hamburger-close.collapsed .hamburger-bar,
+.hamburger-close.hided .hamburger-bar
+	opacity: 1
+
+.hamburger-close.collapsed:after,
+.hamburger-close.hided:after
+	transform: rotate(0)
+
+.hamburger-arrow-left.collapsed
+	transform: rotate(180deg)
+
+.hamburger-arrow-left.collapsed:before
+	width: .6em
+	transform: translate3d(.45em, .1em, 0) rotate(45deg)
+
+.hamburger-arrow-left.collapsed .hamburger-bar
+	border-radius: .2em
+
+.hamburger-arrow-left.collapsed:after
+	width: .6em
+	transform: translate3d(.45em, -.1em, 0) rotate(-45deg)
+
+
+
+@media (max-width:767px)
+	.site-menubar-unfold
+		.page
+			margin-left: auto
+	.site-menubar-open
+		.page
+			transform: translate3d(336px, 0, 0)
+		.site-menubar
+			transition: transform .25s, top .35s, height .35s
+			transform: translate3d(0, 0, 0)
+	.site-menubar-changing
+		overflow: hidden
+		.page
+			transition: transform .25s
+	.site-menubar-hide
+		.site-menubar
+			transition: transform .25s, top .35s, height .35s
+	.site-navbar-collapsing
+		transition: padding-top .35s
+	.site-navbar-collapse-show
+		padding-top: 132px
+		.slidePanel.slidePanel-left,
+		.slidePanel.slidePanel-right
+			top: 135px
+			transition: top .35s
+	body.site-navbar-small
+		padding-top: 60px
+		.site-menubar
+			top: 66px
+			height: calc(100% - 66px)
+		.slidePanel-left,
+		.slidePanel-right
+			top: 66px
+		&.site-navbar-collapse-show
+			padding-top: 120px
+			.site-menubar
+				top: 120px
+				height: calc(100% - 120px)
+			.slidePanel.slidePanel-left,
+			.slidePanel.slidePanel-right
+				top: 120px
+	.site-navbar
+		.brand
+			display: none
+		.brand-mobile
+			display: block
+	.site-menubar
+		top: 66px
+		height: calc(100% - 66px)
+		transform: translate3d(-336px, 0, 0)
+		backface-visibility: hidden
+		perspective: 1000
+	.site-navbar-collapse-show .site-menubar
+		top: 132px
+		height: calc(100% - 132px)
+	.disable-scrolling,
+	body.site-menubar-open
+		height: 100%
+		overflow: hidden
+	body.site-menubar-open .page
+		height: 100%
+		overflow: hidden
+		pointer-events: none
+
+@media (min-width:768px)
+	.site-navbar
+		.navbar-header
+			width: 65px
+			height: 66px
+		.navbar-container
+			margin-left: 65px
+			transition: margin-left .25s
+	.site-menubar-fold.site-menubar-hover
+		.site-navbar
+			.navbar-header
+				width: 336px
+			.navbar-container
+				margin-left: 336px
+	.site-menubar-unfold
+		.site-navbar
+			.navbar-header
+				width: 336px
+				transition: width .25s
+			.navbar-container
+				margin-left: 336px
+	.site-navbar-small
+		.site-navbar
+			.navbar-nav>li>a
+				padding-top: 19px
+				padding-bottom: 19px
+	.css-menubar
+		.site-menu
+			&>.site-menu-item
+				font-size: 14px
+				&>a
+					height: 46px
+					.site-menu-arrow,
+					.site-menu-badge,
+					.site-menu-title
+						visibility: hidden
+						opacity: 0
+			.site-menu-item:hover>.site-menu-sub
+				position: absolute
+				top: 0
+				left: 100%
+				display: block
+				width: 240px
+			.site-menu-sub
+				display: none
+		.site-menubar
+			width: 65px
+	.navbar-toggle
+		display: block
+
+@media screen and (min-width:1200px)
+	.css-menubar .page
+		margin-left: 336px
+		transition: margin-left .25s

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru" class="no-js css-menubar"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Заголовок</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/mmenu/dist/css/jquery-mmenu.min.css">
+  <link rel="stylesheet" href="libs/animsition/animsition.min.css">
+  <link rel="stylesheet" href="libs/asscrollable/asScrollable.min.css">
+  <link rel="stylesheet" href="libs/Waves-0.7.5/dist/waves.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+  <script src="libs/breakpoints/breakpoints.min.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+
+</head>
+
+<body class=" site-navbar-small">
+  <nav class="site-navbar navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle navbar-toggle-left waves waves-effect waves-light"
+      data-toggle="menubar">
+        <i class="icon hamburger hamburger-arrow-left">
+          <span class="sr-only">Меню</span>
+          <span class="hamburger-bar"></span>
+        </i>
+      </button>
+
+      <div class="navbar-brand navbar-brand-center">
+        <img class="navbar-brand-logo" src="img/logo.png">
+      </div>
+
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          <li class="dropdown">
+            <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <span class="avatar avatar-online">
+                <img src="../../global/portraits/5.jpg" alt="...">
+                <i></i>
+              </span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Profile</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-card" aria-hidden="true"></i> Billing</a>
+              </li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-settings" aria-hidden="true"></i> Settings</a>
+              </li>
+              <li class="divider" role="presentation"></li>
+              <li role="presentation">
+                <a href="javascript:void(0)" role="menuitem"><i class="icon md-power" aria-hidden="true"></i> Logout</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Notifications" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon md-notifications" aria-hidden="true"></i>
+              <span class="badge badge-danger up">5</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>NOTIFICATIONS</h5>
+                <span class="label label-round label-danger">New 5</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-receipt bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">A new order has been placed</h6>
+                          <time class="media-meta" datetime="2015-06-12T20:50:48+08:00">5 hours ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-account bg-green-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Completed the task</h6>
+                          <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-settings bg-red-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Settings updated</h6>
+                          <time class="media-meta" datetime="2015-06-11T14:05:00+08:00">2 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-calendar bg-blue-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Event started</h6>
+                          <time class="media-meta" datetime="2015-06-10T13:50:18+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <i class="icon md-comment bg-orange-600 white icon-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Message received</h6>
+                          <time class="media-meta" datetime="2015-06-10T12:34:48+08:00">3 days ago</time>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon md-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    All notifications
+                  </a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" title="Messages" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <i class="icon md-email" aria-hidden="true"></i>
+              <span class="badge badge-info up">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+              <li class="dropdown-menu-header" role="presentation">
+                <h5>MESSAGES</h5>
+                <span class="label label-round label-info">New 3</span>
+              </li>
+
+              <li class="list-group" role="presentation">
+                <div data-role="container">
+                  <div data-role="content">
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-online">
+                            <img src="../../global/portraits/2.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Mary Adams</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T20:22:05+08:00">30 minutes ago</time>
+                          </div>
+                          <div class="media-detail">Anyways, i would like just do it</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-off">
+                            <img src="../../global/portraits/3.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Caleb Richards</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-17T12:30:30+08:00">12 hours ago</time>
+                          </div>
+                          <div class="media-detail">I checheck the document. But there seems</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-busy">
+                            <img src="../../global/portraits/4.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">June Lane</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-16T18:38:40+08:00">2 days ago</time>
+                          </div>
+                          <div class="media-detail">Lorem ipsum Id consectetur et minim</div>
+                        </div>
+                      </div>
+                    </a>
+                    <a class="list-group-item" href="javascript:void(0)" role="menuitem">
+                      <div class="media">
+                        <div class="media-left padding-right-10">
+                          <span class="avatar avatar-sm avatar-away">
+                            <img src="../../global/portraits/5.jpg" alt="..." />
+                            <i></i>
+                          </span>
+                        </div>
+                        <div class="media-body">
+                          <h6 class="media-heading">Edward Fletcher</h6>
+                          <div class="media-meta">
+                            <time datetime="2015-06-15T20:34:48+08:00">3 days ago</time>
+                          </div>
+                          <div class="media-detail">Dolor et irure cupidatat commodo nostrud nostrud.</div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="dropdown-menu-footer" role="presentation">
+                <a class="dropdown-menu-footer-btn" href="javascript:void(0)" role="button">
+                  <i class="icon md-settings" aria-hidden="true"></i>
+                </a>
+                <a href="javascript:void(0)" role="menuitem">
+                    See all messages
+                  </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+    </div>
+  </nav>
+  <div class="site-menubar site-menubar-dark">
+    <ul class="site-menu">
+      <li class="site-menu-item">
+        <a class="animsition-link" href="../index.html">
+          <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+          <span class="site-menu-title">Группы</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item">
+        <a class="animsition-link" href="../index.html">
+          <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+          <span class="site-menu-title">Участники</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item has-sub">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-compact" aria-hidden="true"></i>
+          <span class="site-menu-title">Настройка программ</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="#">
+              <span class="site-menu-title">Программы</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="#">
+              <span class="site-menu-title">Правила курса</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item has-sub">
+            <a href="javascript:void(0)">
+              <span class="site-menu-title">Рекомендации</span>
+              <span class="site-menu-arrow"></span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item">
+                <a class="animsition-link" href="#">
+                  <span class="site-menu-title">Спортивное питание</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="#">
+                  <span class="site-menu-title">Как питаться</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="#">
+                  <span class="site-menu-title">Как тренироваться</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="#">
+                  <span class="site-menu-title">FAQ</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="#">
+              <span class="site-menu-title">Тренировки</span>
+            </a>
+          </li>
+          <li class="site-menu-item">
+            <a class="animsition-link" href="#">
+              <span class="site-menu-title">Упражнения</span>
+            </a>
+          </li>
+          <li class="site-menu-item">
+            <a class="animsition-link" href="#">
+              <span class="site-menu-title">Питание</span>
+            </a>
+          </li>
+          <li class="site-menu-item">
+            <a class="animsition-link" href="#">
+              <span class="site-menu-title">Рецепты</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div class="page animsition">
+    <div class="page-content">
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap-datepicker.js"></script>
+  <script src="libs/asscrollable/jquery.asScrollable.all.min.js"></script>
+  <script src="libs/animsition/animsition.min.js"></script>
+  <script src="libs/asscroll/jquery-asScroll.min.js"></script>
+  <script src="libs/mmenu/dist/js/jquery.mmenu.min.all.js"></script>
+  <script src="libs/menu-side/core.min.js"></script>
+  <script src="libs/menu-side/site.min.js"></script>
+  <script src="libs/menu-side/menubar.min.js"></script>
+  <script src="libs/menu-side/asscrollable.min.js"></script>
+  <script src="libs/Waves-0.7.5/dist/waves.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/jquery.autosize.js"></script>
+  <script src="js/common.js"></script>
+
+  <script>
+    (function(document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function() {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+
+
+</body>
+</html>

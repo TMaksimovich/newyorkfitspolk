@@ -1,0 +1,140 @@
+//Календарь
+.start-datepicker
+	display: inline-block
+	vertical-align: middle
+	color: $sub_text_color
+	font-size: 13px
+	width: 28%
+.input-date-control
+	position: relative
+	display: inline-block
+	.datepicker
+		display: inline-block
+		width: 105px
+		height: 20px
+		vertical-align: middle
+		border: none
+		border-bottom: 1px solid $sub_text_color
+		font-family: "LatoLight", Arial, sans-serif
+		border-radius: 0
+		box-shadow: none
+		padding: 0 0 5px
+		outline: none
+	.caret
+		position: absolute
+		right: 0
+		top: 25%
+		border-top: 5px dashed rgba(0, 0, 0, 0.26)
+		border-right: 5px solid transparent
+		border-left: 5px solid transparent
+.datepicker.dropdown-menu
+	min-width: 275px
+	padding: 10px 30px
+	margin: -20px 0 0 -117px
+	background-color: #fff
+	border: none
+	border-radius: 2px
+	box-shadow: 0 1px 4px rgba(0,0,0,0.175), 0 1px 2px rgba(0,0,0,0.13)
+	font-size: 13px
+	font-family: "LatoLight", Arial, sans-serif
+	transition: all 150ms ease
+	opacity: 0
+	visibility: hidden
+	td, th
+		text-align: center
+		width: 21px
+		height: 16px
+		border-radius: 4px
+	.bar
+		position: absolute
+		display: block !important
+		width: 107px
+		top: 1px
+		left: 117px
+		&:before,
+		&:after
+			content: ''
+			height: 2px
+			width: 0
+			bottom: 1px
+			position: absolute
+			background: $main_bg
+			transition: all 250ms cubic-bezier(0.79, -0.07, 0.14, 1.03) 0.2s
+		&:before
+			left: 50%
+		&:after
+			right: 50%
+	&.open
+		opacity: 1
+		visibility: visible
+		margin-top: 1px
+		.bar:before,
+		.bar:after,
+			width: 50%
+	span.month,
+	span.yearazure,
+	span.year
+		display: block
+		width: 50px
+		height: 50px
+		line-height: 50px
+		float: left
+		margin: 2px 10px
+		cursor: pointer
+		border-radius: 2px
+		font-family: "LatoRegular", Arial, sans-serif
+		transition: all .2s ease
+		&:hover
+			background-color: $light_grey_bg
+		&.active,
+		&.active:hover
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18), 0 1px 2px 0 rgba(0, 0, 0, 0.13)
+			color: #ffffff
+			background-color: $main_bg
+
+	table
+		width: 100%
+	.date-chevron
+		font-size: 20px
+		color: #454545
+		padding: 7px
+	.switch-datepicker,
+	.dow
+		font-size: 13px
+		color: $text_color
+		font-family: "LatoRegular", Arial, sans-serif
+	.switch-datepicker
+		text-transform: uppercase
+		padding-top: 7px
+	.date-chevron,
+	.switch-datepicker
+		text-align: center
+		transition: all .2s ease
+		cursor: pointer
+		font-weight: normal
+		&:hover
+			background-color: $light_grey_bg
+			border-radius: 2px
+	.dow
+		padding-top: 20px
+		padding-bottom: 10px
+	.day
+		p
+			margin: 5px 0
+			border-radius: 50%
+			height: 26px
+			width: 26px
+			line-height: 27px
+			cursor: pointer
+			transition: all .2s ease
+			&:hover
+				background-color: $light_grey_bg
+	.old,
+	.new
+		p
+			color: $sub_text_color
+	td.active p,
+	td.active:hover p
+		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18), 0 1px 2px 0 rgba(0, 0, 0, 0.13)
+		color: #ffffff
+		background-color: $main_bg
