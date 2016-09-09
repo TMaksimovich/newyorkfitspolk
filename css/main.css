@@ -1087,6 +1087,7 @@ p {
   vertical-align: top;
   text-align: center;
   background-color: #def1f0;
+  overflow: hidden;
 }
 
 .user-img img {
@@ -1122,6 +1123,25 @@ p {
 
 .label.label-on {
   background-color: #4caf50;
+}
+
+.badge {
+  border-radius: 15px;
+  min-width: 18px;
+  padding: 3px 6px;
+  font-size: 11px;
+  font-family: "LatoLight", Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  font-weight: normal;
+  line-height: 1;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.badge.badge-default {
+  background-color: #5fc7ae;
 }
 
 .alert {
@@ -1449,6 +1469,10 @@ body {
   content: '\E154';
 }
 
+.md-notifications {
+  color: #454545;
+}
+
 .mm-navbar .mm-prev {
   position: absolute;
   left: 20px;
@@ -1686,10 +1710,10 @@ body {
   padding-bottom: 19px;
 }
 
-.site-navbar-small .site-navbar .navbar-nav > li > a.navbar-avatar,
-.site-navbar-small .site-navbar .navbar-toolbar > li > a.navbar-avatar {
-  padding-top: 15px;
-  padding-bottom: 15px;
+.site-navbar-small .site-navbar .navbar-nav > li > a.navbar-user,
+.site-navbar-small .site-navbar .navbar-toolbar > li > a.navbar-user {
+  padding-top: 19px;
+  padding-bottom: 19px;
 }
 
 .site-navbar-small .site-navbar .navbar-toolbar-right > li {
@@ -1802,6 +1826,89 @@ body {
   width: .6em;
   -webkit-transform: translate3d(0.45em, -0.1em, 0) rotate(-45deg);
           transform: translate3d(0.45em, -0.1em, 0) rotate(-45deg);
+}
+
+.navbar-toolbar .dropdown-menu {
+  -webkit-transform-origin: 100% 0;
+      -ms-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+
+.navbar-toolbar-right {
+  margin-top: 0;
+}
+
+.navbar-toolbar-right li {
+  height: 100%;
+}
+
+.navbar-toolbar-right li a:hover,
+.navbar-toolbar-right li a:active,
+.navbar-toolbar-right li a:focus,
+.navbar-toolbar-right li.open > a:hover,
+.navbar-toolbar-right li.open > a:active,
+.navbar-toolbar-right li.open > a:focus {
+  background-color: transparent;
+}
+
+.navbar-toolbar-right li .badge {
+  position: relative;
+  top: -12px;
+  right: 14px;
+}
+
+.navbar-toolbar-right .dropdown-menu-notifications,
+.navbar-toolbar-right .dropdown-menu-user {
+  padding: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+.navbar-toolbar-right .dropdown-menu-user {
+  margin-top: 10px;
+}
+
+.navbar-toolbar-right .dropdown-menu-user li a {
+  font-size: 16px;
+  line-height: 28px;
+  color: #383838;
+  padding: 4px 46px 8px;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+.navbar-toolbar-right .dropdown-menu-user li a:hover,
+.navbar-toolbar-right .dropdown-menu-user li a:active,
+.navbar-toolbar-right .dropdown-menu-user li a:focus {
+  background-color: #eee;
+}
+
+.navbar-toolbar-right .dropdown-menu-user li a .icon {
+  color: #454545;
+  top: 5px;
+  left: -15px;
+  font-size: 24px;
+}
+
+.navbar-toolbar-right .navbar-user {
+  font-size: 16px;
+  color: #383838;
+  font-family: "LatoLight", Arial, sans-serif;
+  padding-right: 50px;
+}
+
+.navbar-toolbar-right .navbar-user .user-img {
+  width: 23px;
+  height: 23px;
+  margin-right: 13px;
+}
+
+.nav .open > a,
+.nav .open > a:hover,
+.nav .open > a:focus {
+  background-color: transparent;
 }
 
 @media (max-width: 767px) {
@@ -1963,5 +2070,45 @@ body {
     margin-left: 336px;
     -webkit-transition: margin-left 0.25s;
             transition: margin-left 0.25s;
+  }
+}
+
+[class*=animation-] {
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.animation-scale-up {
+  -webkit-animation-name: fade-scale-02;
+          animation-name: fade-scale-02;
+}
+
+@-webkit-keyframes fade-scale-02 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes fade-scale-02 {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }

@@ -126,6 +126,8 @@ body
 	content: '\E88A'
 .md-power:before
 	content: '\E154'
+.md-notifications
+	color: #454545
 
 .mm-navbar .mm-prev
 	position: absolute
@@ -279,10 +281,10 @@ body
 		.navbar-toolbar>li>a
 			padding-top: 19px
 			padding-bottom: 19px
-		.navbar-nav>li>a.navbar-avatar,
-		.navbar-toolbar>li>a.navbar-avatar
-			padding-top: 15px
-			padding-bottom: 15px
+		.navbar-nav>li>a.navbar-user,
+		.navbar-toolbar>li>a.navbar-user
+			padding-top: 19px
+			padding-bottom: 19px
 		.navbar-toolbar-right>li
 			display: inline-block
 			vertical-align: top
@@ -359,7 +361,61 @@ body
 	width: .6em
 	transform: translate3d(.45em, -.1em, 0) rotate(-45deg)
 
+.navbar-toolbar .dropdown-menu
+	transform-origin: 100% 0
+	animation-duration: .3s
 
+.navbar-toolbar-right
+	margin-top: 0
+	li
+		height: 100%
+		a,
+		&.open>a
+			&:hover,
+			&:active,
+			&:focus
+				background-color: transparent
+		.badge
+			position: relative
+			top: -12px
+			right: 14px
+	.dropdown-menu-notifications,
+	.dropdown-menu-user
+		padding: 0
+		box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1), 0 2px 4px 0 rgba(0,0,0,0.1)
+		border-radius: 2px
+	.dropdown-menu-user
+		margin-top: 10px
+		li
+			a
+				font-size: 16px
+				line-height: 28px
+				color: #383838
+				padding: 4px 46px 8px
+				transition: all .2s ease
+				&:hover,
+				&:active,
+				&:focus
+					background-color: #eee
+				.icon
+					color: #454545
+					top: 5px
+					left: -15px
+					font-size: 24px
+	.navbar-user
+		font-size: 16px
+		color: #383838
+		font-family: "LatoLight", Arial, sans-serif
+		padding-right: 50px
+		.user-img
+			width: 23px
+			height: 23px
+			margin-right: 13px
+
+.nav .open>a,
+.nav .open>a:hover,
+.nav .open>a:focus
+	background-color: transparent
 
 @media (max-width:767px)
 	.site-menubar-unfold
