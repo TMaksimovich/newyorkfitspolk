@@ -29,6 +29,7 @@
 	&:active,
 	&:focus
 		box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.17), 0 15px 30px 0 rgba(0, 0, 0, 0.30)
+		outline: none
 	&.btn-large
 		width: 57px
 		height: 57px
@@ -77,6 +78,7 @@
 		&:active,
 		&:focus
 			background-color: transparent
+			outline: none
 .btn-flat-red
 	color: $danger
 	&:hover,
@@ -124,9 +126,27 @@
 		color: #aeaeae
 		background-color: $light_grey_bg
 		box-shadow: none
+		outline: none
 
 .btn-fixed
 	position: absolute
 	right: -83px
 	top: 44px
 	z-index: 1000
+
+@media (max-width:767px)
+	.btn-fixed
+		right: 10px
+		top: calc(100% - 180px)
+	.btn-circle.btn-xs-small
+		width: 42px
+		height: 42px
+		i
+			line-height: 42px
+			font-size: 2rem
+
+@media (max-width:991px)
+	.btn-fixed
+		right: 30px
+		top: calc(100% - 163px)
+		position: fixed

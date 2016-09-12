@@ -279,7 +279,7 @@ body
 			margin: 0
 			width: 65px
 		.navbar-toolbar>li>a
-			padding-top: 19px
+			padding-top: 17px
 			padding-bottom: 19px
 		.navbar-nav>li>a.navbar-user,
 		.navbar-toolbar>li>a.navbar-user
@@ -397,20 +397,29 @@ body
 				&:active,
 				&:focus
 					background-color: #eee
-				.icon
-					color: #454545
-					top: 5px
-					left: -15px
-					font-size: 24px
 	.navbar-user
 		font-size: 16px
 		color: #383838
 		font-family: "LatoLight", Arial, sans-serif
 		padding-right: 50px
-		.user-img
-			width: 23px
-			height: 23px
-			margin-right: 13px
+		position: relative
+		i
+			vertical-align: middle
+		&:after
+			content: ''
+			background: url(../img/sprite.png) 0 0 no-repeat
+			width: 16px
+			height: 8px
+			position: absolute
+			top: 0
+			bottom: 0
+			margin: auto
+			right: 14px
+	.open .navbar-user:after
+		transform: rotate(180deg)
+	.hello-user
+		padding-left: 12px
+
 
 .nav .open>a,
 .nav .open>a:hover,
@@ -459,6 +468,7 @@ body
 			.slidePanel.slidePanel-right
 				top: 120px
 	.site-navbar
+		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.1)
 		.brand,
 		.navbar-brand
 			display: none
@@ -472,13 +482,31 @@ body
 			position: relative
 			top: -66px
 			right: 0
+			box-shadow: none
 			&>.navbar-collapse
 				display: block
 		.navbar-toolbar-right
+			text-align: right
 			li.dropdown
-				width: 35%
-			.hello-user
+				width: 20%
+				a
+					padding-left: 0
+					padding-right: 0
+			.hello-user,
+			.navbar-user i
 				display: none
+			.navbar-user:after
+				top: 30px
+				right: 0
+			.dropdown-menu
+				left: -100px
+			.dropdown-menu-user
+				margin-top: 33px
+				left: -194px
+				li>a
+					padding-left: 10px
+					padding-right: 10px
+
 	.site-menubar
 		top: 66px
 		height: calc(100% - 66px)
@@ -496,6 +524,24 @@ body
 		height: 100%
 		overflow: hidden
 		pointer-events: none
+	.site-menubar-unfold [data-toggle=menubar] .hided.hamburger-arrow-left:before,
+	.site-menubar-unfold [data-toggle=menubar] .hided.hamburger-arrow-left:after
+		width: 1em
+		transform: none
+
+@media (max-width:991px)
+	.site-menubar
+		&.site-menubar-dark
+			box-shadow: none
+	.site-menubar-fold
+		.site-menubar
+			width: 0
+		.page
+			margin-left: 0
+		.site-navbar
+			.navbar-header
+				.navbar-brand
+					display: none
 
 @media (min-width:768px)
 	.site-navbar

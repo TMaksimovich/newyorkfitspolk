@@ -68,14 +68,31 @@ $(function() {
 
 
 	//кастомный скролл
+
+	function window_resize(){
+		var page_h = $("html").height();
+		var page_w = $("html").width();
+
+		if(page_w > 991){
+			$(".table-wrapper").mCustomScrollbar({
+		    	axis:"y",
+		    	scrollButtons:{
+		    		enable: true,
+		    		scrollAmount: "auto",
+		    		scrollType: "stepped",
+		    	}
+	    	});
+		}
+		else{
+			$(".table-wrapper").mCustomScrollbar("destroy");
+		}
+	}
+
 	$(window).on("load",function(){
-	    $(".table-wrapper").mCustomScrollbar({
-	    	axis:"y",
-	    	scrollButtons:{
-	    		enable: true,
-	    		scrollAmount: "auto",
-	    		scrollType: "stepped",
-	    	}
-	    });
+	    window_resize();
 	});
+
+	$(window).resize(function() {
+        window_resize();
+    });
 });

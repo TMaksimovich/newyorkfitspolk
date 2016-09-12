@@ -36,16 +36,25 @@
 
 
 @media (max-width:767px)
+	.page
+		background-color: #fff
 	.breadcrumbs
 		display: none
-	.page-content
-		padding-left: 0
-		padding-right: 0
 	.page-info-group
 		background-position: 75% 0
 	.page-title
 		padding-top: 80px
 	.page-group-content
 		top: 0
+
+@media (max-width:991px)
+	.page-group-content
 		width: 100%
 		max-width: 100%
+		top: -139px
+	.page-group
+		overflow-y: auto
+	.page-info-group
+		background-position: right top
+		background-size: initial
+		min-height: 295px

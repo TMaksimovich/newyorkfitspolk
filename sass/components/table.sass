@@ -58,10 +58,43 @@
 				padding-right: 15px
 		.table-finish
 			width: 14%
+		.table-start-finish
+			display: none
 
 
+@media (max-width:767px)
+	.table-wrapper
+		box-shadow: none
+		.table-content
+			display: block
+			.table-row
+				display: block
+				font-size: 0
+				.table-th,
+				.table-student,
+				.table-start,
+				.table-finish
+					display: none
+				.table-td.table-number
+					font-size: 14px
+					width: 21%
+					display: inline-block
+					vertical-align: top
+					padding-left: 10px
+				.table-start-finish
+					margin: 0
+					color: $sub_text_color
+					font-size: 12px
+					display: block
+				.table-td.table-name
+					width: 78%
+					display: inline-block
+					vertical-align: top
+					padding-right: 10px
+				.table-td a
+					line-height: 1.6
+					padding-top: 10px
 
-
-
-
-
+@media (max-width:991px)
+	.table-wrapper
+		height: auto

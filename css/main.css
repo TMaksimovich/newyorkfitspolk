@@ -657,6 +657,7 @@ p {
 .btn-circle:active,
 .btn-circle:focus {
   box-shadow: 0 9px 12px 0 rgba(0, 0, 0, 0.17), 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .btn-circle.btn-large {
@@ -726,6 +727,7 @@ p {
 .btn-flat.disabled:active,
 .btn-flat.disabled:focus {
   background-color: transparent;
+  outline: none;
 }
 
 .btn-flat-red {
@@ -789,6 +791,7 @@ p {
   color: #aeaeae;
   background-color: #dddddd;
   box-shadow: none;
+  outline: none;
 }
 
 .btn-fixed {
@@ -796,6 +799,31 @@ p {
   right: -83px;
   top: 44px;
   z-index: 1000;
+}
+
+@media (max-width: 767px) {
+  .btn-fixed {
+    right: 10px;
+    top: -webkit-calc(100% - 180px);
+    top: calc(100% - 180px);
+  }
+  .btn-circle.btn-xs-small {
+    width: 42px;
+    height: 42px;
+  }
+  .btn-circle.btn-xs-small i {
+    line-height: 42px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .btn-fixed {
+    right: 30px;
+    top: -webkit-calc(100% - 163px);
+    top: calc(100% - 163px);
+    position: fixed;
+  }
 }
 
 .start-datepicker {
@@ -1739,7 +1767,7 @@ body {
 }
 
 .site-navbar-small .site-navbar .navbar-toolbar > li > a {
-  padding-top: 19px;
+  padding-top: 17px;
   padding-bottom: 19px;
 }
 
@@ -1918,24 +1946,38 @@ body {
   background-color: #eee;
 }
 
-.navbar-toolbar-right .dropdown-menu-user li a .icon {
-  color: #454545;
-  top: 5px;
-  left: -15px;
-  font-size: 24px;
-}
-
 .navbar-toolbar-right .navbar-user {
   font-size: 16px;
   color: #383838;
   font-family: "LatoLight", Arial, sans-serif;
   padding-right: 50px;
+  position: relative;
 }
 
-.navbar-toolbar-right .navbar-user .user-img {
-  width: 23px;
-  height: 23px;
-  margin-right: 13px;
+.navbar-toolbar-right .navbar-user i {
+  vertical-align: middle;
+}
+
+.navbar-toolbar-right .navbar-user:after {
+  content: '';
+  background: url(../img/sprite.png) 0 0 no-repeat;
+  width: 16px;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 14px;
+}
+
+.navbar-toolbar-right .open .navbar-user:after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.navbar-toolbar-right .hello-user {
+  padding-left: 12px;
 }
 
 .nav .open > a,
@@ -2006,6 +2048,9 @@ body {
   body.site-navbar-small.site-navbar-collapse-show .slidePanel.slidePanel-right {
     top: 120px;
   }
+  .site-navbar {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.13), 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
   .site-navbar .brand,
   .site-navbar .navbar-brand {
     display: none;
@@ -2022,15 +2067,39 @@ body {
     position: relative;
     top: -66px;
     right: 0;
+    box-shadow: none;
   }
   .site-navbar .navbar-container > .navbar-collapse {
     display: block;
   }
-  .site-navbar .navbar-toolbar-right li.dropdown {
-    width: 35%;
+  .site-navbar .navbar-toolbar-right {
+    text-align: right;
   }
-  .site-navbar .navbar-toolbar-right .hello-user {
+  .site-navbar .navbar-toolbar-right li.dropdown {
+    width: 20%;
+  }
+  .site-navbar .navbar-toolbar-right li.dropdown a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .site-navbar .navbar-toolbar-right .hello-user,
+  .site-navbar .navbar-toolbar-right .navbar-user i {
     display: none;
+  }
+  .site-navbar .navbar-toolbar-right .navbar-user:after {
+    top: 30px;
+    right: 0;
+  }
+  .site-navbar .navbar-toolbar-right .dropdown-menu {
+    left: -100px;
+  }
+  .site-navbar .navbar-toolbar-right .dropdown-menu-user {
+    margin-top: 33px;
+    left: -194px;
+  }
+  .site-navbar .navbar-toolbar-right .dropdown-menu-user li > a {
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .site-menubar {
     top: 66px;
@@ -2057,6 +2126,28 @@ body {
     height: 100%;
     overflow: hidden;
     pointer-events: none;
+  }
+  .site-menubar-unfold [data-toggle=menubar] .hided.hamburger-arrow-left:before,
+  .site-menubar-unfold [data-toggle=menubar] .hided.hamburger-arrow-left:after {
+    width: 1em;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .site-menubar.site-menubar-dark {
+    box-shadow: none;
+  }
+  .site-menubar-fold .site-menubar {
+    width: 0;
+  }
+  .site-menubar-fold .page {
+    margin-left: 0;
+  }
+  .site-menubar-fold .site-navbar .navbar-header .navbar-brand {
+    display: none;
   }
 }
 
@@ -2215,12 +2306,11 @@ body {
 }
 
 @media (max-width: 767px) {
+  .page {
+    background-color: #fff;
+  }
   .breadcrumbs {
     display: none;
-  }
-  .page-content {
-    padding-left: 0;
-    padding-right: 0;
   }
   .page-info-group {
     background-position: 75% 0;
@@ -2230,8 +2320,22 @@ body {
   }
   .page-group-content {
     top: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .page-group-content {
     width: 100%;
     max-width: 100%;
+    top: -139px;
+  }
+  .page-group {
+    overflow-y: auto;
+  }
+  .page-info-group {
+    background-position: right top;
+    background-size: initial;
+    min-height: 295px;
   }
 }
 
@@ -2327,4 +2431,56 @@ body {
 
 .table-content .table-row .table-finish {
   width: 14%;
+}
+
+.table-content .table-row .table-start-finish {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .table-wrapper {
+    box-shadow: none;
+  }
+  .table-wrapper .table-content {
+    display: block;
+  }
+  .table-wrapper .table-content .table-row {
+    display: block;
+    font-size: 0;
+  }
+  .table-wrapper .table-content .table-row .table-th,
+  .table-wrapper .table-content .table-row .table-student,
+  .table-wrapper .table-content .table-row .table-start,
+  .table-wrapper .table-content .table-row .table-finish {
+    display: none;
+  }
+  .table-wrapper .table-content .table-row .table-td.table-number {
+    font-size: 14px;
+    width: 21%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+  }
+  .table-wrapper .table-content .table-row .table-start-finish {
+    margin: 0;
+    color: #949494;
+    font-size: 12px;
+    display: block;
+  }
+  .table-wrapper .table-content .table-row .table-td.table-name {
+    width: 78%;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 10px;
+  }
+  .table-wrapper .table-content .table-row .table-td a {
+    line-height: 1.6;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .table-wrapper {
+    height: auto;
+  }
 }
