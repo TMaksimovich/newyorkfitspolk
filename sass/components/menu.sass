@@ -459,10 +459,26 @@ body
 			.slidePanel.slidePanel-right
 				top: 120px
 	.site-navbar
-		.brand
+		.brand,
+		.navbar-brand
 			display: none
 		.brand-mobile
 			display: block
+		.navbar-header
+			width: 65px
+		.navbar-container
+			float: right
+			width: 80%
+			position: relative
+			top: -66px
+			right: 0
+			&>.navbar-collapse
+				display: block
+		.navbar-toolbar-right
+			li.dropdown
+				width: 35%
+			.hello-user
+				display: none
 	.site-menubar
 		top: 66px
 		height: calc(100% - 66px)

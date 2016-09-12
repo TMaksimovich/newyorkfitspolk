@@ -1,0 +1,67 @@
+//Таблицы
+.table-wrapper
+	height: 435px
+	overflow-y: auto
+	overflow-x: hidden
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.08), 0 1px 2px 0 rgba(0,0,0,.13)
+
+.table-content
+	display: table
+	width: 100%
+	background-color: #fff
+	border-radius: 2px
+	padding: 30px 0
+	.table-row
+		display: table-row
+		.table-th
+			display: table-cell
+			font-size: 13px
+			color: $sub_text_color
+			padding-bottom: 30px
+			&.table-number
+				padding-right: 63px
+			&.table-start
+				padding-right: 15px
+			&.table-student
+				padding-right: 35px
+		&:hover .table-td
+			background-color: #f4f4f4
+		.table-td
+			display: table-cell
+			font-size: 16px
+			color: $text_color
+			padding: 0
+			a
+				display: inline-block
+				vertical-align: top
+				width: 100%
+				height: 62px
+				line-height: 62px
+				color: $text_color
+				text-decoration: none
+				white-space: nowrap
+				overflow: hidden
+				text-overflow: ellipsis
+		.table-number
+			width: 15%
+			a
+				padding-right: 63px
+		.table-student
+			width: 19%
+			a
+				padding-right: 35px
+		.table-name
+			width: 35%
+		.table-start
+			width: 14%
+			a
+				padding-right: 15px
+		.table-finish
+			width: 14%
+
+
+
+
+
+
+

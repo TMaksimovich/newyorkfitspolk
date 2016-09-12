@@ -1,8 +1,21 @@
 //Всплывающая подсказка
 .tooltip
-	background-color: #626262
-	border-radius: 2px
-	color: #d7d7d7
-	font-size: 12px
-	display: inline-block !important
+	position: relative
+
+.tooltip span
+	display: none
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 1000
+	min-width: 100px
+	min-height: 24px
 	padding: 3px 20px
+	text-align: center
+	font-size: 12px
+	line-height: 16px
+	color: #d7d7d7
+	background: #626262
+	border-radius: 2px

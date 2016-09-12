@@ -142,6 +142,18 @@ p {
   border-radius: 50%;
 }
 
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
 .dropdown-list .dropdown-list-toggle {
   border-bottom: 1px solid #bdbdbd;
   padding: 10px 0;
@@ -779,6 +791,13 @@ p {
   box-shadow: none;
 }
 
+.btn-fixed {
+  position: absolute;
+  right: -83px;
+  top: 44px;
+  z-index: 1000;
+}
+
 .start-datepicker {
   display: inline-block;
   vertical-align: middle;
@@ -1186,12 +1205,26 @@ p {
 }
 
 .tooltip {
-  background-color: #626262;
-  border-radius: 2px;
-  color: #d7d7d7;
-  font-size: 12px;
-  display: inline-block !important;
+  position: relative;
+}
+
+.tooltip span {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1000;
+  min-width: 100px;
+  min-height: 24px;
   padding: 3px 20px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 16px;
+  color: #d7d7d7;
+  background: #626262;
+  border-radius: 2px;
 }
 
 .ui-kit-page .block-notification {
@@ -1973,11 +2006,31 @@ body {
   body.site-navbar-small.site-navbar-collapse-show .slidePanel.slidePanel-right {
     top: 120px;
   }
-  .site-navbar .brand {
+  .site-navbar .brand,
+  .site-navbar .navbar-brand {
     display: none;
   }
   .site-navbar .brand-mobile {
     display: block;
+  }
+  .site-navbar .navbar-header {
+    width: 65px;
+  }
+  .site-navbar .navbar-container {
+    float: right;
+    width: 80%;
+    position: relative;
+    top: -66px;
+    right: 0;
+  }
+  .site-navbar .navbar-container > .navbar-collapse {
+    display: block;
+  }
+  .site-navbar .navbar-toolbar-right li.dropdown {
+    width: 35%;
+  }
+  .site-navbar .navbar-toolbar-right .hello-user {
+    display: none;
   }
   .site-menubar {
     top: 66px;
@@ -2111,4 +2164,167 @@ body {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.breadcrumbs {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 25px;
+  margin-bottom: 8px;
+}
+
+.breadcrumbs li,
+.breadcrumbs a {
+  font-size: 12px;
+  font-family: "LatoLight", Arial, sans-serif;
+  color: #fff;
+}
+
+.page-title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.page {
+  background-color: #f3f4f5;
+  height: 100%;
+}
+
+.page-group {
+  overflow-y: hidden;
+}
+
+.page-info-group {
+  background: url(../img/bg_fon.jpg) 0 0 no-repeat;
+  background-size: cover;
+  min-height: 239px;
+  position: relative;
+  padding: 10px;
+}
+
+.page-group-content {
+  position: relative;
+  top: -83px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 85%;
+  max-width: 885px;
+}
+
+@media (max-width: 767px) {
+  .breadcrumbs {
+    display: none;
+  }
+  .page-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .page-info-group {
+    background-position: 75% 0;
+  }
+  .page-title {
+    padding-top: 80px;
+  }
+  .page-group-content {
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.table-wrapper {
+  height: 435px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+}
+
+.table-content {
+  display: table;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 2px;
+  padding: 30px 0;
+}
+
+.table-content .table-row {
+  display: table-row;
+}
+
+.table-content .table-row .table-th {
+  display: table-cell;
+  font-size: 13px;
+  color: #949494;
+  padding-bottom: 30px;
+}
+
+.table-content .table-row .table-th.table-number {
+  padding-right: 63px;
+}
+
+.table-content .table-row .table-th.table-start {
+  padding-right: 15px;
+}
+
+.table-content .table-row .table-th.table-student {
+  padding-right: 35px;
+}
+
+.table-content .table-row:hover .table-td {
+  background-color: #f4f4f4;
+}
+
+.table-content .table-row .table-td {
+  display: table-cell;
+  font-size: 16px;
+  color: #585858;
+  padding: 0;
+}
+
+.table-content .table-row .table-td a {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  height: 62px;
+  line-height: 62px;
+  color: #585858;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-content .table-row .table-number {
+  width: 15%;
+}
+
+.table-content .table-row .table-number a {
+  padding-right: 63px;
+}
+
+.table-content .table-row .table-student {
+  width: 19%;
+}
+
+.table-content .table-row .table-student a {
+  padding-right: 35px;
+}
+
+.table-content .table-row .table-name {
+  width: 35%;
+}
+
+.table-content .table-row .table-start {
+  width: 14%;
+}
+
+.table-content .table-row .table-start a {
+  padding-right: 15px;
+}
+
+.table-content .table-row .table-finish {
+  width: 14%;
 }
