@@ -211,9 +211,12 @@ body
 				float: left
 				text-align: left
 			.navbar-brand-logo
-				height: 26px
+				height: 18px
 			.navbar-brand-text
 				display: inline-block
+		.navbar-brand-logo-black
+			margin-left: -336px
+			transition: margin-left 0.3s
 		.site-menubar
 			width: 336px
 		.site-menu>.site-menu-item>a .site-menu-arrow,
@@ -391,12 +394,14 @@ body
 				font-size: 16px
 				line-height: 28px
 				color: #383838
-				padding: 4px 46px 8px
+				padding: 8px 46px 9px
 				transition: all .2s ease
 				&:hover,
 				&:active,
 				&:focus
 					background-color: #eee
+			i
+				vertical-align: middle
 	.navbar-user
 		font-size: 16px
 		color: #383838

@@ -137,7 +137,7 @@
 @media (max-width:767px)
 	.btn-fixed
 		right: 10px
-		top: calc(100% - 180px)
+		top: calc(100% - 80px)
 	.btn-circle.btn-xs-small
 		width: 42px
 		height: 42px
@@ -145,8 +145,11 @@
 			line-height: 42px
 			font-size: 2rem
 
-@media (max-width:991px)
+@media (max-width:991px) and (min-width:768px)
 	.btn-fixed
 		right: 30px
-		top: calc(100% - 163px)
+		top: calc(100% - 90px)
+
+@media (max-width:991px)
+	.btn-fixed
 		position: fixed
