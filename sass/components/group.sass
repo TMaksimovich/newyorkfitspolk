@@ -9,6 +9,20 @@
 		font-size: 12px
 		font-family: "LatoLight", Arial, sans-serif
 		color: #fff
+		display: inline-block
+		vertical-align: middle
+		text-decoration: none
+	a
+		position: relative
+		padding-right: 17px
+		&:after
+			content: '\E5CC'
+			position: absolute
+			top: 0
+			right: 0
+			font-family: 'Material Icons'
+			font-size: 13px
+
 .page-title
 	font-size: 24px
 	color: #fff
@@ -35,6 +49,15 @@
 	max-width: 885px
 
 
+//Страничка админ одной группы. Просмотр
+.page-single-group
+	margin-right: 348px
+	@extend .page-group
+	.page-group-content
+		max-width: 615px
+
+
+
 @media (max-width:767px)
 	.page
 		background-color: #fff
@@ -43,7 +66,7 @@
 	.page-info-group
 		background-position: 75% 0
 	.page-title
-		padding-top: 80px
+		padding-top: 95px
 	.page-group-content
 		top: 0
 
@@ -58,6 +81,6 @@
 	.page-group
 		overflow-y: auto
 	.page-info-group
-		background-position: right top
+		background-position: 75% top
 		background-size: initial
 		min-height: 295px

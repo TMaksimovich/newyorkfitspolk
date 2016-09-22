@@ -1,10 +1,10 @@
-//Таблицы
+//ТАБЛИЦЫ
 .table-wrapper
 	height: 435px
 	overflow-y: auto
 	overflow-x: hidden
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.08), 0 1px 2px 0 rgba(0,0,0,.13)
-
+	border-radius: 2px
 .table-content
 	display: table
 	width: 100%
@@ -60,6 +60,40 @@
 			width: 14%
 		.table-start-finish
 			display: none
+
+
+
+//Таблица на странице админ.страничка группы
+.table-content-user
+	.table-row
+		&:hover .table-td
+			background-color: transparent
+		.table-user
+			padding-left: 30px
+		.table-td
+			vertical-align: middle
+			.label
+				margin-left: 13px
+		.table-image
+			width: 10%
+			text-align: right
+			.user-img
+				width: 42px
+				height: 42px
+				line-height: 42px
+				i
+					line-height: 42px
+		.table-button
+			width: 10%
+			text-align: left
+		.table-name
+			width: 80%
+			padding-left: 30px
+
+
+
+
+
 
 
 @media (max-width:767px)

@@ -1156,7 +1156,7 @@ p {
 
 .label {
   display: inline-block;
-  vertical-align: top;
+  vertical-align: middle;
   border-radius: 9px;
   padding: 4px 14px 1px;
   color: #fff;
@@ -2292,6 +2292,23 @@ body {
   font-size: 12px;
   font-family: "LatoLight", Arial, sans-serif;
   color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.breadcrumbs a {
+  position: relative;
+  padding-right: 17px;
+}
+
+.breadcrumbs a:after {
+  content: '\E5CC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Material Icons';
+  font-size: 13px;
 }
 
 .page-title {
@@ -2306,7 +2323,7 @@ body {
   height: 100%;
 }
 
-.page-group {
+.page-group, .page-single-group {
   overflow-y: hidden;
 }
 
@@ -2328,6 +2345,14 @@ body {
   max-width: 885px;
 }
 
+.page-single-group {
+  margin-right: 348px;
+}
+
+.page-single-group .page-group-content {
+  max-width: 615px;
+}
+
 @media (max-width: 767px) {
   .page {
     background-color: #fff;
@@ -2339,7 +2364,7 @@ body {
     background-position: 75% 0;
   }
   .page-title {
-    padding-top: 80px;
+    padding-top: 95px;
   }
   .page-group-content {
     top: 0;
@@ -2357,11 +2382,11 @@ body {
     width: 100%;
     max-width: 100%;
   }
-  .page-group {
+  .page-group, .page-single-group {
     overflow-y: auto;
   }
   .page-info-group {
-    background-position: right top;
+    background-position: 75% top;
     background-size: initial;
     min-height: 295px;
   }
@@ -2372,6 +2397,7 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+  border-radius: 2px;
 }
 
 .table-content {
@@ -2463,6 +2489,47 @@ body {
 
 .table-content .table-row .table-start-finish {
   display: none;
+}
+
+.table-content-user .table-row:hover .table-td {
+  background-color: transparent;
+}
+
+.table-content-user .table-row .table-user {
+  padding-left: 30px;
+}
+
+.table-content-user .table-row .table-td {
+  vertical-align: middle;
+}
+
+.table-content-user .table-row .table-td .label {
+  margin-left: 13px;
+}
+
+.table-content-user .table-row .table-image {
+  width: 10%;
+  text-align: right;
+}
+
+.table-content-user .table-row .table-image .user-img {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.table-content-user .table-row .table-image .user-img i {
+  line-height: 42px;
+}
+
+.table-content-user .table-row .table-button {
+  width: 10%;
+  text-align: left;
+}
+
+.table-content-user .table-row .table-name {
+  width: 80%;
+  padding-left: 30px;
 }
 
 @media (max-width: 767px) {
