@@ -728,6 +728,7 @@ p {
 .btn-flat.disabled:focus {
   background-color: transparent;
   outline: none;
+  font-size: 14px;
 }
 
 .btn-flat-red {
@@ -2442,7 +2443,7 @@ body {
   padding: 0;
 }
 
-.table-content .table-row .table-td a {
+.table-content .table-row .table-td a:not(.btn-flat) {
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -2510,25 +2511,30 @@ body {
 .table-content-user .table-row .table-image {
   width: 10%;
   text-align: right;
+  padding-left: 30px;
 }
 
-.table-content-user .table-row .table-image .user-img {
+.table-content-user .table-row .table-image a.user-img {
   width: 42px;
   height: 42px;
   line-height: 42px;
 }
 
-.table-content-user .table-row .table-image .user-img i {
+.table-content-user .table-row .table-image a.user-img i {
   line-height: 42px;
 }
 
 .table-content-user .table-row .table-button {
   width: 10%;
   text-align: left;
+  padding-right: 20px;
 }
 
 .table-content-user .table-row .table-name {
   width: 80%;
+}
+
+.table-content-user .table-row .table-name a {
   padding-left: 30px;
 }
 
@@ -2590,5 +2596,46 @@ body {
 @media screen and (min-width: 1400px) and (min-height: 900px) {
   .table-wrapper {
     height: 668px;
+  }
+}
+
+.page-aside {
+  height: 100%;
+  width: 348px;
+  top: 66px;
+}
+
+.page-aside-fixed {
+  position: fixed;
+}
+
+.page-aside-right {
+  right: 0;
+}
+
+.aside-header {
+  padding: 20px 15px;
+  border-bottom: 1px solid #cccccc;
+}
+
+@media (max-width: 767px) {
+  .page-single-group {
+    margin-right: auto;
+  }
+  .page-aside-right {
+    right: -348px;
+  }
+  .page-aside-switch {
+    display: block;
+    position: absolute;
+    top: 90px;
+    color: #fff;
+    right: 365px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-aside-switch {
+    display: none;
   }
 }

@@ -1,0 +1,13 @@
+.page-aside {
+  height: 100%;
+  width: 348px;
+  top: 66px;
+}
+
+.page-aside-fixed {
+  position: fixed;
+}
+
+.page-aside-right {
+  right: 0;
+}

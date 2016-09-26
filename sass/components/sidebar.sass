@@ -1,0 +1,36 @@
+//Сайдбар. Правый. Фиксированный
+.page-aside
+	height: 100%
+	width: 348px
+	top: 66px
+
+.page-aside-fixed
+	position: fixed
+
+.page-aside-right
+	right: 0
+
+.aside-header
+	padding: 10px 15px
+	border-bottom: 1px solid #cccccc
+
+
+
+
+@media (max-width:767px)
+	.page-single-group
+		margin-right: auto
+	.page-aside-right
+		right: -348px
+	.page-aside-switch
+		display: block
+		position: absolute
+		top: 90px
+		color: #fff
+		right: 365px
+
+@media (min-width:768px)
+	.page-aside-switch
+		display: none
+
+// @media (max-width:991px)
