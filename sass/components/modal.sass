@@ -16,6 +16,8 @@
 			color: #fff
 
 //Модальное окно
+#modalUser
+	animation-duration: .3s
 .modal-content
 	background-color: #fff
 	border: none
@@ -61,8 +63,16 @@
 		font-family: "LatoLight", Arial, sans-serif
 		font-size: 14px
 
+@media (min-width: 320px)
+	#modalUser
+		transform-origin: 100% 100%
+
 @media (min-width: 768px)
 	.modal-dialog
 		width: 426px
 	.modal-content
 		box-shadow: 0 14px 12px rgba(0,0,0,0.17), 0 20px 40px 0 rgba(0,0,0,0.30)
+
+@media (min-width: 1101px)
+	#modalUser
+		transform-origin: 70% 50% 40px

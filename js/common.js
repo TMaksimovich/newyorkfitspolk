@@ -88,11 +88,32 @@ $(function() {
 		}
 	}
 
+	//сайдбар на мобилках
+	function sidebar_toggle() {
+		var switch_btn  = $(".page-aside-switch");
+		var switch_inner_btn = $(".page-aside-switch-inner");
+		var page_w = $("html").width();
+
+		if(page_w < 767){
+			$(switch_btn).click(function() {
+				$(this).closest(".page-aside-right").addClass("open-aside");
+			});
+
+			$(switch_inner_btn).click(function() {
+				$(this).closest(".page-aside-right").removeClass("open-aside");
+			});
+		}
+
+	}
+
+
 	$(window).on("load",function(){
 	    window_resize();
+	    sidebar_toggle();
 	});
 
 	$(window).resize(function() {
         window_resize();
+        sidebar_toggle();
     });
 });

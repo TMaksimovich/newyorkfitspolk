@@ -227,7 +227,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Александра Мирошниченко</a>
+                <a href="single-user-edit.html"><span>Александра Мирошниченко</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -243,7 +243,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Ирина Попова</a>
+                <a href="single-user-edit.html"><span>Ирина Попова</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -259,7 +259,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Светлана Иванова <span class="label label-new">НОВЫЙ</span></a>
+                <a href="single-user-edit.html"><span>Светлана Иванова</span> <span class="label label-new">НОВЫЙ</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -275,7 +275,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова</a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -291,7 +291,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Александра Новодворская</a>
+                <a href="single-user-edit.html"><span>Александра Новодворская</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -307,7 +307,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова</a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -323,7 +323,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова</a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -339,7 +339,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова <span class="label label-on">ПРОДЛЕН</span></a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span> <span class="label label-on">ПРОДЛЕН</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -355,7 +355,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова</a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -371,7 +371,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова</a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -387,7 +387,7 @@
               </div>
 
               <div class="table-td table-name">
-                <a href="single-user-edit.html">Маргарита Романова <span class="label label-off">ЗАМОРОЖЕН</span></a>
+                <a href="single-user-edit.html"><span>Маргарита Романова</span> <span class="label label-off">ЗАМОРОЖЕН</span></a>
               </div>
 
               <div class="table-td table-button">
@@ -398,7 +398,83 @@
           </div>
         </div>
 
-        <a href="single-group.html" class="btn-circle btn-large btn-xs-small btn-fixed waves waves-effect waves-light"><i class="material-icons">add</i></a>
+        <a href="#" class="btn-circle btn-large btn-xs-small btn-fixed waves waves-effect waves-light" data-toggle="modal" data-target="#modalUser"><i class="material-icons">add</i></a>
+
+        <!-- Модальное окно -->
+          <form class="modal animation-scale-up" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="modalUserLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <button type="button" class="material-icons close" data-dismiss="modal" aria-hidden="true">close</button>
+                  <h3 class="modal-title" id="modalUserLabel">Добавить участника</h3>
+                </div>
+
+                <div class="modal-body">
+                  <div class="row row-user">
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                      <div class="user-img circle"><img src="img/modal.jpg" alt=""></div>
+                    </div>
+                    <div class="col-xs-7 col-sm-8 col-md-9">
+                      <p class="name-user">Александра Мирошниченко</p>
+                      <span class="name-programm">Вместе навсегда</span>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                      <div class="rkmd-checkbox checkbox-ripple input-ripple">
+                        <label class="input-checkbox input-checkbox-radio checkbox-aquamarine">
+                          <input type="checkbox">
+                          <span class="checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row row-user">
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                      <div class="user-img circle"><img src="img/modal.jpg" alt=""></div>
+                    </div>
+                    <div class="col-xs-7 col-sm-8 col-md-9">
+                      <p class="name-user">Ирина Попова</p>
+                      <span class="name-programm">Самостоятельный</span>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                      <div class="rkmd-checkbox checkbox-ripple input-ripple">
+                        <label class="input-checkbox input-checkbox-radio checkbox-aquamarine">
+                          <input type="checkbox">
+                          <span class="checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row row-user">
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                      <div class="user-img circle"><img src="img/modal.jpg" alt=""></div>
+                    </div>
+                    <div class="col-xs-7 col-sm-8 col-md-9">
+                      <p class="name-user">Маргарита Романова</p>
+                      <span class="name-programm">Пси + Фит</span>
+                    </div>
+                    <div class="col-xs-3 col-sm-2 col-md-2">
+                      <div class="rkmd-checkbox checkbox-ripple input-ripple">
+                        <label class="input-checkbox input-checkbox-radio checkbox-aquamarine">
+                          <input type="checkbox">
+                          <span class="checkbox"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="modal-footer">
+                  <input type="submit" class="btn-flat waves-effect waves-grey" value="ПОДТВЕРДИТЬ">
+                </div>
+
+              </div>
+            </div>
+          </form>
+
       </div>
     </div>
   </div>
@@ -410,8 +486,11 @@
 
     <header class="aside-header">
       <!-- Если в группе участников нет, то ее можно удалить. У ссылки убрать класс  disabled-->
-      <a href="#" class="btn-flat disabled waves-effect waves-grey">Удалить</a>
-      <a href="single-group-edit.html" class="btn-flat waves-effect waves-grey">Изменить</a>
+      <div class="page-aside-switch-inner"></div>
+      <div class="button">
+        <a href="#" class="btn-flat disabled waves-effect waves-grey">Удалить</a>
+        <a href="single-group-edit.html" class="btn-flat waves-effect waves-grey">Изменить</a>
+      </div>
     </header>
 
     <div class="aside-content">
