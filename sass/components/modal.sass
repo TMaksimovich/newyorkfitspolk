@@ -14,6 +14,9 @@
 		&:active,
 		&:focus
 			color: #fff
+.modal-open
+	.btn-modal
+		display: none
 
 //Модальное окно
 #modalUser
@@ -66,6 +69,27 @@
 @media (min-width: 320px)
 	#modalUser
 		transform-origin: 100% 100%
+
+@media (min-width: 400px) and (max-width: 539px)
+	.user-img-column,
+	.user-checkbox-column
+		width: 16%
+	.user-name-column
+		width: 67%
+
+@media (min-width: 540px) and (max-width: 619px)
+	.user-img-column,
+	.user-checkbox-column
+		width: 14%
+	.user-name-column
+		width: 72%
+
+@media (min-width: 620px) and (max-width: 767px)
+	.user-img-column,
+	.user-checkbox-column
+		width: 10%
+	.user-name-column
+		width: 80%
 
 @media (min-width: 768px)
 	.modal-dialog

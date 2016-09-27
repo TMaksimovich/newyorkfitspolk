@@ -35,6 +35,11 @@ $(function() {
 		format: 'dd.mm.yyyy'
 	});
 
+	$(".dropdown-list li>a").click(function() {
+		var textList = $(this).text();
+		$(".dropdown-list-toggle").html(textList + '<b class="caret"></b>');
+	});
+
 	//всплывающие подсказки
 	$(function() {
 

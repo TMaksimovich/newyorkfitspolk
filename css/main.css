@@ -50,6 +50,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 h1,
@@ -861,6 +862,7 @@ p {
 
 .input-date-control .caret {
   position: absolute;
+  width: auto !important;
   right: 0;
   top: 25%;
   border-top: 5px dashed rgba(0, 0, 0, 0.26);
@@ -869,9 +871,10 @@ p {
 }
 
 .datepicker.dropdown-menu {
-  min-width: 275px;
+  width: 275px;
+  height: 320px;
   padding: 10px 30px;
-  margin: -20px 0 0 -117px;
+  margin: -20px 0 0 -119px;
   background-color: #fff;
   border: none;
   border-radius: 2px;
@@ -1032,6 +1035,14 @@ p {
   background-color: #5fc7ae;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .datepicker.dropdown-menu {
+    width: 240px;
+    padding: 10px 10px;
+    margin: -20px 0 0 -119px;
+  }
+}
+
 .close-icon {
   font-size: 2.4rem;
   display: inline-block;
@@ -1051,6 +1062,10 @@ p {
 .bg-black .close-icon:active,
 .bg-black .close-icon:focus {
   color: #fff;
+}
+
+.modal-open .btn-modal {
+  display: none;
 }
 
 #modalUser {
@@ -1134,6 +1149,36 @@ p {
     -webkit-transform-origin: 100% 100%;
         -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 539px) {
+  .user-img-column,
+  .user-checkbox-column {
+    width: 16%;
+  }
+  .user-name-column {
+    width: 67%;
+  }
+}
+
+@media (min-width: 540px) and (max-width: 619px) {
+  .user-img-column,
+  .user-checkbox-column {
+    width: 14%;
+  }
+  .user-name-column {
+    width: 72%;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 767px) {
+  .user-img-column,
+  .user-checkbox-column {
+    width: 10%;
+  }
+  .user-name-column {
+    width: 80%;
   }
 }
 

@@ -22,15 +22,17 @@
 		outline: none
 	.caret
 		position: absolute
+		width: auto !important
 		right: 0
 		top: 25%
 		border-top: 5px dashed rgba(0, 0, 0, 0.26)
 		border-right: 5px solid transparent
 		border-left: 5px solid transparent
 .datepicker.dropdown-menu
-	min-width: 275px
+	width: 275px
+	height: 320px
 	padding: 10px 30px
-	margin: -20px 0 0 -117px
+	margin: -20px 0 0 -119px
 	background-color: #fff
 	border: none
 	border-radius: 2px
@@ -138,3 +140,9 @@
 		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.18), 0 1px 2px 0 rgba(0, 0, 0, 0.13)
 		color: #ffffff
 		background-color: $main_bg
+
+@media (min-width:768px) and (max-width:1199px)
+	.datepicker.dropdown-menu
+		width: 240px
+		padding: 10px 10px
+		margin: -20px 0 0 -119px
