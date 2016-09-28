@@ -1311,7 +1311,7 @@ p {
 .tooltip span {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: -8px;
   left: 0;
   right: 0;
   margin: auto;
@@ -2448,11 +2448,11 @@ body {
   height: 100%;
 }
 
-.page-group, .page-single-group {
+.page-group, .page-single-group, .page-rules {
   overflow-y: hidden;
 }
 
-.page-info-group {
+.page-info-group, .page-info-rules {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2485,7 +2485,7 @@ body {
   .breadcrumbs {
     display: none;
   }
-  .page-info-group {
+  .page-info-group, .page-info-rules {
     background-position: 75% 0;
   }
   .page-title {
@@ -2494,7 +2494,7 @@ body {
   .page-group-content {
     top: 0;
   }
-  .page-single-group .page-info-group {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2515,10 +2515,10 @@ body {
     width: 100%;
     max-width: 100%;
   }
-  .page-group, .page-single-group {
+  .page-group, .page-single-group, .page-rules {
     overflow-y: auto;
   }
-  .page-info-group {
+  .page-info-group, .page-info-rules {
     background-position: 75% top;
     background-size: initial;
     min-height: 295px;
@@ -2624,8 +2624,28 @@ body {
   display: none;
 }
 
-.table-content-user .table-row:hover .table-td {
-  background-color: transparent;
+.table-content .table-row .table-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 14px;
+  padding-right: 39px;
+}
+
+.table-content .table-row .table-report-period {
+  width: 10%;
+  text-align: right;
+  font-size: 14px;
+  padding-right: 13px;
+}
+
+.table-content .table-row .table-type-programm {
+  width: 30%;
+  padding-left: 50px;
+}
+
+.table-content .table-row .table-name-programm {
+  width: 50%;
+  padding-left: 30px;
 }
 
 .table-content-user .table-row .table-user {
@@ -2673,6 +2693,7 @@ body {
 @media (max-width: 767px) {
   .table-wrapper {
     box-shadow: none;
+    margin: 0 -12px;
   }
   .table-wrapper .table-content {
     display: block;
@@ -2707,19 +2728,18 @@ body {
     vertical-align: top;
     padding-right: 10px;
   }
-  .table-wrapper .table-content .table-row .table-td a {
-    line-height: 1.6;
-    padding-top: 10px;
-  }
   .table-wrapper .table-content-user {
     padding: 40px 0;
   }
-  .table-wrapper .table-content-user .table-row .table-image {
+  .table-wrapper .table-content-user .table-row:hover .table-td {
+    background-color: transparent;
+  }
+  .table-wrapper .table-content-user .table-row .table-td.table-image {
     display: inline-block;
     vertical-align: top;
     padding-left: 0;
   }
-  .table-wrapper .table-content-user .table-row .table-image a {
+  .table-wrapper .table-content-user .table-row .table-td.table-image a {
     padding-top: 0;
   }
   .table-wrapper .table-content-user .table-row .table-td.table-name {
@@ -2739,6 +2759,24 @@ body {
   .table-wrapper .table-content-user .table-row .table-button {
     display: inline-block;
     vertical-align: top;
+  }
+  .table-wrapper .table-content-user .table-row .table-td a {
+    line-height: 1.6;
+    padding-top: 10px;
+  }
+  .table-wrapper .table-content-rules {
+    padding-top: 30px;
+  }
+  .table-wrapper .table-content-rules .table-duration,
+  .table-wrapper .table-content-rules .table-report-period,
+  .table-wrapper .table-content-rules .table-type-programm,
+  .table-wrapper .table-content-rules .table-th.table-name-programm {
+    display: none;
+  }
+  .table-wrapper .table-content-rules .table-name-programm {
+    width: 100%;
+    padding-left: 20px;
+    display: inline-block;
   }
 }
 
@@ -2935,4 +2973,9 @@ body {
   .site-menubar-unfold .page-aside-right {
     right: 0;
   }
+}
+
+.page-info-rules {
+  background: url(../img/bg_rules.jpg) 0 0 no-repeat;
+  background-size: cover;
 }
