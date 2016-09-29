@@ -44,13 +44,21 @@ body {
   font-family: "LatoRegular", Arial, sans-serif;
   font-weight: normal;
   color: #585858;
-  background-color: #fff;
+  background-color: #f3f4f5;
   font-size: 14px;
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.block-scroll-y {
+  overflow-y: auto;
+}
+
+.block-scroll-y .mCustomScrollBox {
+  background-color: transparent;
 }
 
 h1,
@@ -153,6 +161,20 @@ p {
 
 .center {
   text-align: center;
+}
+
+.right-position {
+  float: right;
+}
+
+.left-position {
+  float: left;
+}
+
+@media (max-width: 767px) {
+  body {
+    background-color: transparent;
+  }
 }
 
 .dropdown-list .dropdown-list-toggle {
@@ -2978,4 +3000,108 @@ body {
 .page-info-rules {
   background: url(../img/bg_rules.jpg) 0 0 no-repeat;
   background-size: cover;
+}
+
+.page-text-content {
+  background-color: #fff;
+  border-radius: 2px;
+  min-height: 1px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 876px;
+  overflow: hidden;
+}
+
+.page-text-content h1 {
+  font-size: 24px;
+}
+
+.page-text-content h2 {
+  font-size: 20px;
+}
+
+.page-text-content h3 {
+  font-size: 18px;
+}
+
+.page-text-content h4,
+.page-text-content h5,
+.page-text-content h6,
+.page-text-content p,
+.page-text-content b,
+.page-text-content strong,
+.page-text-content a:not(.btn-flat),
+.page-text-content ol,
+.page-text-content ul {
+  font-size: 16px;
+}
+
+.page-text-content p,
+.page-text-content b,
+.page-text-content strong,
+.page-text-content a,
+.page-text-content ol,
+.page-text-content ul {
+  line-height: 24px;
+}
+
+.page-text-content h1,
+.page-text-content h2,
+.page-text-content h3,
+.page-text-content h4,
+.page-text-content h5,
+.page-text-content h6 {
+  font-family: "LatoLight", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  font-weight: 100;
+}
+
+.page-text-content ul,
+.page-text-content ol {
+  padding-left: 15px;
+}
+
+.page-text-content p {
+  margin-bottom: 20px;
+}
+
+.message-block {
+  background-color: #f4f4f4;
+  border-left: 5px solid #4eb79e;
+  padding: 5px 40px;
+  margin: 30px 0;
+}
+
+@media (max-width: 767px) {
+  .single-page-rules .page-info-rules {
+    position: relative;
+    background-size: initial;
+  }
+  .single-page-rules .page-text-content {
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .single-page-rules .page-info-rules {
+    position: fixed;
+    width: 100%;
+  }
+  .page-text-content {
+    top: 210px;
+    width: 85%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+    padding: 20px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-text-content {
+    top: 158px;
+  }
 }

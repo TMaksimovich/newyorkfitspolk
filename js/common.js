@@ -40,6 +40,7 @@ $(function() {
 		$(".dropdown-list-toggle").html(textList + '<b class="caret"></b>');
 	});
 
+
 	//всплывающие подсказки
 	$(function() {
 
@@ -69,6 +70,38 @@ $(function() {
 	    }
 	  });
 
+	});
+
+	$(".block-scroll-y").mCustomScrollbar({
+    	axis:"y",
+    	scrollButtons: {
+    		enable: true,
+    		scrollAmount: "auto",
+    		scrollType: "stepped"
+    	},
+    	callbacks:{
+			onScroll:function(){
+				var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
+				var posTitle = $(".block-scroll-y .page-title").offset().top;
+
+				if(this.mcs.top <= -95){
+					$(".block-scroll-y .breadcrumbs").fadeOut();
+				}
+				if(this.mcs.top <= -50) {
+					$(".block-scroll-y .page-title").fadeOut();
+				}
+				else {
+					$(".block-scroll-y .breadcrumbs, .block-scroll-y .page-title").fadeIn();
+				}
+			},
+			onTotalScroll:function(){
+				$("#mCSB_1_container").css({
+					"top": this.mcs.top + (-158),
+					"overflow": "visible"});
+			},
+      		onTotalScrollOffset: -158,
+      		alwaysTriggerOffsets: false
+		}
 	});
 
 

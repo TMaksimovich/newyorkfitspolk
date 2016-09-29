@@ -30,13 +30,18 @@ body
 	font-family: "LatoRegular", Arial, sans-serif
 	font-weight: normal
 	color: $text_color
-	background-color: #fff
+	background-color: #f3f4f5
 	font-size: 14px
 	position: relative
 	line-height: 1.6
 	-webkit-font-smoothing: antialiased
 	overflow-x: hidden
 	overflow-y: hidden
+
+.block-scroll-y
+	overflow-y: auto
+	.mCustomScrollBox
+		background-color: transparent
 
 h1,
 h2,
@@ -107,3 +112,12 @@ p
 	text-align: right
 .center
 	text-align: center
+
+.right-position
+	float: right
+.left-position
+	float: left
+
+@media (max-width:767px)
+	body
+		background-color: transparent
