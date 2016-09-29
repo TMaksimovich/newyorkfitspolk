@@ -72,37 +72,59 @@ $(function() {
 
 	});
 
-	$(".block-scroll-y").mCustomScrollbar({
-    	axis:"y",
-    	scrollButtons: {
-    		enable: true,
-    		scrollAmount: "auto",
-    		scrollType: "stepped"
-    	},
-    	callbacks:{
-			onScroll:function(){
-				var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
-				var posTitle = $(".block-scroll-y .page-title").offset().top;
 
-				if(this.mcs.top <= -95){
-					$(".block-scroll-y .breadcrumbs").fadeOut();
-				}
-				if(this.mcs.top <= -50) {
-					$(".block-scroll-y .page-title").fadeOut();
-				}
-				else {
-					$(".block-scroll-y .breadcrumbs, .block-scroll-y .page-title").fadeIn();
-				}
-			},
-			onTotalScroll:function(){
-				$("#mCSB_1_container").css({
-					"top": this.mcs.top + (-158),
-					"overflow": "visible"});
-			},
-      		onTotalScrollOffset: -158,
-      		alwaysTriggerOffsets: false
+
+	$(window).scroll(function() {
+		var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
+		var posTitle = $(".block-scroll-y .page-title").offset().top;
+		var bodyScroll = $("body").scrollTop();
+
+		if(bodyScroll >= 110){
+			$(".block-scroll-y .breadcrumbs").fadeOut();
 		}
+		else {
+			$(".block-scroll-y .breadcrumbs").fadeIn();
+		}
+		if(bodyScroll >= 50) {
+			$(".block-scroll-y .page-title").fadeOut();
+		}
+		else {
+			$(".block-scroll-y .page-title").fadeIn();
+		}
+
 	});
+
+	// $(".block-scroll-y").mCustomScrollbar({
+ //    	axis:"y",
+ //    	scrollButtons: {
+ //    		enable: true,
+ //    		scrollAmount: "auto",
+ //    		scrollType: "stepped"
+ //    	},
+ //    	callbacks:{
+	// 		onScroll:function(){
+	// 			var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
+	// 			var posTitle = $(".block-scroll-y .page-title").offset().top;
+
+	// 			if(this.mcs.top <= -95){
+	// 				$(".block-scroll-y .breadcrumbs").fadeOut();
+	// 			}
+	// 			if(this.mcs.top <= -50) {
+	// 				$(".block-scroll-y .page-title").fadeOut();
+	// 			}
+	// 			else {
+	// 				$(".block-scroll-y .breadcrumbs, .block-scroll-y .page-title").fadeIn();
+	// 			}
+	// 		},
+	// 		onTotalScroll:function(){
+	// 			$("#mCSB_1_container").css({
+	// 				"top": this.mcs.top + (-158),
+	// 				"overflow": "visible"});
+	// 		},
+ //      		onTotalScrollOffset: -158,
+ //      		alwaysTriggerOffsets: false
+	// 	}
+	// });
 
 
 	//кастомный скролл
