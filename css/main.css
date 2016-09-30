@@ -3030,11 +3030,10 @@ body {
 .page-text-content h5,
 .page-text-content h6,
 .page-text-content p,
-.page-text-content b,
-.page-text-content strong,
 .page-text-content a:not(.btn-flat),
 .page-text-content ol,
-.page-text-content ul {
+.page-text-content ul,
+.page-text-content dl {
   font-size: 16px;
 }
 
@@ -3043,7 +3042,8 @@ body {
 .page-text-content strong,
 .page-text-content a,
 .page-text-content ol,
-.page-text-content ul {
+.page-text-content ul,
+.page-text-content dl {
   line-height: 24px;
 }
 
@@ -3067,6 +3067,23 @@ body {
 
 .page-text-content p {
   margin-bottom: 20px;
+}
+
+.page-text-content strong,
+.page-text-content b,
+.page-text-content dt {
+  font-size: 18px;
+  font-weight: normal;
+  font-family: "LatoBold", Arial, sans-serif;
+}
+
+.page-text-content dt {
+  margin-bottom: 10px;
+}
+
+.page-text-content dd {
+  margin-bottom: 18px;
+  margin-left: 0;
 }
 
 .message-block {
