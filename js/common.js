@@ -75,22 +75,30 @@ $(function() {
 
 
 	$(window).scroll(function() {
-		var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
-		var posTitle = $(".block-scroll-y .page-title").offset().top;
-		var bodyScroll = $("body").scrollTop();
+		var page_w = $("html").width();
 
-		if(bodyScroll >= 110){
-			$(".block-scroll-y .breadcrumbs").fadeOut();
+		if(page_w > 992) {
+			var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
+			var posTitle = $(".block-scroll-y .page-title").offset().top;
+			var bodyScroll = $("body").scrollTop();
+
+			if(bodyScroll >= 110){
+				$(".block-scroll-y .breadcrumbs").fadeOut();
+			}
+			else {
+				$(".block-scroll-y .breadcrumbs").fadeIn();
+			}
+			if(bodyScroll >= 50) {
+				$(".block-scroll-y .page-title").fadeOut();
+			}
+			else {
+				$(".block-scroll-y .page-title").fadeIn();
+			}
 		}
 		else {
-			$(".block-scroll-y .breadcrumbs").fadeIn();
+			return false;
 		}
-		if(bodyScroll >= 50) {
-			$(".block-scroll-y .page-title").fadeOut();
-		}
-		else {
-			$(".block-scroll-y .page-title").fadeIn();
-		}
+
 
 	});
 
