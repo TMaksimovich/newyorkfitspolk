@@ -2474,7 +2474,8 @@ body {
   overflow-y: hidden;
 }
 
-.page-info-group, .page-info-rules, .page-info-faq {
+.page-info-group, .page-info-rules, .page-info-faq,
+.page-info-sport-food {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2507,7 +2508,8 @@ body {
   .breadcrumbs {
     display: none;
   }
-  .page-info-group, .page-info-rules, .page-info-faq {
+  .page-info-group, .page-info-rules, .page-info-faq,
+  .page-info-sport-food {
     background-position: 75% 0;
   }
   .page-title {
@@ -2516,7 +2518,7 @@ body {
   .page-group-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2540,7 +2542,8 @@ body {
   .page-group, .page-single-group, .page-rules {
     overflow-y: auto;
   }
-  .page-info-group, .page-info-rules, .page-info-faq {
+  .page-info-group, .page-info-rules, .page-info-faq,
+  .page-info-sport-food {
     background-position: 75% top;
     background-size: initial;
     min-height: 295px;
@@ -2997,7 +3000,8 @@ body {
   }
 }
 
-.page-info-rules, .page-info-faq {
+.page-info-rules, .page-info-faq,
+.page-info-sport-food {
   background: url(../img/bg_rules.jpg) 0 0 no-repeat;
   background-size: cover;
 }
@@ -3095,18 +3099,25 @@ body {
 }
 
 @media (max-width: 767px) {
-  .single-page-rules .page-info-rules, .page-faq .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq {
+  .single-page-rules .page-info-rules, .page-faq .page-info-rules,
+  .page-sport-food .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
+  .page-sport-food .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
+  .page-sport-food .page-info-sport-food {
     position: relative;
     background-size: initial;
   }
-  .single-page-rules .page-text-content, .page-faq .page-text-content {
+  .single-page-rules .page-text-content, .page-faq .page-text-content,
+  .page-sport-food .page-text-content {
     top: 0;
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .single-page-rules .page-info-rules, .page-faq .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq {
+  .single-page-rules .page-info-rules, .page-faq .page-info-rules,
+  .page-sport-food .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
+  .page-sport-food .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
+  .page-sport-food .page-info-sport-food {
     position: fixed;
     width: 100%;
   }
@@ -3130,6 +3141,7 @@ body {
 
 .accordion-wrapper .accordion-collapse {
   display: none;
+  overflow: hidden;
 }
 
 .accordion-wrapper .accordion-collapse * {
@@ -3202,4 +3214,33 @@ body {
   cursor: pointer;
   margin: 0;
   padding: 13px 0;
+}
+
+.accordion-wrapper .accordion-column {
+  float: left;
+  width: 100%;
+}
+
+.accordion-wrapper .accordion-column .accordion-column-title {
+  color: #949494;
+  font-size: 13px;
+  line-height: 14px;
+  font-family: "LatoRegular", Arial, sans-serif;
+  padding-bottom: 0;
+}
+
+.accordion-wrapper .accordion-column .accordion-column-body,
+.accordion-wrapper .accordion-column .accordion-column-body p:last-child {
+  padding-bottom: 0;
+}
+
+@media (min-width: 992px) {
+  .accordion-wrapper .accordion-column-4 {
+    width: 33.33%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .accordion-wrapper .accordion-column-4:first-of-type {
+    padding-left: 0;
+  }
 }
