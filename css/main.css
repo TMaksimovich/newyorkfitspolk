@@ -2474,7 +2474,7 @@ body {
   overflow-y: hidden;
 }
 
-.page-info-group, .page-info-rules {
+.page-info-group, .page-info-rules, .page-info-faq {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2507,7 +2507,7 @@ body {
   .breadcrumbs {
     display: none;
   }
-  .page-info-group, .page-info-rules {
+  .page-info-group, .page-info-rules, .page-info-faq {
     background-position: 75% 0;
   }
   .page-title {
@@ -2516,7 +2516,7 @@ body {
   .page-group-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2540,7 +2540,7 @@ body {
   .page-group, .page-single-group, .page-rules {
     overflow-y: auto;
   }
-  .page-info-group, .page-info-rules {
+  .page-info-group, .page-info-rules, .page-info-faq {
     background-position: 75% top;
     background-size: initial;
     min-height: 295px;
@@ -2997,7 +2997,7 @@ body {
   }
 }
 
-.page-info-rules {
+.page-info-rules, .page-info-faq {
   background: url(../img/bg_rules.jpg) 0 0 no-repeat;
   background-size: cover;
 }
@@ -3012,6 +3012,7 @@ body {
   margin: auto;
   max-width: 876px;
   overflow: hidden;
+  margin-bottom: 67px;
 }
 
 .page-text-content h1 {
@@ -3094,18 +3095,18 @@ body {
 }
 
 @media (max-width: 767px) {
-  .single-page-rules .page-info-rules {
+  .single-page-rules .page-info-rules, .page-faq .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq {
     position: relative;
     background-size: initial;
   }
-  .single-page-rules .page-text-content {
+  .single-page-rules .page-text-content, .page-faq .page-text-content {
     top: 0;
     width: 100%;
   }
 }
 
 @media (min-width: 768px) {
-  .single-page-rules .page-info-rules {
+  .single-page-rules .page-info-rules, .page-faq .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq {
     position: fixed;
     width: 100%;
   }
@@ -3121,4 +3122,84 @@ body {
   .page-text-content {
     top: 158px;
   }
+}
+
+.accordion-wrapper {
+  margin-bottom: 56px;
+}
+
+.accordion-wrapper .accordion-collapse {
+  display: none;
+}
+
+.accordion-wrapper .accordion-collapse * {
+  padding: 6px 0 18px;
+  margin: 0;
+}
+
+.accordion-wrapper .accordion-collapse ul,
+.accordion-wrapper .accordion-collapse ol {
+  padding-left: 15px;
+}
+
+.accordion-wrapper .accordion-collapse ul li,
+.accordion-wrapper .accordion-collapse ol li {
+  padding-bottom: 0;
+}
+
+.accordion-wrapper .accordion-collapse a {
+  color: #5fc7ae;
+}
+
+.accordion-wrapper .accordion {
+  border-bottom: 1px solid #cccccc;
+}
+
+.accordion-wrapper .accordion.expanded .accordion-header:before {
+  opacity: 0;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.accordion-wrapper .accordion.expanded .accordion-header:after {
+  opacity: 1;
+}
+
+.accordion-wrapper .accordion .accordion-header {
+  position: relative;
+  padding-right: 30px;
+}
+
+.accordion-wrapper .accordion .accordion-header:before,
+.accordion-wrapper .accordion .accordion-header:after {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  opacity: .4;
+  font-family: 'Material Icons';
+  -webkit-transition: all 0.3s linear 0s;
+          transition: all 0.3s linear 0s;
+}
+
+.accordion-wrapper .accordion .accordion-header:before {
+  content: '\E145';
+}
+
+.accordion-wrapper .accordion .accordion-header:after {
+  content: '\E15B';
+  opacity: 0;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.accordion-wrapper .accordion .accordion-header * {
+  font-family: "LatoLight", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 13px 0;
 }
