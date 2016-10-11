@@ -106,6 +106,46 @@
 			a
 				padding-left: 30px
 
+//Таблица на странице Участники
+.table-users.table-content
+	@extend .table-content-user
+	.table-row
+		.table-td
+			font-size: 14px
+			text-align: right
+			width: 15%
+		.table-user
+			width: 35%
+		.table-group,
+		.table-start,
+		.table-finish
+			width: 15%
+			text-align: right
+		.table-image
+			width: 8%
+			vertical-align: top
+			padding-top: 10px
+		.table-name
+			width: 35%
+			font-size: 16px
+			text-align: left
+			.programm
+				display: inline-block
+				vertical-align: middle
+				width: 100%
+				color: $sub_text_color
+				padding-top: 10px
+			a
+				line-height: 1
+				white-space: normal
+				text-overflow: none
+				vertical-align: middle
+				padding-top: 10px
+		.table-finish
+			padding-right: 30px
+	.period-xs,
+	.group-md
+		display: none
 
 @media (max-width:767px)
 	.table-wrapper
@@ -147,6 +187,7 @@
 					display: inline-block
 					vertical-align: top
 					padding-left: 0
+					padding-top: 0
 					a
 						padding-top: 0
 				.table-td.table-name
@@ -177,12 +218,75 @@
 				width: 100%
 				padding-left: 20px
 				display: inline-block
+	.table-users.table-content
+		padding: 0
+		.table-row
+			.table-td
+				a
+					padding-top: 0 !important
+			.table-image
+				width: 15%
+			.table-td.table-name
+				width: 85%
+				margin-bottom: 15px
+				a
+					height: 110px
+				.programm
+					font-size: 14px
+					padding-top: 0
+				.group-md
+					display: block
+					font-size: 12px
+					span
+						display: inline-block !important
+			.table-group
+				display: none
+		.period-xs
+			display: block
+			font-size: 12px
 
+@media (min-width:768px) and (max-width:991px)
+	.table-users
+		.table-row
+			.table-group
+				display: none
+			.table-td.table-name
+				a
+					height: 95px
+					line-height: 1
+					padding-top: 15px
+			.table-image
+				vertical-align: top
+				padding-top: 15px
+			.group-md
+				padding-top: 10px
+				font-size: 14px
 
 
 @media (max-width:991px)
 	.table-wrapper
 		height: auto
+	.table-users.table-content
+		.group-md
+			color: $sub_text_color
+			display: block
+			span
+				color: $text_color
+				display: inline-block
+				vertical-align: middle
+		.table-row
+			.table-name
+				.programm
+					display: block
+
+@media (min-width:992px) and (max-width:1200px)
+	.table-users.table-content
+		.table-row
+			.table-image
+				width: 5%
+			.table-name
+				width: 46%
+
 
 @media screen and (min-width: 1024px) and (max-height:800px)
 	.table-wrapper
