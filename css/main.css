@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "LatoBold";
   font-style: normal;
@@ -1135,6 +1136,26 @@ p {
   padding: 0;
 }
 
+.modal-content .modal-footer input[type="submit"],
+.modal-content .modal-footer input[type="reset"] {
+  text-transform: uppercase;
+}
+
+.modal-content .modal-footer .close {
+  float: none;
+  opacity: 1;
+  padding: 0.85em 1.1em;
+  font-size: 1em;
+  line-height: 1em;
+  text-shadow: none;
+  vertical-align: middle;
+  letter-spacing: 0;
+}
+
+.modal-content .modal-footer .close:hover {
+  background-color: transparent;
+}
+
 .modal-content .user-img {
   width: 42px;
   height: 42px;
@@ -1166,11 +1187,63 @@ p {
   font-size: 14px;
 }
 
+.modal-programm .modal-body {
+  padding: 10px 30px 0;
+}
+
+.modal-programm .group input:focus ~ label {
+  left: -11px;
+  color: #949494;
+}
+
+.modal-programm .group {
+  margin-bottom: 30px;
+}
+
+.modal-programm .group-desc {
+  margin-right: 18px;
+}
+
+.modal-programm .dropdown {
+  margin-bottom: 23px;
+}
+
+.modal-programm .dropdown .dropdown-list-toggle {
+  border-bottom: 1px solid #949494;
+  padding: 10px 0 5px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-programm .dropdown .dropdown-list-toggle .caret {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 0;
+}
+
+.modal-programm .group-day label {
+  left: 14px;
+}
+
+.modal-programm .group-day input:focus ~ label {
+  left: 0;
+}
+
+.modal-programm .modal-footer {
+  padding: 16px 19px 20px;
+}
+
 @media (min-width: 320px) {
   #modalUser {
     -webkit-transform-origin: 100% 100%;
         -ms-transform-origin: 100% 100%;
             transform-origin: 100% 100%;
+  }
+  .modal-programm .group-desc {
+    margin-right: 0;
   }
 }
 
@@ -1207,6 +1280,9 @@ p {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 426px;
+  }
+  .modal-programm {
+    width: 546px;
   }
   .modal-content {
     box-shadow: 0 14px 12px rgba(0, 0, 0, 0.17), 0 20px 40px 0 rgba(0, 0, 0, 0.3);
@@ -2470,12 +2546,12 @@ body {
   height: 100%;
 }
 
-.page-group, .page-single-group, .page-rules {
+.page-group, .page-single-group, .page-rules, .page-programms {
   overflow-y: hidden;
 }
 
 .page-info-group, .page-info-rules, .page-info-faq,
-.page-info-sport-food, .page-user .page-info {
+.page-info-sport-food, .page-user .page-info, .page-info-programms {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2483,7 +2559,7 @@ body {
   padding: 10px;
 }
 
-.page-group-content, .page-user-content {
+.page-group-content, .page-user-content, .page-programms-content {
   position: relative;
   top: -83px;
   left: 0;
@@ -2497,7 +2573,7 @@ body {
   margin-right: 348px;
 }
 
-.page-single-group .page-group-content, .page-single-group .page-user-content {
+.page-single-group .page-group-content, .page-single-group .page-user-content, .page-single-group .page-programms-content {
   max-width: 615px;
 }
 
@@ -2509,16 +2585,16 @@ body {
     display: none;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .page-user .page-info {
+  .page-info-sport-food, .page-user .page-info, .page-info-programms {
     background-position: 75% 0;
   }
   .page-title {
     padding-top: 95px;
   }
-  .page-group-content, .page-user-content {
+  .page-group-content, .page-user-content, .page-programms-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-user .page-info, .page-user .page-single-group .page-info {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-user .page-info, .page-user .page-single-group .page-info, .page-single-group .page-info-programms {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2529,21 +2605,21 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .page-group-content, .page-user-content {
+  .page-group-content, .page-user-content, .page-programms-content {
     top: -139px;
   }
 }
 
 @media (max-width: 991px) {
-  .page-group-content, .page-user-content {
+  .page-group-content, .page-user-content, .page-programms-content {
     width: 100%;
     max-width: 100%;
   }
-  .page-group, .page-single-group, .page-rules {
+  .page-group, .page-single-group, .page-rules, .page-programms {
     overflow-y: auto;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .page-user .page-info {
+  .page-info-sport-food, .page-user .page-info, .page-info-programms {
     background-position: 75% top;
     background-size: initial;
     min-height: 295px;
@@ -2769,6 +2845,63 @@ body {
   display: none;
 }
 
+.table-content-programms .table-row:hover .table-td {
+  background-color: transparent;
+}
+
+.table-content-programms .table-row .table-name-programm {
+  width: 35%;
+}
+
+.table-content-programms .table-row .table-name-programm .table-name-desc {
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: #949494;
+}
+
+.table-content-programms .table-row .table-td {
+  padding-top: 21px;
+}
+
+.table-content-programms .table-row .table-type-programm {
+  width: 25%;
+}
+
+.table-content-programms .table-row .table-duration {
+  width: 10%;
+  padding-right: 0;
+}
+
+.table-content-programms .table-row .table-report-period {
+  width: 10%;
+}
+
+.table-content-programms .table-row .table-remove {
+  width: 10%;
+  text-align: center;
+}
+
+.table-content-programms .table-row .table-remove button {
+  color: #bdbdbd;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  vertical-align: middle;
+  -webkit-transition: .3s ease-in-out;
+          transition: .3s ease-in-out;
+}
+
+.table-content-programms .table-row .table-remove button i {
+  font-size: 18px;
+  padding-top: 5px;
+}
+
+.table-content-programms .table-row .table-remove button:hover {
+  color: #454545;
+}
+
 @media (max-width: 767px) {
   .table-wrapper {
     box-shadow: none;
@@ -2892,6 +3025,93 @@ body {
     display: block;
     font-size: 12px;
   }
+  .table-content-programms.table-content {
+    padding: 40px 0;
+  }
+  .table-content-programms.table-content .table-row-th.table-row {
+    display: none;
+  }
+  .table-content-programms.table-content .table-row {
+    display: block;
+    position: relative;
+  }
+  .table-content-programms.table-content .table-row:hover,
+  .table-content-programms.table-content .table-row:active {
+    background-color: #eeeeee;
+  }
+  .table-content-programms.table-content .table-row:hover .table-remove,
+  .table-content-programms.table-content .table-row:active .table-remove {
+    display: block;
+    right: 0;
+  }
+  .table-content-programms.table-content .table-row .table-td {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .table-content-programms.table-content .table-row .table-name-programm {
+    width: 100%;
+    padding-left: 23px;
+    padding-top: 13px;
+  }
+  .table-content-programms.table-content .table-row .table-name-programm .table-name-desc {
+    display: none;
+  }
+  .table-content-programms.table-content .table-row .table-type-programm {
+    width: 100%;
+    font-size: 14px;
+    color: #949494;
+    padding-left: 23px;
+    padding-top: 0;
+  }
+  .table-content-programms.table-content .table-row .table-duration,
+  .table-content-programms.table-content .table-row .table-report-period {
+    width: 40%;
+    max-width: 140px;
+    position: relative;
+    padding-top: 0;
+    font-size: 12px;
+  }
+  .table-content-programms.table-content .table-row .table-duration:before,
+  .table-content-programms.table-content .table-row .table-report-period:before {
+    position: absolute;
+    top: -2px;
+    left: 23px;
+    color: #949494;
+    font-size: 14px;
+  }
+  .table-content-programms.table-content .table-row .table-duration:before {
+    content: 'Длит...(дни)';
+  }
+  .table-content-programms.table-content .table-row .table-report-period {
+    padding-right: 0;
+    padding-bottom: 13px;
+  }
+  .table-content-programms.table-content .table-row .table-report-period:before {
+    content: 'Отчет...(дни)';
+  }
+  .table-content-programms.table-content .table-row .table-remove {
+    padding-top: 0;
+    height: 91px;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    line-height: 91px;
+    width: 16%;
+    -webkit-transition: right 0.3s ease-in-out;
+            transition: right 0.3s ease-in-out;
+  }
+  .table-content-programms.table-content .table-row .table-remove button {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background-color: #5fc7ae;
+    color: #fff;
+  }
+  .table-content-programms.table-content .table-row .table-remove button i {
+    padding-top: 0;
+    font-size: 24px;
+    line-height: 91px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2910,6 +3130,12 @@ body {
   .table-users .table-row .group-md {
     padding-top: 10px;
     font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .table-content-programms .table-row .table-name-programm {
+    width: 30%;
   }
 }
 
@@ -3382,4 +3608,9 @@ body {
   .page-user {
     overflow-y: auto;
   }
+}
+
+.page-info-programms {
+  background: url(../img/bg_rules.jpg) 0 0 no-repeat;
+  background-size: cover;
 }

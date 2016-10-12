@@ -147,6 +147,47 @@
 	.group-md
 		display: none
 
+
+//Таблица на странице Программы
+.table-content-programms
+	.table-row
+		&:hover .table-td
+			background-color: transparent
+		.table-name-programm
+			width: 35%
+			.table-name-desc
+				display: block
+				font-size: 14px
+				line-height: 18px
+				color: $sub_text_color
+		.table-td
+			padding-top: 21px
+		.table-type-programm
+			width: 25%
+		.table-duration
+			width: 10%
+			padding-right: 0
+		.table-report-period
+			width: 10%
+		.table-remove
+			width: 10%
+			text-align: center
+			button
+				color: #bdbdbd
+				background-color: transparent
+				border: none
+				box-shadow: none
+				outline: none
+				vertical-align: middle
+				transition: .3s ease-in-out
+				i
+					font-size: 18px
+					padding-top: 5px
+				&:hover
+					color: #454545
+
+
+
 @media (max-width:767px)
 	.table-wrapper
 		box-shadow: none
@@ -218,6 +259,7 @@
 				width: 100%
 				padding-left: 20px
 				display: inline-block
+	// Участники
 	.table-users.table-content
 		padding: 0
 		.table-row
@@ -244,6 +286,75 @@
 		.period-xs
 			display: block
 			font-size: 12px
+	// Программы
+	.table-content-programms.table-content
+		padding: 40px 0
+		.table-row-th.table-row
+			display: none
+		.table-row
+			display: block
+			position: relative
+			&:hover,
+			&:active
+				background-color: #eeeeee
+				.table-remove
+					display: block
+					right: 0
+			.table-td
+				display: inline-block
+				vertical-align: top
+			.table-name-programm
+				width: 100%
+				padding-left: 23px
+				padding-top: 13px
+				.table-name-desc
+					display: none
+			.table-type-programm
+				width: 100%
+				font-size: 14px
+				color: $sub_text_color
+				padding-left: 23px
+				padding-top: 0
+			.table-duration,
+			.table-report-period
+				width: 40%
+				max-width: 140px
+				position: relative
+				padding-top: 0
+				font-size: 12px
+				&:before
+					position: absolute
+					top: -2px
+					left: 23px
+					color: $sub_text_color
+					font-size: 14px
+			.table-duration
+				&:before
+					content: 'Длит...(дни)'
+			.table-report-period
+				padding-right: 0
+				padding-bottom: 13px
+				&:before
+					content: 'Отчет...(дни)'
+			.table-remove
+				padding-top: 0
+				height: 91px
+				position: absolute
+				top: 0
+				right: -100%
+				line-height: 91px
+				width: 16%
+				transition: right 0.3s ease-in-out
+				button
+					height: 100%
+					width: 100%
+					text-align: center
+					background-color: $main_bg
+					color: #fff
+					i
+						padding-top: 0
+						font-size: 24px
+						line-height: 91px
 
 @media (min-width:768px) and (max-width:991px)
 	.table-users
@@ -261,6 +372,13 @@
 			.group-md
 				padding-top: 10px
 				font-size: 14px
+
+@media (min-width:768px) and (max-width:1199px)
+	// Программы
+	.table-content-programms
+		.table-row
+			.table-name-programm
+				width: 30%
 
 
 @media (max-width:991px)
