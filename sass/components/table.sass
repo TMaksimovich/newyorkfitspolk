@@ -186,7 +186,22 @@
 				&:hover
 					color: #454545
 
-
+//Таблица на странице Питание
+.table-content-food
+	.table-row
+		.table-name-programm.table-td
+			a
+				min-height: 88px
+				white-space: normal
+				overflow: visible
+				line-height: 1.4
+				padding: 10px 0
+			.desc
+				display: block
+				width: 40%
+				font-size: 14px
+				color: $sub_text_color
+				padding-top: 5px
 
 @media (max-width:767px)
 	.table-wrapper
@@ -259,6 +274,20 @@
 				width: 100%
 				padding-left: 20px
 				display: inline-block
+		.table-content-food
+			padding-top: 30px
+			.table-row
+				.table-name-programm
+					width: 100%
+					padding-left: 20px
+					padding-right: 20px
+					.desc
+						width: 100%
+
+
+
+
+
 	// Участники
 	.table-users.table-content
 		padding: 0

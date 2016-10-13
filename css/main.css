@@ -2546,12 +2546,12 @@ body {
   height: 100%;
 }
 
-.page-group, .page-single-group, .page-rules, .page-programms {
+.page-group, .page-single-group, .page-rules, .page-programms, .page-food {
   overflow-y: hidden;
 }
 
 .page-info-group, .page-info-rules, .page-info-faq,
-.page-info-sport-food, .page-user .page-info, .page-info-programms {
+.page-info-sport-food, .page-user .page-info, .page-info-programms, .page-info-food {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2585,7 +2585,7 @@ body {
     display: none;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .page-user .page-info, .page-info-programms {
+  .page-info-sport-food, .page-user .page-info, .page-info-programms, .page-info-food {
     background-position: 75% 0;
   }
   .page-title {
@@ -2594,7 +2594,7 @@ body {
   .page-group-content, .page-user-content, .page-programms-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-user .page-info, .page-user .page-single-group .page-info, .page-single-group .page-info-programms {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-user .page-info, .page-user .page-single-group .page-info, .page-single-group .page-info-programms, .page-single-group .page-info-food {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2615,11 +2615,11 @@ body {
     width: 100%;
     max-width: 100%;
   }
-  .page-group, .page-single-group, .page-rules, .page-programms {
+  .page-group, .page-single-group, .page-rules, .page-programms, .page-food {
     overflow-y: auto;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .page-user .page-info, .page-info-programms {
+  .page-info-sport-food, .page-user .page-info, .page-info-programms, .page-info-food {
     background-position: 75% top;
     background-size: initial;
     min-height: 295px;
@@ -2902,6 +2902,22 @@ body {
   color: #454545;
 }
 
+.table-content-food .table-row .table-name-programm.table-td a {
+  min-height: 88px;
+  white-space: normal;
+  overflow: visible;
+  line-height: 1.4;
+  padding: 10px 0;
+}
+
+.table-content-food .table-row .table-name-programm.table-td .desc {
+  display: block;
+  width: 40%;
+  font-size: 14px;
+  color: #949494;
+  padding-top: 5px;
+}
+
 @media (max-width: 767px) {
   .table-wrapper {
     box-shadow: none;
@@ -2990,6 +3006,17 @@ body {
     width: 100%;
     padding-left: 20px;
     display: inline-block;
+  }
+  .table-wrapper .table-content-food {
+    padding-top: 30px;
+  }
+  .table-wrapper .table-content-food .table-row .table-name-programm {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .table-wrapper .table-content-food .table-row .table-name-programm .desc {
+    width: 100%;
   }
   .table-users.table-content {
     padding: 0;
@@ -3611,6 +3638,11 @@ body {
 }
 
 .page-info-programms {
+  background: url(../img/bg_rules.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.page-info-food {
   background: url(../img/bg_rules.jpg) 0 0 no-repeat;
   background-size: cover;
 }
