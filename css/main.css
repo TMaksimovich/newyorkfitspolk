@@ -782,7 +782,7 @@ p {
   text-transform: uppercase;
   font-family: "LatoBold", sans-serif;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 14px !important;
   letter-spacing: 1px;
   position: relative;
   overflow: hidden;
@@ -3841,11 +3841,6 @@ body {
 .single-page-food .page-text-content, .single-page-food .page-text-comments {
   max-width: 1056px;
   padding: 20px 15px;
-}
-
-.single-page-food .page-text-content .btn-default, .single-page-food .page-text-comments .btn-default {
-  float: right;
-  font-size: 14px;
 }
 
 .single-page-food .page-text-comments {
