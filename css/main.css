@@ -2936,15 +2936,15 @@ body {
   padding-top: 5px;
 }
 
-.table-content-food {
+.single-page-food .table-content-food {
   display: table;
 }
 
-.table-content-food .table-row {
+.single-page-food .table-content-food .table-row {
   display: table-row;
 }
 
-.table-content-food .table-th {
+.single-page-food .table-content-food .table-th {
   display: table-cell;
   font-size: 16px;
   color: #949494;
@@ -2952,12 +2952,12 @@ body {
   text-align: left;
 }
 
-.table-content-food .table-icon {
+.single-page-food .table-content-food .table-icon {
   width: 15%;
   text-align: center;
 }
 
-.table-content-food .table-icon p {
+.single-page-food .table-content-food .table-icon p {
   font-size: 12px;
   font-family: "LatoLight", Arial, sans-serif;
   color: #949494;
@@ -2967,7 +2967,7 @@ body {
   margin: 0;
 }
 
-.table-content-food .table-icon p:after {
+.single-page-food .table-content-food .table-icon p:after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -2979,37 +2979,37 @@ body {
   background: url(../img/sprite.png) no-repeat;
 }
 
-.table-content-food .table-icon.icon-breakfast p:after {
+.single-page-food .table-content-food .table-icon.icon-breakfast p:after {
   background-position: 0 -16px;
 }
 
-.table-content-food .table-icon.icon-snack p:after {
+.single-page-food .table-content-food .table-icon.icon-snack p:after {
   background-position: -40px -16px;
 }
 
-.table-content-food .table-icon.icon-lunch p:after {
+.single-page-food .table-content-food .table-icon.icon-lunch p:after {
   background-position: -74px -18px;
 }
 
-.table-content-food .table-icon.icon-dinner p:after {
+.single-page-food .table-content-food .table-icon.icon-dinner p:after {
   background-position: -114px -16px;
 }
 
-.table-content-food .table-elements {
+.single-page-food .table-content-food .table-elements {
   width: 35%;
 }
 
-.table-content-food .table-elements ul {
+.single-page-food .table-content-food .table-elements ul {
   list-style: none;
 }
 
-.table-content-food .table-elements ul li {
+.single-page-food .table-content-food .table-elements ul li {
   margin-bottom: 5px;
   padding-left: 27px;
   position: relative;
 }
 
-.table-content-food .table-elements ul li:before {
+.single-page-food .table-content-food .table-elements ul li:before {
   content: '';
   width: 7px;
   height: 7px;
@@ -3020,22 +3020,22 @@ body {
   left: 0;
 }
 
-.table-content-food .table-product {
+.single-page-food .table-content-food .table-product {
   width: 50%;
 }
 
-.table-content-food .table-product p {
+.single-page-food .table-content-food .table-product p {
   width: 67%;
   display: inline-block;
   vertical-align: top;
   margin-top: 0;
 }
 
-.table-content-food .table-product .btn-flat {
+.single-page-food .table-content-food .table-product .btn-flat {
   float: right;
 }
 
-.table-content-food .table-td {
+.single-page-food .table-content-food .table-td {
   display: table-cell;
 }
 
@@ -3260,43 +3260,46 @@ body {
     font-size: 24px;
     line-height: 91px;
   }
-  .table-content-food {
+  .single-page-food .table-content-food {
     display: block;
     width: 550px;
   }
-  .table-content-food .table-row {
+  .single-page-food .table-content-food .table-row {
     display: block;
     margin-bottom: 10px;
   }
-  .table-content-food .table-th,
-  .table-content-food .table-td {
+  .single-page-food .table-content-food .table-th,
+  .single-page-food .table-content-food .table-td {
     display: inline-block;
     vertical-align: top;
   }
-  .table-content-food .table-icon {
+  .single-page-food .table-content-food .table-icon {
     width: 80px;
     padding-top: 18px;
   }
-  .table-content-food .table-elements {
+  .single-page-food .table-content-food .table-elements {
     width: 150px;
   }
-  .table-content-food .table-elements ul {
+  .single-page-food .table-content-food .table-elements ul {
     padding-left: 0;
   }
-  .table-content-food .table-product {
+  .single-page-food .table-content-food .table-product {
     width: 300px;
   }
-  .table-content-food .table-product p {
+  .single-page-food .table-content-food .table-product p {
     width: 100%;
     padding-left: 10px;
     margin-bottom: 0;
     padding-top: 18px;
   }
-  .table-content-food .table-product .btn-flat {
+  .single-page-food .table-content-food .table-product .btn-flat {
     float: left;
   }
-  .table-content-food .table-th.table-product {
+  .single-page-food .table-content-food .table-th.table-product {
     padding-left: 10px;
+  }
+  .page-food .table-content-food .table-td {
+    display: block;
   }
 }
 
@@ -3468,7 +3471,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     width: 19%;
-    height: 20px;
+    height: 15px;
     background: url(../img/sprite.png) -27px 0 no-repeat;
   }
 }
