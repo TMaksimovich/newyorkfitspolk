@@ -113,6 +113,36 @@
 	.modal-footer
 		padding: 16px 19px 20px
 
+// План питания
+#modalFood
+	.modal-body
+		padding-top: 0
+		font-size: 16px
+		p
+			margin: 0
+		p+p
+			margin-top: 6px
+		ul
+			padding-left: 0
+			margin-top: 8px
+			margin-bottom: 24px
+			list-style: none
+			li
+				position: relative
+				padding-left: 22px
+				&:before
+					content: ''
+					position: absolute
+					width: 7px
+					height: 7px
+					background-color: $main_bg
+					border-radius: 50%
+					top: 9px
+					left: 0
+	.modal-footer
+		padding-top: 40px
+
+
 
 @media (min-width: 320px)
 	#modalUser
@@ -148,6 +178,9 @@
 		width: 546px
 	.modal-content
 		box-shadow: 0 14px 12px rgba(0,0,0,0.17), 0 20px 40px 0 rgba(0,0,0,0.30)
+	#modalFood
+		.modal-dialog
+			width: 696px
 
 @media (min-width: 1101px)
 	#modalUser

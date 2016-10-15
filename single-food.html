@@ -267,7 +267,7 @@
                 </div>
                 <div class="table-td table-product">
                   <p>Овсяноблин, шпинат, огурец, помидор, чолула или табаско</p>
-                  <a href="#" class="btn-flat waves-effect waves-grey">рецепт</a>
+                  <a href="#" class="btn-modal btn-flat waves-effect waves-grey" data-toggle="modal" data-target="#modalFood">рецепт</a>
                 </div>
               </div>
 
@@ -842,9 +842,6 @@
               </div>
             </div>
           </div>
-
-
-
         </div>
         <!-- end Табы -->
 
@@ -865,6 +862,39 @@
     </div>
   </div>
    <!-- End Основной контент странички -->
+
+   <!-- Модальное окно -->
+  <form class="modal fade" id="modalFood" tabindex="-1" role="dialog" aria-labelledby="modalFoodLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="material-icons close" data-dismiss="modal" aria-hidden="true">close</button>
+          <h3 class="modal-title" id="modalFoodLabel">Как приготовить овсяноблин</h3>
+        </div>
+
+        <div class="modal-body">
+          <p>Понадобится:</p>
+          <ul>
+            <li>Яйцо – 2 шт.</li>
+            <li>Овсяные отруби – 2 столовые ложки</li>
+            <li>Молоко – 30 гр.</li>
+            <li>Соль, черный перец</li>
+          </ul>
+
+          <p>Как приготовить:</p>
+          <p>Смешайте яйца, молоко и овсяные отруби, соль и перец тоже, естественно, добавьте. Масла много на сковородку лить не нужно, чуть – чуть смажьте, и достаточно.</p>
+          <p>Вылейте овсяно-яичную смесь и когда низ схватится, переверните на другую сторону. Один интересный момент: отруби вы можете заменить овсяными хлопьями, но предварительно их замочите минут на десять в теплом молоке или просто водичкой, пусть они загустеют.</p>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-flat waves-effect waves-grey" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+        </div>
+
+      </div>
+    </div>
+  </form>
+  <!-- end Модальное окно -->
 
 
 

@@ -1236,6 +1236,46 @@ p {
   padding: 16px 19px 20px;
 }
 
+#modalFood .modal-body {
+  padding-top: 0;
+  font-size: 16px;
+}
+
+#modalFood .modal-body p {
+  margin: 0;
+}
+
+#modalFood .modal-body p + p {
+  margin-top: 6px;
+}
+
+#modalFood .modal-body ul {
+  padding-left: 0;
+  margin-top: 8px;
+  margin-bottom: 24px;
+  list-style: none;
+}
+
+#modalFood .modal-body ul li {
+  position: relative;
+  padding-left: 22px;
+}
+
+#modalFood .modal-body ul li:before {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #5fc7ae;
+  border-radius: 50%;
+  top: 9px;
+  left: 0;
+}
+
+#modalFood .modal-footer {
+  padding-top: 40px;
+}
+
 @media (min-width: 320px) {
   #modalUser {
     -webkit-transform-origin: 100% 100%;
@@ -1286,6 +1326,9 @@ p {
   }
   .modal-content {
     box-shadow: 0 14px 12px rgba(0, 0, 0, 0.17), 0 20px 40px 0 rgba(0, 0, 0, 0.3);
+  }
+  #modalFood .modal-dialog {
+    width: 696px;
   }
 }
 
@@ -2607,7 +2650,7 @@ body {
     background-position: 75% 0;
   }
   .page-title {
-    padding-top: 95px;
+    padding-top: 170px;
   }
   .page-group-content, .page-user-content, .page-programms-content {
     top: 0;
@@ -2639,7 +2682,7 @@ body {
   .page-info-group, .page-info-rules, .page-info-faq,
   .page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food {
     background-position: 75% top;
-    background-size: initial;
+    background-size: cover;
     min-height: 295px;
   }
 }
@@ -3551,6 +3594,7 @@ body {
 .page-info-sport-food, .single-page-food .page-info-food {
   background: url(../img/bg_rules.jpg) 0 0 no-repeat;
   background-size: cover;
+  margin-bottom: 30px;
 }
 
 .page-text-content, .single-page-food .page-text-comments {
@@ -3672,7 +3716,7 @@ body {
   .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
   .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .single-page-food .page-info-food {
     position: relative;
-    background-size: initial;
+    background-size: cover;
   }
   .single-page-rules .page-text-content, .page-faq .page-text-content,
   .page-sport-food .page-text-content, .single-page-food .page-text-content, .single-page-food .page-text-comments {
@@ -3908,12 +3952,12 @@ body {
   font-size: 13px;
   font-family: "LatoBold", Arial, sans-serif;
   cursor: pointer;
-  color: #949494;
+  color: rgba(88, 88, 88, 0.55);
   position: relative;
 }
 
 .tabs__caption li.active {
-  color: rgba(88, 88, 88, 0.55);
+  color: #949494;
 }
 
 .tabs__caption li.active:after {
@@ -3921,7 +3965,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 1px;
+  height: 2px;
   width: 100%;
   display: block;
   background: #5fc7ae;
