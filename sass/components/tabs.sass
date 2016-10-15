@@ -1,0 +1,73 @@
+//Табы
+.tabs__content
+	display: none
+.tabs__content.active
+	display: block
+	padding-top: 26px
+	padding-bottom: 50px
+.tabs__caption
+	width: 100%
+	border-bottom: 1px solid #cccccc
+	list-style: none
+	padding-left: 0
+	text-align: center
+	li
+		display: inline-block
+		padding: 10px 20px 7px
+		margin: 0 10px
+		text-transform: uppercase
+		font-size: 13px
+		font-family: "LatoBold", Arial, sans-serif
+		cursor: pointer
+		color: $sub_text_color
+		position: relative
+		&.active
+			color: rgba(88,88,88,0.55)
+			&:after
+				content: ''
+				position: absolute
+				bottom: 0
+				left: 0
+				height: 1px
+				width: 100%
+				display: block
+				background: $main_bg
+				animation: border-expand .2s cubic-bezier(.4,0,.4,1) 10ms alternate forwards
+				transition: all 1s cubic-bezier(.4,0,1,1)
+		.short-name
+			display: none
+
+@media(max-width:767px)
+	.tabs
+		.tabs__caption
+			li
+				.short-name
+					display: inline-block
+				.full-name
+					display: none
+
+@media(min-width:768px) and (max-width:991px)
+	.tabs
+		padding-left: 0
+		padding-right: 0
+		.tabs__caption
+			li
+				font-size: 12px
+		.tabs__content.active
+			padding-left: 12px
+			padding-right: 12px
+
+@media(max-width:1199px)
+	.tabs
+		.tabs__caption
+			padding-left: 0
+			li
+				padding: 10px 4px 5px
+				margin: 0 5px
+
+@media(min-width:1200px) and (max-width:1399px)
+	.tabs
+		.tabs__caption
+			padding-left: 0
+			li
+				padding: 10px 15px 5px

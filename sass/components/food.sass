@@ -5,3 +5,47 @@
 	@extend .page-info-group
 	background: url(../img/bg_rules.jpg) 0 0 no-repeat
 	background-size: cover
+
+.single-page-food
+	@extend .single-page-rules
+	.page-info-food
+		@extend .page-info-rules
+		background: url(../img/bg_food.jpg) 0 0 no-repeat
+		background-size: cover
+	.page-text-content
+		max-width: 1056px
+		padding: 20px 15px
+		.btn-default
+			float: right
+			font-size: 14px
+	.page-text-comments
+		@extend .page-text-content
+		top: 115px
+		padding-bottom: 40px
+		h3
+			margin-top: 27px
+
+@media(max-width:767px)
+	.single-page-food
+		.page-info-food
+			background-position: 75% bottom
+		.page-text-content
+			padding-left: 0
+			padding-right: 0
+			margin-bottom: 0
+			border-bottom: 1px solid #cccccc
+		.tabs__content.active
+			overflow-x: scroll
+			padding-bottom: 0
+		.page-text-comments
+			top: 0
+
+@media(min-width:768px) and (max-width:991px)
+	.single-page-food
+		.page-text-content
+			padding: 20px 0
+		.page-text-comments
+			padding-left: 12px
+			padding-right: 12px
+			top: 175px
+
