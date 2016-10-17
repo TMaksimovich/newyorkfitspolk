@@ -44,6 +44,7 @@
 				text-overflow: ellipsis
 		.table-number
 			width: 15%
+			text-align: right
 			a
 				padding-right: 63px
 		.table-student
@@ -273,6 +274,38 @@
 		.table-td
 			display: table-cell
 
+//Таблица на странице Тренировки
+.table-content-training
+	.table-row
+		.table-td
+			font-size: 14px
+			height: 83px
+			padding-top: 12px
+			&.table-name
+				font-size: 16px
+				width: 45%
+				padding-right: 80px
+				.table-name-desc
+					font-size: 14px
+					color: $sub_text_color
+					display: block
+					line-height: 18px
+					padding: 3px 0
+				a
+					height: 100%
+					white-space: normal
+					overflow: visible
+			&.table-cat,
+			&.table-type
+				width: 20%
+				font-size: 16px
+			&.table-number,
+			&.table-name,
+			&.table-cat,
+			&.table-type
+				a
+					line-height: 1
+
 @media (max-width:767px)
 	.table-wrapper
 		box-shadow: none
@@ -482,6 +515,26 @@
 		.table-content-food
 			.table-td
 				display: block
+	// Треировки
+	.table-content-training
+		.table-row
+			&:hover
+				.table-td
+					background-color: transparent
+			.table-cat.table-td
+				padding-left: 21%
+			.table-cat.table-td,
+			.table-type.table-td
+				display: inline-block
+				width: 50%
+				height: auto
+				padding-bottom: 10px
+				a
+					height: auto
+
+
+
+
 
 
 @media (min-width:768px) and (max-width:991px)

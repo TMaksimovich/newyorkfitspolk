@@ -180,13 +180,14 @@ p {
 
 .dropdown-list .dropdown-list-toggle {
   border-bottom: 1px solid #bdbdbd;
-  padding: 10px 0;
+  padding: 10px 30px 10px 0;
   border-radius: 0;
   font-size: 16px;
   font-family: "LatoLight", sans-serif;
   color: #949494;
   text-transform: none;
   z-index: 10;
+  position: relative;
 }
 
 .dropdown-list .dropdown-list-toggle:hover,
@@ -196,7 +197,9 @@ p {
 }
 
 .dropdown-list .dropdown-list-toggle .caret {
-  margin-left: 34px;
+  position: absolute;
+  right: 0;
+  top: 44%;
 }
 
 .dropdown-list.open .btn.dropdown-list-toggle,
@@ -1468,6 +1471,10 @@ p {
   border-radius: 2px;
 }
 
+.ui-kit-page {
+  background-color: #fff;
+}
+
 .ui-kit-page .block-notification {
   border-radius: 2px;
   margin-bottom: 5px;
@@ -2607,12 +2614,12 @@ body {
   height: 100%;
 }
 
-.page-group, .page-single-group, .page-rules, .page-programms, .page-food {
+.page-group, .page-single-group, .page-rules, .page-programms, .page-food, .page-training {
   overflow-y: hidden;
 }
 
 .page-info-group, .page-info-rules, .page-info-faq,
-.page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food {
+.page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food, .page-info-training {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2620,7 +2627,7 @@ body {
   padding: 10px;
 }
 
-.page-group-content, .page-user-content, .page-programms-content {
+.page-group-content, .page-user-content, .page-programms-content, .page-training-content {
   position: relative;
   top: -83px;
   left: 0;
@@ -2634,7 +2641,7 @@ body {
   margin-right: 348px;
 }
 
-.page-single-group .page-group-content, .page-single-group .page-user-content, .page-single-group .page-programms-content {
+.page-single-group .page-group-content, .page-single-group .page-user-content, .page-single-group .page-programms-content, .page-single-group .page-training-content {
   max-width: 615px;
 }
 
@@ -2646,16 +2653,16 @@ body {
     display: none;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food {
+  .page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food, .page-info-training {
     background-position: 75% 0;
   }
   .page-title {
     padding-top: 170px;
   }
-  .page-group-content, .page-user-content, .page-programms-content {
+  .page-group-content, .page-user-content, .page-programms-content, .page-training-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-user .page-info, .page-user .page-single-group .page-info, .page-single-group .page-info-programms, .page-single-group .page-info-food {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-user .page-info, .page-user .page-single-group .page-info, .page-single-group .page-info-programms, .page-single-group .page-info-food, .page-single-group .page-info-training {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2666,21 +2673,21 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .page-group-content, .page-user-content, .page-programms-content {
+  .page-group-content, .page-user-content, .page-programms-content, .page-training-content {
     top: -139px;
   }
 }
 
 @media (max-width: 991px) {
-  .page-group-content, .page-user-content, .page-programms-content {
+  .page-group-content, .page-user-content, .page-programms-content, .page-training-content {
     width: 100%;
     max-width: 100%;
   }
-  .page-group, .page-single-group, .page-rules, .page-programms, .page-food {
+  .page-group, .page-single-group, .page-rules, .page-programms, .page-food, .page-training {
     overflow-y: auto;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food {
+  .page-info-sport-food, .single-page-food .page-info-food, .page-user .page-info, .page-info-programms, .page-info-food, .page-info-training {
     background-position: 75% top;
     background-size: cover;
     min-height: 295px;
@@ -2752,6 +2759,7 @@ body {
 
 .table-content .table-row .table-number {
   width: 15%;
+  text-align: right;
 }
 
 .table-content .table-row .table-number a {
@@ -3082,6 +3090,45 @@ body {
   display: table-cell;
 }
 
+.table-content-training .table-row .table-td {
+  font-size: 14px;
+  height: 83px;
+  padding-top: 12px;
+}
+
+.table-content-training .table-row .table-td.table-name {
+  font-size: 16px;
+  width: 45%;
+  padding-right: 80px;
+}
+
+.table-content-training .table-row .table-td.table-name .table-name-desc {
+  font-size: 14px;
+  color: #949494;
+  display: block;
+  line-height: 18px;
+  padding: 3px 0;
+}
+
+.table-content-training .table-row .table-td.table-name a {
+  height: 100%;
+  white-space: normal;
+  overflow: visible;
+}
+
+.table-content-training .table-row .table-td.table-cat,
+.table-content-training .table-row .table-td.table-type {
+  width: 20%;
+  font-size: 16px;
+}
+
+.table-content-training .table-row .table-td.table-number a,
+.table-content-training .table-row .table-td.table-name a,
+.table-content-training .table-row .table-td.table-cat a,
+.table-content-training .table-row .table-td.table-type a {
+  line-height: 1;
+}
+
 @media (max-width: 767px) {
   .table-wrapper {
     box-shadow: none;
@@ -3344,6 +3391,23 @@ body {
   .page-food .table-content-food .table-td {
     display: block;
   }
+  .table-content-training .table-row:hover .table-td {
+    background-color: transparent;
+  }
+  .table-content-training .table-row .table-cat.table-td {
+    padding-left: 21%;
+  }
+  .table-content-training .table-row .table-cat.table-td,
+  .table-content-training .table-row .table-type.table-td {
+    display: inline-block;
+    width: 50%;
+    height: auto;
+    padding-bottom: 10px;
+  }
+  .table-content-training .table-row .table-cat.table-td a,
+  .table-content-training .table-row .table-type.table-td a {
+    height: auto;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3594,7 +3658,6 @@ body {
 .page-info-sport-food, .single-page-food .page-info-food {
   background: url(../img/bg_rules.jpg) 0 0 no-repeat;
   background-size: cover;
-  margin-bottom: 30px;
 }
 
 .page-text-content, .single-page-food .page-text-comments {
@@ -4018,5 +4081,98 @@ body {
   }
   .tabs .tabs__caption li {
     padding: 10px 15px 5px;
+  }
+}
+
+.page-info-training {
+  background: url(../img/bg_training.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.filter {
+  padding: 23px 30px 14px;
+  background-color: #FFF;
+  border-radius: 2px 2px 0 0;
+}
+
+.filter .filter-row {
+  border-bottom: 1px solid #bdbdbd;
+  margin: 0;
+  padding-bottom: 18px;
+}
+
+.filter h3 {
+  font-size: 20px;
+  color: #585858;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-family: "LatoLight", Arial, sans-serif;
+  margin: 0;
+}
+
+.filter span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  color: #949494;
+  padding-right: 20px;
+}
+
+.filter .dropdown-list {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 5px;
+  min-width: 125px;
+}
+
+.filter .dropdown-list a {
+  padding: 0;
+  width: 100%;
+  position: relative;
+  color: #585858;
+}
+
+.filter .dropdown-list a .caret {
+  position: absolute;
+  right: 0;
+  bottom: 8px;
+}
+
+@media (max-width: 767px) {
+  .page-training {
+    padding-bottom: 40px;
+  }
+  .page-info-training {
+    background-position-x: 86%;
+  }
+  .filter {
+    padding: 30px 0;
+  }
+  .filter h3 {
+    display: none;
+  }
+  .filter span {
+    width: 54%;
+  }
+  .filter .dropdown-list {
+    width: 40%;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .page-training-content {
+    top: -101px;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 992px) {
+  .filter .dropdown-list {
+    min-width: 82px;
+  }
+}
+
+@media (max-width: 1120px) and (min-width: 1081px) {
+  .filter .dropdown-list {
+    min-width: 110px;
   }
 }

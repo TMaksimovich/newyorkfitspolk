@@ -35,9 +35,10 @@ $(function() {
 		format: 'dd.mm.yyyy'
 	});
 
+	//выпадающий список
 	$(".dropdown-list li>a").click(function() {
 		var textList = $(this).text();
-		$(".dropdown-list-toggle").html(textList + '<b class="caret"></b>');
+		$(this).closest(".dropdown-list").find(".dropdown-list-toggle").html(textList + '<b class="caret"></b>');
 	});
 
 	//аккордион

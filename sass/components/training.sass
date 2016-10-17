@@ -1,0 +1,73 @@
+//Страничка Тренировки
+.page-training
+	@extend .page-group
+.page-info-training
+	@extend .page-info-group
+	background: url(../img/bg_training.jpg) 0 0 no-repeat
+	background-size: cover
+.page-training-content
+	@extend .page-group-content
+
+.filter
+	padding: 23px 30px 14px
+	background-color: #FFF
+	border-radius: 2px 2px 0 0
+	.filter-row
+		border-bottom: 1px solid #bdbdbd
+		margin: 0
+		padding-bottom: 18px
+	h3
+		font-size: 20px
+		color: $text_color
+		font-weight: normal
+		text-transform: uppercase
+		font-family: "LatoLight", Arial, sans-serif
+		margin: 0
+	span
+		display: inline-block
+		vertical-align: middle
+		font-size: 13px
+		color: #949494
+		padding-right: 20px
+	.dropdown-list
+		display: inline-block
+		vertical-align: middle
+		padding-top: 5px
+		min-width: 125px
+		a
+			padding: 0
+			width: 100%
+			position: relative
+			color: $text_color
+			.caret
+				position: absolute
+				right: 0
+				bottom: 8px
+
+@media (max-width:767px)
+	.page-training
+		padding-bottom: 40px
+	.page-info-training
+		background-position-x: 86%
+	.filter
+		padding: 30px 0
+		h3
+			display: none
+		span
+			width: 54%
+		.dropdown-list
+			width: 40%
+
+@media (max-width: 991px) and (min-width: 768px)
+	.page-training-content
+		top: -101px
+
+@media (max-width: 1080px) and (min-width: 992px)
+	.filter .dropdown-list
+		min-width: 82px
+
+@media (max-width: 1120px) and (min-width: 1081px)
+	.filter .dropdown-list
+		min-width: 110px
+
+
