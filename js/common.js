@@ -59,6 +59,22 @@ $(function() {
 	      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
 	});
 
+	//слайдер тренировок
+	var $status = $('.pagingInfo');
+	var $slickElement = $('.training-item');
+
+	$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+	  //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+	  var i = (currentSlide ? currentSlide : 0) + 1;
+	  $status.text(i + '/' + slick.slideCount);
+	});
+
+	$slickElement.slick({
+		prevArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-prev">назад</a>',
+		nextArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-next">вперед</a>',
+		autoplay: true
+	});
+
 
 	//всплывающие подсказки
 	$(function() {
