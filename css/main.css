@@ -2694,7 +2694,7 @@ body {
   }
 }
 
-.table-wrapper {
+.table-wrapper, .table-wrapper-no-scroll {
   height: 435px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -3129,104 +3129,114 @@ body {
   line-height: 1;
 }
 
+.table-wrapper-no-scroll {
+  height: auto;
+}
+
 @media (max-width: 767px) {
-  .table-wrapper {
+  .table-wrapper, .table-wrapper-no-scroll {
     box-shadow: none;
     margin: 0 -12px;
   }
-  .table-wrapper .table-content {
+  .table-wrapper .table-content, .table-wrapper-no-scroll .table-content {
     display: block;
     padding: 0;
   }
-  .table-wrapper .table-content .table-row {
+  .table-wrapper .table-content .table-row, .table-wrapper-no-scroll .table-content .table-row {
     display: block;
     font-size: 0;
   }
   .table-wrapper .table-content .table-row .table-th,
+  .table-wrapper-no-scroll .table-content .table-row .table-th,
   .table-wrapper .table-content .table-row .table-student,
+  .table-wrapper-no-scroll .table-content .table-row .table-student,
   .table-wrapper .table-content .table-row .table-start,
-  .table-wrapper .table-content .table-row .table-finish {
+  .table-wrapper-no-scroll .table-content .table-row .table-start,
+  .table-wrapper .table-content .table-row .table-finish, .table-wrapper-no-scroll .table-content .table-row .table-finish {
     display: none;
   }
-  .table-wrapper .table-content .table-row .table-td.table-number {
+  .table-wrapper .table-content .table-row .table-td.table-number, .table-wrapper-no-scroll .table-content .table-row .table-td.table-number {
     font-size: 14px;
     width: 21%;
     display: inline-block;
     vertical-align: top;
     padding-left: 10px;
   }
-  .table-wrapper .table-content .table-row .table-start-finish {
+  .table-wrapper .table-content .table-row .table-start-finish, .table-wrapper-no-scroll .table-content .table-row .table-start-finish {
     margin: 0;
     color: #949494;
     font-size: 12px;
     display: block;
   }
-  .table-wrapper .table-content .table-row .table-td.table-name {
+  .table-wrapper .table-content .table-row .table-td.table-name, .table-wrapper-no-scroll .table-content .table-row .table-td.table-name {
     width: 78%;
     display: inline-block;
     vertical-align: top;
     padding-right: 10px;
   }
-  .table-wrapper .table-content-user, .table-wrapper .table-users.table-content {
+  .table-wrapper .table-content-user, .table-wrapper-no-scroll .table-content-user, .table-wrapper .table-users.table-content, .table-wrapper-no-scroll .table-users.table-content {
     padding: 40px 0;
   }
-  .table-wrapper .table-content-user .table-row:hover .table-td, .table-wrapper .table-users.table-content .table-row:hover .table-td {
+  .table-wrapper .table-content-user .table-row:hover .table-td, .table-wrapper-no-scroll .table-content-user .table-row:hover .table-td, .table-wrapper .table-users.table-content .table-row:hover .table-td, .table-wrapper-no-scroll .table-users.table-content .table-row:hover .table-td {
     background-color: transparent;
   }
-  .table-wrapper .table-content-user .table-row .table-td.table-image, .table-wrapper .table-users.table-content .table-row .table-td.table-image {
+  .table-wrapper .table-content-user .table-row .table-td.table-image, .table-wrapper-no-scroll .table-content-user .table-row .table-td.table-image, .table-wrapper .table-users.table-content .table-row .table-td.table-image, .table-wrapper-no-scroll .table-users.table-content .table-row .table-td.table-image {
     display: inline-block;
     vertical-align: top;
     padding-left: 0;
     padding-top: 0;
   }
-  .table-wrapper .table-content-user .table-row .table-td.table-image a, .table-wrapper .table-users.table-content .table-row .table-td.table-image a {
+  .table-wrapper .table-content-user .table-row .table-td.table-image a, .table-wrapper-no-scroll .table-content-user .table-row .table-td.table-image a, .table-wrapper .table-users.table-content .table-row .table-td.table-image a, .table-wrapper-no-scroll .table-users.table-content .table-row .table-td.table-image a {
     padding-top: 0;
   }
-  .table-wrapper .table-content-user .table-row .table-td.table-name, .table-wrapper .table-users.table-content .table-row .table-td.table-name {
+  .table-wrapper .table-content-user .table-row .table-td.table-name, .table-wrapper-no-scroll .table-content-user .table-row .table-td.table-name, .table-wrapper .table-users.table-content .table-row .table-td.table-name, .table-wrapper-no-scroll .table-users.table-content .table-row .table-td.table-name {
     display: inline-block;
     vertical-align: top;
     width: 67%;
   }
-  .table-wrapper .table-content-user .table-row .table-td.table-name span:first-child, .table-wrapper .table-users.table-content .table-row .table-td.table-name span:first-child {
+  .table-wrapper .table-content-user .table-row .table-td.table-name span:first-child, .table-wrapper-no-scroll .table-content-user .table-row .table-td.table-name span:first-child, .table-wrapper .table-users.table-content .table-row .table-td.table-name span:first-child, .table-wrapper-no-scroll .table-users.table-content .table-row .table-td.table-name span:first-child {
     display: block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  .table-wrapper .table-content-user .table-row .table-td.table-name .label, .table-wrapper .table-users.table-content .table-row .table-td.table-name .label {
+  .table-wrapper .table-content-user .table-row .table-td.table-name .label, .table-wrapper-no-scroll .table-content-user .table-row .table-td.table-name .label, .table-wrapper .table-users.table-content .table-row .table-td.table-name .label, .table-wrapper-no-scroll .table-users.table-content .table-row .table-td.table-name .label {
     margin-left: 0;
   }
-  .table-wrapper .table-content-user .table-row .table-button, .table-wrapper .table-users.table-content .table-row .table-button {
+  .table-wrapper .table-content-user .table-row .table-button, .table-wrapper-no-scroll .table-content-user .table-row .table-button, .table-wrapper .table-users.table-content .table-row .table-button, .table-wrapper-no-scroll .table-users.table-content .table-row .table-button {
     display: inline-block;
     vertical-align: top;
   }
-  .table-wrapper .table-content-user .table-row .table-td a, .table-wrapper .table-users.table-content .table-row .table-td a {
+  .table-wrapper .table-content-user .table-row .table-td a, .table-wrapper-no-scroll .table-content-user .table-row .table-td a, .table-wrapper .table-users.table-content .table-row .table-td a, .table-wrapper-no-scroll .table-users.table-content .table-row .table-td a {
     line-height: 1.6;
     padding-top: 10px;
   }
-  .table-wrapper .table-content-rules {
+  .table-wrapper .table-content-rules, .table-wrapper-no-scroll .table-content-rules {
     padding-top: 30px;
   }
   .table-wrapper .table-content-rules .table-duration,
+  .table-wrapper-no-scroll .table-content-rules .table-duration,
   .table-wrapper .table-content-rules .table-report-period,
+  .table-wrapper-no-scroll .table-content-rules .table-report-period,
   .table-wrapper .table-content-rules .table-type-programm,
-  .table-wrapper .table-content-rules .table-th.table-name-programm {
+  .table-wrapper-no-scroll .table-content-rules .table-type-programm,
+  .table-wrapper .table-content-rules .table-th.table-name-programm, .table-wrapper-no-scroll .table-content-rules .table-th.table-name-programm {
     display: none;
   }
-  .table-wrapper .table-content-rules .table-name-programm {
+  .table-wrapper .table-content-rules .table-name-programm, .table-wrapper-no-scroll .table-content-rules .table-name-programm {
     width: 100%;
     padding-left: 20px;
     display: inline-block;
   }
-  .table-wrapper .table-content-food {
+  .table-wrapper .table-content-food, .table-wrapper-no-scroll .table-content-food {
     padding-top: 30px;
   }
-  .table-wrapper .table-content-food .table-row .table-name-programm {
+  .table-wrapper .table-content-food .table-row .table-name-programm, .table-wrapper-no-scroll .table-content-food .table-row .table-name-programm {
     width: 100%;
     padding-left: 20px;
     padding-right: 20px;
   }
-  .table-wrapper .table-content-food .table-row .table-name-programm .desc {
+  .table-wrapper .table-content-food .table-row .table-name-programm .desc, .table-wrapper-no-scroll .table-content-food .table-row .table-name-programm .desc {
     width: 100%;
   }
   .table-users.table-content {
@@ -3391,6 +3401,9 @@ body {
   .page-food .table-content-food .table-td {
     display: block;
   }
+  .table-content-training .table-wrapper-no-scroll {
+    height: auto;
+  }
   .table-content-training .table-row:hover .table-td {
     background-color: transparent;
   }
@@ -3439,7 +3452,7 @@ body {
 }
 
 @media (max-width: 991px) {
-  .table-wrapper {
+  .table-wrapper, .table-wrapper-no-scroll {
     height: auto;
   }
   .table-users.table-content .group-md {
@@ -3466,14 +3479,20 @@ body {
 }
 
 @media screen and (min-width: 1024px) and (max-height: 800px) {
-  .table-wrapper {
+  .table-wrapper, .table-wrapper-no-scroll {
     height: 345px;
+  }
+  .table-wrapper-no-scroll {
+    height: auto;
   }
 }
 
 @media screen and (min-width: 1400px) and (min-height: 900px) {
-  .table-wrapper {
+  .table-wrapper, .table-wrapper-no-scroll {
     height: 668px;
+  }
+  .table-wrapper-no-scroll {
+    height: auto;
   }
 }
 
@@ -3785,6 +3804,7 @@ body {
   .page-sport-food .page-text-content, .single-page-food .page-text-content, .single-page-food .page-text-comments {
     top: 0;
     width: 100%;
+    padding-top: 40px;
   }
 }
 
@@ -4084,9 +4104,26 @@ body {
   }
 }
 
+.page-training {
+  overflow-y: visible;
+}
+
 .page-info-training {
   background: url(../img/bg_training.jpg) 0 0 no-repeat;
   background-size: cover;
+  position: fixed;
+  width: 100%;
+}
+
+.page-training-content {
+  top: 158px;
+  margin-bottom: 60px;
+}
+
+.page-training-content .btn-fixed {
+  position: fixed;
+  right: 198px;
+  top: 259px;
 }
 
 .filter {
@@ -4144,6 +4181,15 @@ body {
   }
   .page-info-training {
     background-position-x: 86%;
+    position: relative;
+    width: auto;
+  }
+  .page-training-content {
+    top: 0;
+  }
+  .page-training-content .btn-fixed {
+    right: 10px;
+    top: 88%;
   }
   .filter {
     padding: 30px 0;
@@ -4161,7 +4207,11 @@ body {
 
 @media (max-width: 991px) and (min-width: 768px) {
   .page-training-content {
-    top: -101px;
+    top: 193px;
+  }
+  .page-training-content .btn-fixed {
+    right: 23px;
+    top: 89%;
   }
 }
 
@@ -4180,5 +4230,41 @@ body {
 @media (max-width: 1120px) and (min-width: 1081px) {
   .filter .dropdown-list {
     min-width: 110px;
+  }
+}
+
+@media (max-width: 1190px) and (min-width: 992px) {
+  .page-training-content .btn-fixed {
+    right: 10px;
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 1191px) {
+  .page-training-content .btn-fixed {
+    right: 4%;
+  }
+}
+
+@media (max-width: 1430px) and (min-width: 1251px) {
+  .page-training-content .btn-fixed {
+    right: 6%;
+  }
+}
+
+@media (max-width: 1530px) and (min-width: 1431px) {
+  .page-training-content .btn-fixed {
+    right: 11%;
+  }
+}
+
+@media (max-width: 1730px) and (min-width: 1531px) {
+  .page-training-content .btn-fixed {
+    right: 15%;
+  }
+}
+
+@media (min-width: 1731px) {
+  .page-training-content .btn-fixed {
+    right: 20%;
   }
 }

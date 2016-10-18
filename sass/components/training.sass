@@ -1,12 +1,21 @@
 //Страничка Тренировки
 .page-training
 	@extend .page-group
+	overflow-y: visible
 .page-info-training
 	@extend .page-info-group
 	background: url(../img/bg_training.jpg) 0 0 no-repeat
 	background-size: cover
+	position: fixed
+	width: 100%
 .page-training-content
 	@extend .page-group-content
+	top: 158px
+	margin-bottom: 60px
+	.btn-fixed
+		position: fixed
+		right: 198px
+		top: 259px
 
 .filter
 	padding: 23px 30px 14px
@@ -49,6 +58,13 @@
 		padding-bottom: 40px
 	.page-info-training
 		background-position-x: 86%
+		position: relative
+		width: auto
+	.page-training-content
+		top: 0
+		.btn-fixed
+			right: 10px
+			top: 88%
 	.filter
 		padding: 30px 0
 		h3
@@ -60,7 +76,10 @@
 
 @media (max-width: 991px) and (min-width: 768px)
 	.page-training-content
-		top: -101px
+		top: 193px
+		.btn-fixed
+			right: 23px
+			top: 89%
 
 @media (max-width: 991px) and (min-width: 782px)
 	.filter .dropdown-list
@@ -73,5 +92,29 @@
 @media (max-width: 1120px) and (min-width: 1081px)
 	.filter .dropdown-list
 		min-width: 110px
+
+@media (max-width: 1190px) and (min-width: 992px)
+	.page-training-content .btn-fixed
+		right: 10px
+
+@media (max-width: 1250px) and (min-width: 1191px)
+	.page-training-content .btn-fixed
+		right: 4%
+
+@media (max-width: 1430px) and (min-width: 1251px)
+	.page-training-content .btn-fixed
+		right: 6%
+
+@media (max-width: 1530px) and (min-width: 1431px)
+	.page-training-content .btn-fixed
+		right: 11%
+
+@media (max-width: 1730px) and (min-width: 1531px)
+	.page-training-content .btn-fixed
+		right: 15%
+
+@media (min-width: 1731px)
+	.page-training-content .btn-fixed
+		right: 20%
 
 
