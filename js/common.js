@@ -71,8 +71,7 @@ $(function() {
 
 	$slickElement.slick({
 		prevArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-prev">назад</a>',
-		nextArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-next">вперед</a>',
-		autoplay: true
+		nextArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-next">вперед</a>'
 	});
 
 
