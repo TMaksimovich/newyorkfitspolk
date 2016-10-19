@@ -3121,7 +3121,8 @@ body {
 }
 
 .table-content-training .table-row .table-td.table-cat,
-.table-content-training .table-row .table-td.table-type {
+.table-content-training .table-row .table-td.table-type,
+.table-content-training .table-row .table-td.table-qty {
   width: 20%;
   font-size: 16px;
 }
@@ -3129,8 +3130,14 @@ body {
 .table-content-training .table-row .table-td.table-number a,
 .table-content-training .table-row .table-td.table-name a,
 .table-content-training .table-row .table-td.table-cat a,
-.table-content-training .table-row .table-td.table-type a {
+.table-content-training .table-row .table-td.table-type a,
+.table-content-training .table-row .table-td.table-qty a {
   line-height: 1;
+}
+
+.table-content-training .table-row .table-qty {
+  text-align: right;
+  padding-right: 45px;
 }
 
 .table-wrapper-no-scroll {
@@ -3415,15 +3422,29 @@ body {
     padding-left: 21%;
   }
   .table-content-training .table-row .table-cat.table-td,
-  .table-content-training .table-row .table-type.table-td {
+  .table-content-training .table-row .table-type.table-td,
+  .table-content-training .table-row .table-qty.table-td {
     display: inline-block;
     width: 50%;
     height: auto;
     padding-bottom: 10px;
   }
   .table-content-training .table-row .table-cat.table-td a,
-  .table-content-training .table-row .table-type.table-td a {
+  .table-content-training .table-row .table-type.table-td a,
+  .table-content-training .table-row .table-qty.table-td a {
     height: auto;
+  }
+  .table-content-training .table-row .table-qty.table-td {
+    text-align: left;
+  }
+  .table-content-training .table-row .table-td {
+    height: auto;
+  }
+  .plan-training-content .table-row .table-cat.table-td {
+    width: 60%;
+  }
+  .plan-training-content .table-row .table-qty.table-td {
+    width: 35%;
   }
 }
 
@@ -4248,6 +4269,10 @@ body {
   bottom: 8px;
 }
 
+.plan-training-content .filter .dropdown-list {
+  min-width: 175px;
+}
+
 @media (max-width: 767px) {
   .page-training {
     padding-bottom: 40px;
@@ -4285,6 +4310,9 @@ body {
   .single-training-content .training-item {
     padding-left: 0;
     padding-right: 0;
+  }
+  .plan-training-content .filter .dropdown-list {
+    min-width: 40%;
   }
 }
 

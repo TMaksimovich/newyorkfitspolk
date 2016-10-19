@@ -8,7 +8,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Одна тренировка</title>
+	<title>План тренировок</title>
 	<meta name="description" content="">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -167,12 +167,12 @@
             </ul>
           </li>
 
-          <li class="site-menu-item active">
+          <li class="site-menu-item">
             <a class="animsition-link" href="training.html">
               <span class="site-menu-title">Тренировки</span>
             </a>
           </li>
-          <li class="site-menu-item">
+          <li class="site-menu-item active">
             <a class="animsition-link" href="praxis.html">
               <span class="site-menu-title">План тренировок</span>
             </a>
@@ -195,47 +195,118 @@
 
         <div class="col-xs-13">
           <ul class="breadcrumbs">
-            <li><a href="training.html">Тренировки</a></li>
-            <li class="active">Силовая тренировка дома</li>
+            <li class="active">План тренировок</li>
           </ul>
         </div>
 
         <div class="col-xs-13">
-          <h1 class="page-title">Силовая тренировка дома</h1>
+          <h1 class="page-title">План тренировок</h1>
         </div>
       </div>
 
-      <!-- Слайдер -->
-      <div class="row single-training-content">
-        <div class="col-xs-13">
-          <a href="single-training-edit.html" class="btn-default waves waves-effect waves-light right-position">Изменить</a>
-        </div>
-
-        <div class="training-item col-xs-13">
-          <div class="training-slide">
-            <div class="slide-media">
-              <img src="img/training-slider.jpg" alt="ПРИСЕД В СМИТЕ ИЛИ С ГАНТЕЛЯМИ">
-            </div>
-            <div class="slide-desc col-xs-13 col-sm-8">
-              <h3>ПРИСЕД В СМИТЕ ИЛИ С ГАНТЕЛЯМИ</h3>
-              <p>Число подходов 2 -3 по 15-20 раз. И так несколько раз, пока не упадете. Не лежим, встаем и снова приседаем :)</p>
-            </div>
-          </div>
-
-          <div class="training-slide">
-            <div class="slide-media">
-              <iframe src="https://www.youtube.com/embed/kmJMxy46FHQ" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <div class="slide-desc col-xs-13 col-sm-8">
-              <h3>ПРИСЕД В СМИТЕ ИЛИ С ГАНТЕЛЯМИ</h3>
-              <p>Число подходов 2 -3 по 15-20 раз. И так несколько раз, пока не упадете. Не лежим, встаем и снова приседаем :)</p>
+      <!-- Табличка -->
+      <div class="row page-training-content plan-training-content">
+        <div class="table-wrapper-no-scroll">
+          <div class="filter col-xs-13">
+            <div class="row filter-row">
+              <h3 class="col-xs-3">ФИЛЬТР</h3>
+              <div class="col-xs-13 col-sm-9">
+                <span>Категория тренировок</span>
+                <div class="dropdown dropdown-list">
+                  <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown">Все
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#" class="waves">В зале</a></li>
+                    <li><a href="#" class="waves">Дома</a></li>
+                    <li><a href="#" class="waves">Дома и в зале</a></li>
+                    <li><a href="#" class="waves">Все</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="table-content table-content-training">
+            <div class="table-row table-row-th">
+              <div class="table-th table-number">№</div>
+              <div class="table-th table-name">Название режима тренировки</div>
+              <div class="table-th table-cat">Категория тренировок</div>
+              <div class="table-th table-qty tooltip" title="Кол-во тренировок в неделю">Кол-во ...</div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-td table-number"><a href="single-praxis-one.html">10</a></div>
+              <div class="table-td table-name">
+                <a href="single-praxis-one.html">Облегченный режим дома
+                  <span class="table-name-desc">Отличная подборка для начала тренировок. Содержит: разминку, тренировку, растяжку</span>
+                </a>
+              </div>
+              <div class="table-td table-cat"><a href="single-praxis-one.html">Дома</a></div>
+              <div class="table-td table-qty"><a href="single-praxis-one.html">4</a></div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-td table-number"><a href="single-praxis-one.html">5</a></div>
+              <div class="table-td table-name">
+                <a href="single-praxis-one.html">Усиленный режим в зале
+                  <span class="table-name-desc">Отличная подборка для начала тренировок. Содержит: разминку, тренировку, растяжку</span>
+                </a>
+              </div>
+              <div class="table-td table-cat"><a href="single-praxis-one.html">В зале</a></div>
+              <div class="table-td table-qty"><a href="single-praxis-one.html">3</a></div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-td table-number"><a href="single-praxis-one.html">4</a></div>
+              <div class="table-td table-name">
+                <a href="single-praxis-one.html">Стандартый режим в зале
+                  <span class="table-name-desc">Отличная подборка для начала тренировок. Содержит: разминку, тренировку, растяжку</span>
+                </a>
+              </div>
+              <div class="table-td table-cat"><a href="single-praxis-one.html">В зале</a></div>
+              <div class="table-td table-qty"><a href="single-praxis-one.html">5</a></div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-td table-number"><a href="single-praxis-double.html">3</a></div>
+              <div class="table-td table-name">
+                <a href="single-praxis-double.html">Стандартный режим дома и в зале
+                  <span class="table-name-desc">Отличная подборка для начала тренировок. Содержит: разминку, тренировку, растяжку</span>
+                </a>
+              </div>
+              <div class="table-td table-cat"><a href="single-praxis-double.html">Дома и в зале</a></div>
+              <div class="table-td table-qty"><a href="single-praxis-double.html">2</a></div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-td table-number"><a href="single-praxis-one.html">2</a></div>
+              <div class="table-td table-name">
+                <a href="single-praxis-one.html">Облегченный режим в зале
+                  <span class="table-name-desc">Отличная подборка для начала тренировок. Содержит: разминку, тренировку, растяжку</span>
+                </a>
+              </div>
+              <div class="table-td table-cat"><a href="single-praxis-one.html">В зале</a></div>
+              <div class="table-td table-qty"><a href="single-praxis-one.html">3</a></div>
+            </div>
+
+            <div class="table-row">
+              <div class="table-td table-number"><a href="single-praxis-double.html">1</a></div>
+              <div class="table-td table-name">
+                <a href="single-praxis-double.html">Усиленный режим дома и в зале
+                  <span class="table-name-desc">Отличная подборка для начала тренировок. Содержит: разминку, тренировку, растяжку</span>
+                </a>
+              </div>
+              <div class="table-td table-cat"><a href="single-praxis-double.html">Дома и в зале</a></div>
+              <div class="table-td table-qty"><a href="single-praxis-double.html">5</a></div>
+            </div>
+
+          </div>
         </div>
-        <!-- счетчик слайдов -->
-        <span class="pagingInfo"></span>
+        <!-- end Табличка -->
+
+        <a href="praxis-edit.html" class="btn-circle btn-large btn-xs-small btn-fixed waves waves-effect waves-light"><i class="material-icons">add</i></a>
+
       </div>
-      <!-- end Слайдер -->
     </div>
   </div>
   <!-- End Основной контент странички -->
@@ -261,7 +332,6 @@
   <script src="libs/menu-side/menubar.min.js"></script>
   <script src="libs/menu-side/asscrollable.min.js"></script>
   <script src="libs/Waves-0.7.5/dist/waves.min.js"></script>
-  <script src="libs/slick/slick.min.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/form.js"></script>

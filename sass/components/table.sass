@@ -296,15 +296,20 @@
 					white-space: normal
 					overflow: visible
 			&.table-cat,
-			&.table-type
+			&.table-type,
+			&.table-qty
 				width: 20%
 				font-size: 16px
 			&.table-number,
 			&.table-name,
 			&.table-cat,
-			&.table-type
+			&.table-type,
+			&.table-qty
 				a
 					line-height: 1
+		.table-qty
+			text-align: right
+			padding-right: 45px
 .table-wrapper-no-scroll
 	@extend .table-wrapper
 	height: auto
@@ -529,17 +534,24 @@
 			.table-cat.table-td
 				padding-left: 21%
 			.table-cat.table-td,
-			.table-type.table-td
+			.table-type.table-td,
+			.table-qty.table-td
 				display: inline-block
 				width: 50%
 				height: auto
 				padding-bottom: 10px
 				a
 					height: auto
-
-
-
-
+			.table-qty.table-td
+				text-align: left
+			.table-td
+				height: auto
+	.plan-training-content
+		.table-row
+			.table-cat.table-td
+				width: 60%
+			.table-qty.table-td
+				width: 35%
 
 
 @media (min-width:768px) and (max-width:991px)
