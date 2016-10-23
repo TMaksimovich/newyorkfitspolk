@@ -822,6 +822,11 @@ p {
   outline: none;
 }
 
+.btn-default.btn-default-white {
+  background-color: #fff;
+  color: #5fc7ae;
+}
+
 .btn-fixed {
   position: absolute;
   right: -83px;
@@ -1412,6 +1417,7 @@ p {
   padding: 7px 30px;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+  max-width: 440px;
 }
 
 .alert.alert-black {
@@ -4271,6 +4277,111 @@ body {
 
 .plan-training-content .filter .dropdown-list {
   min-width: 175px;
+}
+
+.form-praxis {
+  background-color: #fff;
+  padding: 70px 48px;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 1px 2px rgba(0, 0, 0, 0.13);
+}
+
+.form-praxis .group-comment {
+  margin-bottom: 44px;
+}
+
+.form-praxis .rkmd-radio {
+  font-size: 16px;
+  color: #585858;
+  font-family: "LatoLight", Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0;
+}
+
+.form-praxis .rkmd-radio .input-radio {
+  vertical-align: middle;
+}
+
+.form-praxis .toggle-block {
+  margin-top: 37px;
+}
+
+.form-praxis .toggle-block span {
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.form-praxis .toggle-block .switch {
+  float: right;
+  margin-top: 4px;
+}
+
+.form-praxis .toggle-block .switch + p {
+  color: #949494;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.form-praxis .buttons {
+  margin-bottom: 30px;
+}
+
+.form-praxis .add-praxis {
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.form-praxis .add-praxis span {
+  font-size: 16px;
+  font-family: "LatoLight", Arial, sans-serif;
+  color: #949494;
+}
+
+.form-praxis .add-praxis span i {
+  vertical-align: middle;
+  font-size: inherit;
+}
+
+.form-praxis .add-praxis .praxis-name {
+  margin-top: 7px;
+  width: 85%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.form-praxis .add-praxis .praxis-name h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #585858;
+  font-weight: normal;
+}
+
+.form-praxis .add-praxis .praxis-name p {
+  font-size: 14px;
+  color: #949494;
+  margin: 0;
+  line-height: 18px;
+}
+
+.form-praxis .add-praxis .praxis-icon {
+  margin-top: 7px;
+  width: 14%;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.form-praxis .add-praxis .praxis-icon i {
+  font-size: 24px;
+  color: #949494;
+}
+
+.form-praxis .add-praxis .praxis-icon i span {
+  color: #d7d7d7;
+  font-size: 12px;
+  bottom: -25px;
+  padding: 3px 0 0;
 }
 
 @media (max-width: 767px) {
