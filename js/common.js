@@ -36,9 +36,10 @@ $(function() {
 	});
 
 	//выпадающий список
-	$(".dropdown-list li>a").click(function() {
+	$(".dropdown-list li>a").click(function(event) {
+		event.preventDefault();
 		var textList = $(this).text();
-		$(this).closest(".dropdown-list").find(".dropdown-list-toggle").html(textList + '<b class="caret"></b>');
+		$(this).closest(".dropdown-list").find(".dropdown-list-toggle").html(textList + '<b class="caret"></b>').addClass('active');
 	});
 
 	//аккордион
@@ -58,6 +59,39 @@ $(function() {
 	      .addClass('active').siblings().removeClass('active')
 	      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
 	});
+
+	//переключатель
+	$('.toggle-block .toggle-checkbox').on('click', function(){
+	    if ($(this).is(":checked")) {
+	        $(this).closest('.toggle-block').find('p').html('Да');
+	    }
+	    else {
+	    	$('.toggle-block').find('p').html('Нет');
+	    }
+	});
+
+	// активный блок на странице Режим тренировки
+	$('.new-block-praxis .dropdown-list').on('click', function(){
+		if($(this).find('.dropdown-list-toggle').hasClass('active')) {
+			$(this).closest('.new-block-praxis')
+				   .find('.add-praxis')
+				   .attr('data-toggle', 'modal')
+				   .attr('data-target', '#modalTraining')
+				   .addClass('active')
+		}
+	});
+
+	$(".add-praxis").each(function() {
+		var $praxisName = $(this).find('.praxis-name');
+
+	    if ($.trim($praxisName.text()) !== "") {
+	        $(this).closest('.add-praxis')
+	        	   .find('.praxis-icon .material-icons')
+	        	   .addClass('tooltip active')
+	        	   .attr('title', 'Посмотреть тренировку')
+	    }
+	});
+
 
 	//слайдер тренировок
 	var $status = $('.pagingInfo');

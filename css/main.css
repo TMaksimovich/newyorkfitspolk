@@ -4286,6 +4286,15 @@ body {
   box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 1px 2px rgba(0, 0, 0, 0.13);
 }
 
+.form-praxis .group input:focus ~ label,
+.form-praxis .group textarea:focus ~ label {
+  left: -27px;
+}
+
+.form-praxis .group-comment input:focus ~ label {
+  left: -13px;
+}
+
 .form-praxis .group-comment {
   margin-bottom: 44px;
 }
@@ -4328,8 +4337,10 @@ body {
 
 .form-praxis .add-praxis {
   background-color: #f4f4f4;
-  padding: 20px;
+  padding: 15px 20px;
   margin-top: 10px;
+  margin-bottom: 15px;
+  min-height: 129px;
 }
 
 .form-praxis .add-praxis span {
@@ -4343,9 +4354,22 @@ body {
   font-size: inherit;
 }
 
+.form-praxis .add-praxis.active {
+  cursor: pointer;
+}
+
+.form-praxis .add-praxis.active:hover,
+.form-praxis .add-praxis.active:active {
+  background-color: #eee;
+}
+
+.form-praxis .add-praxis + .add-praxis {
+  margin-top: 0;
+}
+
 .form-praxis .add-praxis .praxis-name {
   margin-top: 7px;
-  width: 85%;
+  width: 84%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -4370,11 +4394,15 @@ body {
   display: inline-block;
   vertical-align: middle;
   text-align: right;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: default;
 }
 
 .form-praxis .add-praxis .praxis-icon i {
   font-size: 24px;
-  color: #949494;
+  color: #bdbdbd;
 }
 
 .form-praxis .add-praxis .praxis-icon i span {
@@ -4382,6 +4410,25 @@ body {
   font-size: 12px;
   bottom: -25px;
   padding: 3px 0 0;
+}
+
+.form-praxis .add-praxis .praxis-icon i.active {
+  color: #454545;
+  cursor: pointer;
+}
+
+.form-praxis .new-block-praxis .dropdown-list-toggle.active {
+  color: #383838;
+  font-family: "LatoRegular", sans-serif;
+}
+
+@media (max-width: 479px) {
+  .form-praxis .buttons .right-position {
+    float: none;
+  }
+  .form-praxis .buttons button {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4424,6 +4471,22 @@ body {
   }
   .plan-training-content .filter .dropdown-list {
     min-width: 40%;
+  }
+  .form-praxis {
+    padding: 45px 0;
+    box-shadow: none;
+  }
+  .form-praxis .buttons {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 792px) and (min-width: 768px) {
+  .form-praxis .buttons .right-position {
+    float: none;
+  }
+  .form-praxis .buttons button {
+    margin-bottom: 20px;
   }
 }
 
