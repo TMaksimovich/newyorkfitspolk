@@ -1369,6 +1369,10 @@ p {
   margin-top: 22px;
 }
 
+#modalUserEdit .modal-programm .toggle-block {
+  margin-top: 26px;
+}
+
 @media (min-width: 320px) {
   #modalUser {
     -webkit-transform-origin: 100% 100%;
@@ -4187,6 +4191,10 @@ body {
   text-decoration: none;
 }
 
+.single-page-user-setting .page-content .account-info button {
+  margin-left: 0;
+}
+
 .single-page-user-setting .page-content h3 {
   text-transform: uppercase;
   font-size: 20px;
@@ -4227,6 +4235,10 @@ body {
   vertical-align: middle;
   width: 66%;
   padding-left: 30px;
+}
+
+.single-page-user-setting .page-content .meta-user-media .meta-user-name button {
+  margin: 0;
 }
 
 .single-page-user-setting .page-content .meta-user-media .name-user {
@@ -4274,6 +4286,68 @@ body {
 
 .single-page-user-setting .page-content button {
   margin-left: -10px;
+}
+
+.single-page-user-setting .right-menu-block {
+  position: fixed;
+  background-color: #fff;
+  width: 348px;
+  top: 64px;
+  right: -100%;
+  padding: 20px 0;
+  box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.13), 0 0 2px 4px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease;
+}
+
+.single-page-user-setting .right-menu-block ul {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 38px;
+}
+
+.single-page-user-setting .right-menu-block ul li {
+  display: block;
+}
+
+.single-page-user-setting .right-menu-block ul li a {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 13px 40px;
+  font-size: 16px;
+  color: #585858;
+  text-decoration: none;
+  text-align: left;
+  width: 100%;
+}
+
+.single-page-user-setting .right-menu-block ul li a i {
+  vertical-align: middle;
+  margin-right: 23px;
+}
+
+.single-page-user-setting .right-menu-block ul li a:hover {
+  background-color: #eee;
+}
+
+.single-page-user-setting .right-menu-block ul li.active a {
+  background-color: #eee;
+}
+
+.single-page-user-setting .right-menu-block .close {
+  margin-right: 10px;
+  outline: none;
+}
+
+.single-page-user-setting .right-menu-block.open-menu {
+  right: 0;
+  z-index: 100;
+}
+
+@media (max-width: 480px) {
+  .single-page-user-setting .right-menu-block {
+    width: 100%;
+  }
 }
 
 @media (max-width: 561px) {

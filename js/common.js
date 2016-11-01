@@ -251,14 +251,44 @@ $(function() {
 
 	}
 
+	// Боковое меню на странице участника
+	function side_menu_toggle() {
+		var open_btn  = $(".menu-user button");
+		var close_btn = $(".right-menu-block .close");
+		var page_w = $("html").width();
+		var page_h = $("html").height();
+
+
+		$(open_btn).click(function() {
+			$(this).closest(".menu-user-column")
+				   .find('.right-menu-block')
+				   .height(page_h-64)
+				   .addClass("open-menu");
+		});
+
+		$(close_btn).click(function() {
+			$(this).closest(".right-menu-block").removeClass("open-menu");
+		});
+
+		$(document).mouseup(function (e){
+			var close_doc = $(".right-menu-block.open-menu");
+			if (!close_doc.is(e.target)
+			    && close_doc.has(e.target).length === 0) {
+				close_doc.removeClass("open-menu");
+			}
+		});
+	}
+
 
 	$(window).on("load",function(){
 	    window_resize();
 	    sidebar_toggle();
+	    side_menu_toggle();
 	});
 
 	$(window).resize(function() {
         window_resize();
         sidebar_toggle();
+        side_menu_toggle();
     });
 });

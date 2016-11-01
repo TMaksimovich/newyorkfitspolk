@@ -538,24 +538,74 @@
         </div>
 
         <!-- Вызов модального окошка  #modalUser-->
-        <a href="#" class="btn-modal btn-circle btn-large btn-xs-small btn-fixed waves waves-effect waves-light" data-toggle="modal" data-target="#modalUser"><i class="material-icons">add</i></a>
+        <a href="#" class="btn-modal btn-circle btn-large btn-xs-small btn-fixed waves waves-effect waves-light" data-toggle="modal" data-target="#modalUserEdit"><i class="material-icons">add</i></a>
 
         <!-- Модальное окно -->
-        <form class="modal animation-scale-up" id="modalUser" tabindex="-1" role="dialog" aria-labelledby="modalUserLabel" aria-hidden="true">
-          <div class="modal-dialog">
+        <form class="modal animation-scale-up" id="modalUserEdit" tabindex="-1" role="dialog" aria-labelledby="modalUserLabelEdit" aria-hidden="true">
+          <div class="modal-dialog modal-programm">
             <div class="modal-content">
 
               <div class="modal-header">
                 <button type="button" class="material-icons close" data-dismiss="modal" aria-hidden="true">close</button>
-                <h3 class="modal-title" id="modalUserLabel">Добавить участника</h3>
+                <h4 class="modal-title" id="modalUserLabelEdit">Добавить нового участника</h4>
               </div>
 
               <div class="modal-body">
+                <div class="row">
+                  <div class="col-xs-13 col-sm-7">
+                    <div class="group">
+                      <input type="text"><span class="bar"></span>
+                      <label>Имя Фамилия</label>
+                    </div>
 
+                    <div class="group">
+                      <input type="email"><span class="bar"></span>
+                      <label>E-mail</label>
+                    </div>
+
+                    <div class="group">
+                      <textarea></textarea><span class="bar"></span>
+                      <label>Комментарий</label>
+                    </div>
+                  </div>
+
+                  <div class="col-xs-13 col-sm-6">
+
+                    <div class="dropdown dropdown-list">
+                      <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown" aria-expanded="false">Программа<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li><span class="waves waves-effect waves-light">Вместе навсегда</span></li>
+                        <li><span class="waves waves-effect waves-light">Питание для новичков</span></li>
+                        <li><span class="waves waves-effect waves-light">Самостоятельный</span></li>
+                        <li><span class="waves waves-effect waves-light">Только питание</span></li>
+                        <li><span class="waves waves-effect waves-light">Пси + Фит</span></li>
+                        <li><span class="waves waves-effect waves-light">Создай себя</span></li>
+                      </ul>
+                    </div>
+
+                    <div class="toggle-block">
+                      <span>Статус участника</span>
+                      <input id="toogle" class="toggle-checkbox" type="checkbox" hidden="hidden">
+                      <label for="toogle" class="switch"></label>
+                      <p>Заморожен</p>
+                    </div>
+
+
+                    <p class="extend">Продлить аккаунт</p>
+                    <div class="rkmd-checkbox checkbox-ripple input-ripple">
+                      <label class="input-checkbox input-checkbox-radio checkbox-aquamarine">
+                        <input type="checkbox">
+                        <span class="checkbox"></span>
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
               </div>
 
               <div class="modal-footer">
-                <input type="submit" class="btn-flat waves-effect waves-grey" value="ПОДТВЕРДИТЬ">
+                <button class="btn-flat waves-effect waves-grey close" data-dismiss="modal" aria-hidden="true">Отмена</button>
+                <input type="submit" class="btn-flat waves-effect waves-grey" value="Сохранить">
               </div>
 
             </div>
