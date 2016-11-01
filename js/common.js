@@ -36,8 +36,7 @@ $(function() {
 	});
 
 	//выпадающий список
-	$(".dropdown-list li>a").click(function(event) {
-		event.preventDefault();
+	$(".dropdown-list li>span").click(function() {
 		var textList = $(this).text();
 		$(this).closest(".dropdown-list").find(".dropdown-list-toggle").html(textList + '<b class="caret"></b>').addClass('active');
 	});
@@ -60,13 +59,23 @@ $(function() {
 	      .closest('div.tabs').find('div.tabs__content').removeClass('active').eq($(this).index()).addClass('active');
 	});
 
-	//переключатель
-	$('.toggle-block .toggle-checkbox').on('click', function(){
+	//переключатель на странице плана тренировок
+	$('.plan-training-content .toggle-block .toggle-checkbox').on('click', function(){
 	    if ($(this).is(":checked")) {
 	        $(this).closest('.toggle-block').find('p').html('Да');
 	    }
 	    else {
 	    	$('.toggle-block').find('p').html('Нет');
+	    }
+	});
+
+	//переключатель на странице участника
+	$('#modalUserEdit .toggle-block .toggle-checkbox').on('click', function(){
+	    if ($(this).is(":checked")) {
+	        $(this).closest('.toggle-block').find('p').html('Активный');
+	    }
+	    else {
+	    	$('.toggle-block').find('p').html('Заморожен');
 	    }
 	});
 

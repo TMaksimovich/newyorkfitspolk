@@ -245,10 +245,17 @@ p {
   z-index: -1;
 }
 
-.dropdown-list .dropdown-menu li a {
+.dropdown-list .dropdown-menu li span {
   padding: 14px 25px;
   font-size: 16px;
+  display: block;
   color: #383838;
+}
+
+.dropdown-list .dropdown-menu li:hover,
+.dropdown-list .dropdown-menu li:focus,
+.dropdown-list .dropdown-menu li:active {
+  background-color: #eeeeee;
 }
 
 .group {
@@ -1099,6 +1106,10 @@ p {
   display: none;
 }
 
+.modal-open .single-page-user-setting .btn-modal {
+  display: inline-block;
+}
+
 #modalUser {
   -webkit-animation-duration: .3s;
           animation-duration: .3s;
@@ -1282,6 +1293,80 @@ p {
 
 #modalFood .modal-footer {
   padding-top: 40px;
+}
+
+#modalMessage .modal-content .modal-body {
+  padding: 90px 30px 0;
+  margin-bottom: 40px;
+}
+
+#modalMessage .modal-content .modal-footer {
+  padding: 0 19px 32px;
+}
+
+#modalMessage .modal-content .modal-footer input[type="submit"] {
+  background-color: #5fc7ae;
+}
+
+#modalMessage .group textarea:focus ~ label {
+  left: -11px;
+}
+
+#modalUserEdit .group input[type="email"]:focus ~ label {
+  left: -5px;
+}
+
+#modalUserEdit .group textarea:focus ~ label {
+  left: -11px;
+}
+
+#modalUserEdit .group input:focus ~ label {
+  color: #5fc7ae;
+}
+
+#modalUserEdit .dropdown-list .dropdown-list-toggle.active,
+#modalUserEdit .group input,
+#modalUserEdit .group textarea {
+  color: #585858;
+  font-family: "LatoRegular", Arial, sans-serif;
+}
+
+#modalUserEdit .toggle-block {
+  margin-top: 35px;
+}
+
+#modalUserEdit .toggle-block span {
+  font-size: 16px;
+}
+
+#modalUserEdit .toggle-block .switch {
+  float: right;
+}
+
+#modalUserEdit .toggle-block p {
+  margin: 0;
+  font-size: 13px;
+  color: #949494;
+}
+
+#modalUserEdit .toggle-block .danger {
+  font-size: 11px;
+  color: #f55145;
+  line-height: 14px;
+  display: inline-block;
+  width: 100%;
+}
+
+#modalUserEdit .extend {
+  font-size: 16px;
+  margin-top: 26px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#modalUserEdit .checkbox-ripple {
+  float: right;
+  margin-top: 22px;
 }
 
 @media (min-width: 320px) {
@@ -3975,9 +4060,338 @@ body {
   overflow-y: hidden;
 }
 
+.single-page-user-setting .page-info-user {
+  background: url(../img/bg_user.jpg) 0 0 no-repeat;
+  background-size: cover;
+  min-height: 240px;
+  padding: 15px 8px;
+}
+
+.single-page-user-setting .meta-user {
+  font-family: "LatoLight", Arial, sans-serif;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.single-page-user-setting .meta-user .name-user {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.single-page-user-setting .meta-user .email-user {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.single-page-user-setting .menu-user {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 36px;
+  margin-top: 22px;
+  position: relative;
+}
+
+.single-page-user-setting .menu-user .photo {
+  width: 94px;
+  height: 94px;
+  background-color: #def1f0;
+  border-radius: 50%;
+  border: 5px solid #327d9b;
+  text-align: center;
+  color: #5fc7ae;
+  overflow: hidden;
+}
+
+.single-page-user-setting .menu-user .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-page-user-setting .menu-user .photo i {
+  line-height: 82px;
+  font-size: 40px;
+}
+
+.single-page-user-setting .menu-user button {
+  width: 44px;
+  height: 44px;
+  background-color: #5fc7ae;
+  border-radius: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: -5px;
+  left: -19px;
+  color: #fff;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.single-page-user-setting .menu-user button i {
+  line-height: 42px;
+}
+
+.single-page-user-setting .page-content {
+  margin-top: -83px;
+  padding: 0 25px 65px;
+}
+
+.single-page-user-setting .page-content .user-info,
+.single-page-user-setting .page-content .account-info {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+  padding: 44px 28px 30px;
+}
+
+.single-page-user-setting .page-content .user-info {
+  margin-right: 12px;
+  width: 48%;
+  float: left;
+}
+
+.single-page-user-setting .page-content .account-info {
+  width: 50%;
+}
+
+.single-page-user-setting .page-content .account-info .meta-user-info {
+  margin-bottom: 35px;
+}
+
+.single-page-user-setting .page-content .account-info .meta-user-info span {
+  width: 30%;
+}
+
+.single-page-user-setting .page-content .account-info .links {
+  list-style: none;
+  padding: 25px 0 19px;
+  margin: 0;
+  border-top: 1px solid #bdbdbd;
+}
+
+.single-page-user-setting .page-content .account-info .links li {
+  margin-bottom: 12px;
+}
+
+.single-page-user-setting .page-content .account-info .links a {
+  color: #5fc7ae;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.single-page-user-setting .page-content .account-info .links a:hover,
+.single-page-user-setting .page-content .account-info .links a:active {
+  text-decoration: none;
+}
+
+.single-page-user-setting .page-content h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: normal;
+  font-family: "LatoLight", Arial, sans-serif;
+  margin: 0 0 35px;
+}
+
+.single-page-user-setting .page-content .meta-user-media {
+  margin: 0 0 25px;
+}
+
+.single-page-user-setting .page-content .meta-user-media .photo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 168px;
+  height: 168px;
+  border-radius: 6px;
+  background-color: #def1f0;
+  color: #5fc7ae;
+  text-align: center;
+  overflow: hidden;
+}
+
+.single-page-user-setting .page-content .meta-user-media .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-page-user-setting .page-content .meta-user-media .photo i {
+  line-height: 168px;
+  font-size: 90px;
+}
+
+.single-page-user-setting .page-content .meta-user-media .meta-user-name {
+  display: inline-block;
+  vertical-align: middle;
+  width: 66%;
+  padding-left: 30px;
+}
+
+.single-page-user-setting .page-content .meta-user-media .name-user {
+  font-size: 20px;
+  margin: 0;
+}
+
+.single-page-user-setting .page-content .meta-user-media .email-user {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 16px;
+  color: #585858;
+  text-decoration: none;
+  font-family: "LatoLight", Arial, sans-serif;
+}
+
+.single-page-user-setting .page-content .meta-user-info {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 55px;
+}
+
+.single-page-user-setting .page-content .meta-user-info li {
+  margin-bottom: 16px;
+}
+
+.single-page-user-setting .page-content .meta-user-info span,
+.single-page-user-setting .page-content .meta-user-info p {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.single-page-user-setting .page-content .meta-user-info span {
+  width: 25%;
+  font-size: 13px;
+  color: #949494;
+}
+
+.single-page-user-setting .page-content .meta-user-info p {
+  width: 65%;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.single-page-user-setting .page-content button {
+  margin-left: -10px;
+}
+
+@media (max-width: 561px) {
+  .single-page-user-setting .page-content .meta-user-media .meta-user-name {
+    width: 100%;
+    padding-left: 0;
+    padding-top: 15px;
+  }
+  .single-page-user-setting .page-content .meta-user-info span,
+  .single-page-user-setting .page-content .meta-user-info p {
+    width: 100%;
+  }
+  .single-page-user-setting .page-content .account-info .meta-user-info span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .single-page-user-setting .page-info-user {
+    min-height: 181px;
+  }
+  .single-page-user-setting .page-title {
+    padding-top: 55px;
+  }
+  .single-page-user-setting .menu-user-column {
+    float: left;
+    text-align: left;
+  }
+  .single-page-user-setting .menu-user {
+    margin-top: 0;
+  }
+  .single-page-user-setting .page-content .user-info,
+  .single-page-user-setting .page-content .account-info {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
+    float: left;
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .single-page-user-setting .page-content .meta-user-media .photo {
+    width: 116px;
+    height: 116px;
+  }
+  .single-page-user-setting .page-content .meta-user-media .photo i {
+    line-height: 116px;
+    font-size: 70px;
+  }
+  .single-page-user-setting .page-content .meta-user-media .meta-user-name {
+    width: 60%;
+    padding-left: 15px;
+  }
+  .single-page-user-setting .page-content .meta-user-media .meta-user-name a {
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .single-page-user-setting .page-content .meta-user-media .email-user {
+    margin-bottom: 15px;
+  }
+  .single-page-user-setting .page-content .meta-user-info span {
+    width: 33%;
+  }
+  .single-page-user-setting .page-content .account-info .meta-user-info span {
+    width: 48%;
+  }
+  .single-page-user-setting .page-content .account-info .meta-user-info p {
+    width: 50%;
+  }
+  .single-page-user-setting .page-content .user-info,
+  .single-page-user-setting .page-content .account-info {
+    min-height: 610px;
+  }
+}
+
+@media (min-width: 768px) {
+  .single-page-user-setting .modal-dialog {
+    width: 546px;
+  }
+}
+
 @media (max-width: 991px) {
   .page-user {
     overflow-y: auto;
+  }
+  .single-page-user-setting .page-content {
+    margin-top: 0;
+    padding: 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
+  .single-page-user-setting .page-content .meta-user-media .photo {
+    width: 120px;
+    height: 120px;
+  }
+  .single-page-user-setting .page-content .meta-user-media .photo i {
+    line-height: 120px;
+    font-size: 70px;
+  }
+  .single-page-user-setting .page-content .meta-user-media .meta-user-name {
+    padding-left: 15px;
+  }
+  .single-page-user-setting .page-content .user-info,
+  .single-page-user-setting .page-content .account-info {
+    min-height: 601px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1300px) {
+  .single-page-user-setting .page-content .meta-user-media .photo {
+    width: 150px;
+    height: 150px;
+  }
+  .single-page-user-setting .page-content .meta-user-media .photo i {
+    line-height: 150px;
+    font-size: 90px;
   }
 }
 

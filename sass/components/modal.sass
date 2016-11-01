@@ -17,6 +17,9 @@
 .modal-open
 	.btn-modal
 		display: none
+	.single-page-user-setting
+		.btn-modal
+			display: inline-block
 
 //Модальное окно
 #modalUser
@@ -141,6 +144,56 @@
 					left: 0
 	.modal-footer
 		padding-top: 40px
+
+// Страница Участника
+#modalMessage
+	.modal-content
+		.modal-body
+			padding: 90px 30px 0
+			margin-bottom: 40px
+		.modal-footer
+			padding: 0 19px 32px
+			input[type="submit"]
+				background-color: $main_bg
+	.group textarea:focus ~ label
+		left: -11px
+
+#modalUserEdit
+	.group input[type="email"]:focus ~ label
+		left: -5px
+	.group textarea:focus ~ label
+		left: -11px
+	.group input:focus ~ label
+		color: $main_bg
+	.dropdown-list .dropdown-list-toggle.active,
+	.group input,
+	.group textarea
+		color: $text_color
+		font-family: "LatoRegular", Arial, sans-serif
+	.toggle-block
+		margin-top: 35px
+		span
+			font-size: 16px
+		.switch
+			float: right
+		p
+			margin: 0
+			font-size: 13px
+			color: $sub_text_color
+		.danger
+			font-size: 11px
+			color: $danger
+			line-height: 14px
+			display: inline-block
+			width: 100%
+	.extend
+		font-size: 16px
+		margin-top: 26px
+		display: inline-block
+		vertical-align: middle
+	.checkbox-ripple
+		float: right
+		margin-top: 22px
 
 
 
