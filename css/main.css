@@ -1122,6 +1122,7 @@ p {
   box-shadow: 0 14px 12px rgba(0, 0, 0, 0.17), 0 20px 40px 0 rgba(0, 0, 0, 0.3);
   padding: 0;
   text-align: left;
+  overflow: hidden;
 }
 
 .modal-content .modal-title {
@@ -1373,6 +1374,60 @@ p {
   margin-top: 26px;
 }
 
+#modalTrainingButton .training-item {
+  padding-top: 0;
+}
+
+#modalTrainingButton .training-item .slick-next {
+  right: -11px;
+}
+
+#modalTrainingButton .training-item .slick-prev {
+  right: 91px;
+}
+
+#modalTrainingButton .modal-body {
+  padding: 10px 49px 30px;
+}
+
+#modalTrainingButton .modal-header {
+  padding: 25px 49px;
+}
+
+#modalTrainingButton .slide-media {
+  padding: 0;
+}
+
+#modalTrainingButton .pagingInfo {
+  bottom: 35px;
+}
+
+#modalTrainingButton .slide-desc {
+  margin-top: 22px;
+}
+
+#modalTrainingButton .slide-desc input,
+#modalTrainingButton .slide-desc textarea {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #bdbdbd;
+  outline: none;
+}
+
+#modalTrainingButton .slide-desc input {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "LatoLight", Arial, sans-serif;
+  margin-bottom: 7px;
+}
+
+#modalTrainingButton .slide-desc textarea {
+  font-size: 16px;
+  height: 57px !important;
+}
+
 @media (min-width: 320px) {
   #modalUser {
     -webkit-transform-origin: 100% 100%;
@@ -1414,6 +1469,27 @@ p {
   }
 }
 
+@media (max-width: 767px) {
+  #modalTrainingButton .modal-header {
+    padding: 25px 15px;
+  }
+  #modalTrainingButton .modal-body {
+    padding: 10px 15px;
+  }
+  #modalTrainingButton .slide-desc {
+    margin-bottom: 15px;
+  }
+  #modalTrainingButton .slide-desc input {
+    font-size: 16px;
+  }
+  #modalTrainingButton .pagingInfo {
+    bottom: 15px;
+  }
+  #modalTrainingButton .slide-media {
+    height: 160px;
+  }
+}
+
 @media (min-width: 768px) {
   .modal-dialog {
     width: 426px;
@@ -1424,8 +1500,27 @@ p {
   .modal-content {
     box-shadow: 0 14px 12px rgba(0, 0, 0, 0.17), 0 20px 40px 0 rgba(0, 0, 0, 0.3);
   }
-  #modalFood .modal-dialog {
+  #modalFood .modal-dialog,
+  #modalTrainingButton .modal-dialog {
     width: 696px;
+  }
+  #modalTrainingButton .training-item {
+    padding-bottom: 45px;
+  }
+}
+
+@media (min-width: 992px) {
+  #modalTrainingButton .modal-dialog {
+    width: 826px;
+  }
+  #modalTrainingButton .slide-desc {
+    width: 65%;
+  }
+}
+
+@media (min-width: 1080px) {
+  #modalTrainingButton .modal-dialog {
+    width: 876px;
   }
 }
 
@@ -1564,6 +1659,12 @@ p {
   color: #d7d7d7;
   background: #626262;
   border-radius: 2px;
+}
+
+@media (max-width: 991px) {
+  .tooltip span {
+    display: none !important;
+  }
 }
 
 .ui-kit-page {
@@ -4136,6 +4237,9 @@ body {
 
 .single-page-user-setting .menu-user button i {
   line-height: 42px;
+  text-align: center;
+  margin: auto;
+  width: 100%;
 }
 
 .single-page-user-setting .page-content {
@@ -4344,6 +4448,27 @@ body {
   z-index: 100;
 }
 
+.single-page-user-setting .page-training-content {
+  top: -83px;
+  margin-bottom: 0;
+}
+
+.single-page-user-setting .page-training-content .dropdown-list .dropdown-list-toggle {
+  padding: 10px 30px 0px 0;
+}
+
+.single-page-user-setting .page-training-content .title-block {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "LatoLight", Arial, sans-serif;
+  margin-top: 0;
+}
+
+.single-page-user-setting .page-training-content .title-block + .add-praxis {
+  margin-bottom: 34px;
+}
+
 @media (max-width: 480px) {
   .single-page-user-setting .right-menu-block {
     width: 100%;
@@ -4386,6 +4511,9 @@ body {
     width: 100%;
     float: left;
     box-shadow: none;
+  }
+  .single-page-user-setting .page-training-content {
+    top: 0;
   }
 }
 
@@ -4831,6 +4959,12 @@ body {
   min-height: 129px;
 }
 
+.form-praxis .add-praxis .praxis-info {
+  width: 84%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .form-praxis .add-praxis span {
   font-size: 16px;
   font-family: "LatoLight", Arial, sans-serif;
@@ -4857,7 +4991,7 @@ body {
 
 .form-praxis .add-praxis .praxis-name {
   margin-top: 7px;
-  width: 84%;
+  width: 100%;
   display: inline-block;
   vertical-align: middle;
 }
@@ -4911,6 +5045,9 @@ body {
 }
 
 @media (max-width: 479px) {
+  .form-praxis .buttons {
+    margin-bottom: 0;
+  }
   .form-praxis .buttons .right-position {
     float: none;
   }
@@ -4967,6 +5104,12 @@ body {
   .form-praxis .buttons {
     margin-top: 40px;
   }
+  .form-praxis .add-praxis {
+    padding: 15px 15px;
+  }
+  .form-praxis .add-praxis .praxis-info {
+    width: 84%;
+  }
 }
 
 @media (max-width: 792px) and (min-width: 768px) {
@@ -4985,6 +5128,12 @@ body {
   .page-training-content .btn-fixed {
     right: 23px;
     top: 89%;
+  }
+  .single-page-user-setting .page-training-content {
+    top: 0;
+  }
+  .single-page-user-setting .form-praxis {
+    box-shadow: none;
   }
 }
 

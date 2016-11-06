@@ -61,6 +61,9 @@
 			outline: none
 			i
 				line-height: 42px
+				text-align: center
+				margin: auto
+				width: 100%
 	.page-content
 		margin-top: -83px
 		padding: 0 25px 65px
@@ -196,6 +199,19 @@
 		&.open-menu
 			right: 0
 			z-index: 100
+	.page-training-content
+		top: -83px
+		margin-bottom: 0
+		.dropdown-list .dropdown-list-toggle
+			padding: 10px 30px 0px 0
+		.title-block
+			text-transform: uppercase
+			font-weight: normal
+			font-size: 20px
+			font-family: "LatoLight", Arial, sans-serif
+			margin-top: 0
+			& + .add-praxis
+				margin-bottom: 34px
 
 
 @media (max-width:480px)
@@ -239,6 +255,8 @@
 				width: 100%
 				float: left
 				box-shadow: none
+		.page-training-content
+			top: 0
 
 @media (min-width:768px) and (max-width:991px)
 	.single-page-user-setting

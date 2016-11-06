@@ -8,7 +8,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Страничка участника - управление</title>
+	<title>Страничка участника - План питания</title>
 	<meta name="description" content="">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -197,10 +197,10 @@
           <ul class="breadcrumbs">
             <li><a href="user.html">Участники</a></li>
             <li><a href="single-user.html">Александра Мирошниченко</a></li>
-            <li class="active">Управление</li>
+            <li class="active">План питания</li>
           </ul>
 
-          <h1 class="page-title">Управление</h1>
+          <h1 class="page-title">План питания</h1>
         </div>
 
         <div class="col-xs-13 col-sm-6 menu-user-column right-position right">
@@ -220,7 +220,7 @@
           <div class="right-menu-block">
             <button class="close"><i class="material-icons">close</i></button>
             <ul>
-              <li class="active">
+              <li>
                 <a href="single-user-setting.html"><i class="material-icons">tune</i> Управление</a>
               </li>
               <li>
@@ -232,7 +232,7 @@
               <li>
                 <a href="single-user-plan.html"><i class="material-icons">accessibility</i> План тренировок</a>
               </li>
-              <li>
+              <li class="active">
                 <a href="single-user-food.html"><i class="material-icons">room_service</i> План питания</a>
               </li>
               <li>
@@ -244,194 +244,14 @@
         </div>
       </div>
 
-      <div class="row page-content">
-        <div class="user-info">
-          <h3>Личная информация</h3>
-          <div class="meta-user-media">
-            <div class="photo">
-              <img src="img/user.jpg" alt="Александра Мирошниченко">
-              <!-- если аватарки нет, то -->
-              <i class="material-icons">face</i>
-            </div>
-
-            <div class="meta-user-name">
-              <p class="name-user">Александра Мирошниченко</p>
-              <a href="mailto:alex-mirosha@mail.ru" class="email-user">alex-mirosha@mail.ru</a>
-
-              <button class="btn-modal btn-default waves waves-effect waves-light" data-toggle="modal" data-target="#modalMessage">Написать сообщение</button>
-
-              <!-- Модальное окно -->
-              <form class="modal animation-scale-up" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="modalMessageLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-
-                    <div class="modal-header">
-                      <button type="button" class="material-icons close" data-dismiss="modal" aria-hidden="true">close</button>
-                      <h4 class="modal-title" id="modalMessageLabel">Написать сообщение</h4>
-                    </div>
-
-                    <div class="modal-body">
-                      <div class="group">
-                        <textarea></textarea><span class="bar"></span>
-                        <label>Сообщение</label>
-                      </div>
-                    </div>
-
-                    <div class="modal-footer">
-                      <input type="submit" class="btn-default waves waves-effect waves-light" value="Отправить">
-                    </div>
-
-                  </div>
-                </div>
-              </form>
-              <!-- end Модальное окно -->
-            </div>
-          </div>
-
-          <ul class="meta-user-info">
-            <li>
-              <span>Возраст</span>
-              <p>29</p>
-            </li>
-            <li>
-              <span>Город</span>
-              <p>Санкт-Петербург</p>
-            </li>
-            <li>
-              <span>Дата активации</span>
-              <p>12.08.16</p>
-            </li>
-            <li>
-              <span>Комментарий</span>
-              <p>Тренируется 5 лет, планирует продолжить работу со мной со следующей группой</p>
-            </li>
-          </ul>
-
-          <button class="btn-flat waves-effect waves-grey">Отправить анкету</button>
-
-        </div>
-
-        <div class="account-info right-position">
-          <h3>ИНФОРМАЦИЯ ОБ АККАУНТЕ</h3>
-          <ul class="meta-user-info">
-            <li>
-              <span>Статус</span>
-              <p>Активный</p>
-            </li>
-            <li>
-              <span>Программа</span>
-              <p>Создай себя</p>
-            </li>
-            <li>
-              <span>Группа</span>
-              <p>5</p>
-            </li>
-            <li>
-              <span>Старт группы</span>
-              <p>15.08.16</p>
-            </li>
-            <li>
-              <span>Финиш группы</span>
-              <p>14.11.16</p>
-            </li>
-            <li>
-              <span>Категория тренировок</span>
-              <p>Дома и в зале</p>
-            </li>
-            <li>
-              <span>Количество тренировок</span>
-              <p>5</p>
-            </li>
-          </ul>
-
-          <ul class="links">
-            <li><a href="single-praxis-double.html">Настроить план тренировок</a></li>
-            <li><a href="single-food.html">Настроить план питания</a></li>
-          </ul>
-
-          <button class="btn-modal btn-default waves waves-effect waves-light" data-toggle="modal" data-target="#modalUserEdit">Изменить</button>
-          <!-- Модальное окно -->
-          <form class="modal animation-scale-up" id="modalUserEdit" tabindex="1" role="dialog" aria-labelledby="modalUserLabel" aria-hidden="true">
-            <div class="modal-dialog modal-programm">
-              <div class="modal-content">
-
-                <div class="modal-header">
-                  <button type="button" class="material-icons close" data-dismiss="modal" aria-hidden="true">close</button>
-                  <h4 class="modal-title" id="modalUserLabel">Информация об участнике</h4>
-                </div>
-
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="col-xs-13 col-sm-7">
-                      <div class="group">
-                        <input type="text"><span class="bar"></span>
-                        <label>Имя Фамилия</label>
-                      </div>
-
-                      <div class="group">
-                        <input type="email"><span class="bar"></span>
-                        <label>E-mail</label>
-                      </div>
-
-                      <div class="group">
-                        <textarea></textarea><span class="bar"></span>
-                        <label>Комментарий</label>
-                      </div>
-                    </div>
-
-                    <div class="col-xs-13 col-sm-6">
-
-                      <div class="dropdown dropdown-list">
-                        <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown" aria-expanded="false">Программа<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><span class="waves waves-effect waves-light">Вместе навсегда</span></li>
-                          <li><span class="waves waves-effect waves-light">Питание для новичков</span></li>
-                          <li><span class="waves waves-effect waves-light">Самостоятельный</span></li>
-                          <li><span class="waves waves-effect waves-light">Только питание</span></li>
-                          <li><span class="waves waves-effect waves-light">Пси + Фит</span></li>
-                          <li><span class="waves waves-effect waves-light">Создай себя</span></li>
-                        </ul>
-                      </div>
-
-                      <div class="toggle-block">
-                        <span>Статус участника</span>
-                        <input id="toogle" class="toggle-checkbox" type="checkbox" hidden="hidden">
-                        <label for="toogle" class="switch"></label>
-                        <p>Заморожен</p>
-                        <span class="danger">Чтобы присвоить статус Активный, сначала добавь участника в группу</span>
-                      </div>
-
-
-                      <p class="extend">Продлить аккаунт</p>
-                      <div class="rkmd-checkbox checkbox-ripple input-ripple">
-                        <label class="input-checkbox input-checkbox-radio checkbox-aquamarine">
-                          <input type="checkbox">
-                          <span class="checkbox"></span>
-                        </label>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="modal-footer">
-                  <button class="btn-flat waves-effect waves-grey close" data-dismiss="modal" aria-hidden="true">Отмена</button>
-                  <input type="submit" class="btn-flat waves-effect waves-grey" value="Сохранить">
-                </div>
-
-              </div>
-            </div>
-          </form>
-          <!-- end Модальное окно -->
-
-          <button class="btn-default disabled waves waves-effect waves-light right-position">Удалить</button>
-        </div>
-
+      <div class="row page-training-content plan-training-content">
 
       </div>
+
     </div>
   </div>
    <!-- End Основной контент странички -->
+
 
 
 	<!--[if lt IE 9]>

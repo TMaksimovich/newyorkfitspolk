@@ -31,6 +31,7 @@
 	box-shadow: 0 14px 12px rgba(0,0,0,0.17), 0 20px 40px 0 rgba(0,0,0,0.30)
 	padding: 0
 	text-align: left
+	overflow: hidden
 	.modal-title
 		font-size: 20px
 		color: $h_color
@@ -200,7 +201,39 @@
 		.toggle-block
 			margin-top: 26px
 
-
+#modalTrainingButton
+	.training-item
+		padding-top: 0
+		.slick-next
+			right: -11px
+		.slick-prev
+			right: 91px
+	.modal-body
+		padding: 10px 49px 30px
+	.modal-header
+		padding: 25px 49px
+	.slide-media
+		padding: 0
+	.pagingInfo
+		bottom: 35px
+	.slide-desc
+		margin-top: 22px
+		input,
+		textarea
+			width: 100%
+			border-top: none
+			border-left: none
+			border-right: none
+			border-bottom: 1px solid #bdbdbd
+			outline: none
+		input
+			font-size: 20px
+			text-transform: uppercase
+			font-family: "LatoLight", Arial, sans-serif
+			margin-bottom: 7px
+		textarea
+			font-size: 16px
+			height: 57px !important
 
 @media (min-width: 320px)
 	#modalUser
@@ -229,6 +262,21 @@
 	.user-name-column
 		width: 80%
 
+@media (max-width: 767px)
+	#modalTrainingButton
+		.modal-header
+			padding: 25px 15px
+		.modal-body
+			padding: 10px 15px
+		.slide-desc
+			margin-bottom: 15px
+			input
+				font-size: 16px
+		.pagingInfo
+			bottom: 15px
+		.slide-media
+			height: 160px
+
 @media (min-width: 768px)
 	.modal-dialog
 		width: 426px
@@ -236,9 +284,25 @@
 		width: 546px
 	.modal-content
 		box-shadow: 0 14px 12px rgba(0,0,0,0.17), 0 20px 40px 0 rgba(0,0,0,0.30)
-	#modalFood
+	#modalFood,
+	#modalTrainingButton
 		.modal-dialog
 			width: 696px
+	#modalTrainingButton
+		.training-item
+			padding-bottom: 45px
+
+@media (min-width: 992px)
+	#modalTrainingButton
+		.modal-dialog
+			width: 826px
+		.slide-desc
+			width: 65%
+
+@media (min-width: 1080px)
+	#modalTrainingButton
+		.modal-dialog
+			width: 876px
 
 @media (min-width: 1101px)
 	#modalUser

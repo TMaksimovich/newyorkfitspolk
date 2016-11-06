@@ -36,7 +36,7 @@ $(function() {
 	});
 
 	//выпадающий список
-	$(".dropdown-list li>span").click(function() {
+	$(".dropdown-list li>span").on('touchstart click', function(){
 		var textList = $(this).text();
 		$(this).closest(".dropdown-list").find(".dropdown-list-toggle").html(textList + '<b class="caret"></b>').addClass('active');
 	});
@@ -84,9 +84,11 @@ $(function() {
 		if($(this).find('.dropdown-list-toggle').hasClass('active')) {
 			$(this).closest('.new-block-praxis')
 				   .find('.add-praxis')
+				   .addClass('active')
+				   .find('.praxis-info')
 				   .attr('data-toggle', 'modal')
 				   .attr('data-target', '#modalTraining')
-				   .addClass('active')
+
 		}
 	});
 
@@ -116,6 +118,10 @@ $(function() {
 		prevArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-prev">назад</a>',
 		nextArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-next">вперед</a>'
 	});
+
+	$('.modal').on('shown.bs.modal', function (e) { //когда открыто модальное окно
+      $slickElement.slick("setPosition", 0);
+    })
 
 
 	//всплывающие подсказки
