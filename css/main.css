@@ -4469,6 +4469,16 @@ body {
   margin-bottom: 34px;
 }
 
+.single-page-user-setting .page-text-content, .single-page-user-setting .single-page-food .page-text-comments, .single-page-food .single-page-user-setting .page-text-comments {
+  top: -83px;
+  margin-bottom: 0;
+}
+
+.single-page-user-setting.single-page-food .page-text-comments {
+  top: 0;
+  margin-bottom: 40px;
+}
+
 @media (max-width: 480px) {
   .single-page-user-setting .right-menu-block {
     width: 100%;
@@ -4565,6 +4575,12 @@ body {
   .single-page-user-setting .page-content {
     margin-top: 0;
     padding: 0;
+  }
+  .single-page-user-setting .page-text-content, .single-page-user-setting .single-page-food .page-text-comments, .single-page-food .single-page-user-setting .page-text-comments {
+    top: 0;
+  }
+  .single-page-user-setting.single-page-food .page-text-comments {
+    margin-top: 30px;
   }
 }
 
