@@ -1122,7 +1122,6 @@ p {
   box-shadow: 0 14px 12px rgba(0, 0, 0, 0.17), 0 20px 40px 0 rgba(0, 0, 0, 0.3);
   padding: 0;
   text-align: left;
-  overflow: hidden;
 }
 
 .modal-content .modal-title {
@@ -1372,6 +1371,10 @@ p {
 
 #modalUserEdit .modal-programm .toggle-block {
   margin-top: 26px;
+}
+
+#modalTrainingButton .modal-content {
+  overflow: hidden;
 }
 
 #modalTrainingButton .training-item {
@@ -4475,7 +4478,7 @@ body {
 }
 
 .single-page-user-setting.single-page-food .page-text-comments {
-  top: 0;
+  top: -55px;
   margin-bottom: 40px;
 }
 
@@ -4581,6 +4584,7 @@ body {
   }
   .single-page-user-setting.single-page-food .page-text-comments {
     margin-top: 30px;
+    top: 0;
   }
 }
 
