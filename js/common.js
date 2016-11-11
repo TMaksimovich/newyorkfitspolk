@@ -107,6 +107,7 @@ $(function() {
 	//слайдер тренировок
 	var $status = $('.pagingInfo');
 	var $slickElement = $('.training-item');
+	var $modal = $('.modal');
 
 	$slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
 	  //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
@@ -119,15 +120,16 @@ $(function() {
 		nextArrow: '<a href="#" class="btn-flat waves-effect waves-grey slick-next">вперед</a>'
 	});
 
-	$('.modal').on('shown.bs.modal', function (e) { //когда открыто модальное окно
+	$modal.on('shown.bs.modal', function (e) { //когда открыто модальное окно
       $slickElement.slick("setPosition", 0);
     })
 
 
 	//всплывающие подсказки
 	$(function() {
+	  var $tooltip = $('.tooltip');
 
-	  $('.tooltip').each(function() {
+	  $tooltip.each(function() {
 	    var el = $(this);
 	    var title = el.attr('title');
 	    if (title && title != '') {
@@ -161,21 +163,23 @@ $(function() {
 		var page_w = $("html").width();
 
 		if(page_w > 992) {
-			var posBread = $(".block-scroll-y .breadcrumbs").offset().top;
-			var posTitle = $(".block-scroll-y .page-title").offset().top;
-			var bodyScroll = $("body").scrollTop();
+			var $breadcrumbs = $(".block-scroll-y .breadcrumbs");
+			var $title = $(".block-scroll-y .page-title");
+			var $posBread = $breadcrumbs.offset().top;
+			var $posTitle = $title.offset().top;
+			var $bodyScroll = $("body").scrollTop();
 
-			if(bodyScroll >= 110){
-				$(".block-scroll-y .breadcrumbs").fadeOut();
+			if($bodyScroll >= 110){
+				$breadcrumbs.fadeOut();
 			}
 			else {
-				$(".block-scroll-y .breadcrumbs").fadeIn();
+				$breadcrumbs.fadeIn();
 			}
-			if(bodyScroll >= 50) {
-				$(".block-scroll-y .page-title").fadeOut();
+			if($bodyScroll >= 50) {
+				$title.fadeOut();
 			}
 			else {
-				$(".block-scroll-y .page-title").fadeIn();
+				$title.fadeIn();
 			}
 		}
 		else {
@@ -221,11 +225,12 @@ $(function() {
 	//кастомный скролл
 
 	function window_resize(){
-		var page_h = $("html").height();
-		var page_w = $("html").width();
+		var $page_h = $("html").height();
+		var $page_w = $("html").width();
+		var $tableWrapper = $(".table-wrapper");
 
-		if(page_w > 991){
-			$(".table-wrapper").mCustomScrollbar({
+		if($page_w > 991){
+			$tableWrapper.mCustomScrollbar({
 		    	axis:"y",
 		    	scrollButtons:{
 		    		enable: true,
@@ -235,7 +240,7 @@ $(function() {
 	    	});
 		}
 		else{
-			$(".table-wrapper").mCustomScrollbar("destroy");
+			$tableWrapper.mCustomScrollbar("destroy");
 		}
 	}
 

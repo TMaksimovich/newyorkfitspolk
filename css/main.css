@@ -275,6 +275,7 @@ p {
   border: none;
   border-radius: 0;
   border-bottom: 1px solid #949494;
+  background-color: transparent;
 }
 
 .group input:focus,
@@ -286,29 +287,34 @@ p {
 .group label {
   color: #949494;
   font-size: 16px;
+  line-height: 18px;
   font-family: "LatoLight", sans-serif;
   font-weight: normal;
   position: absolute;
   pointer-events: none;
   left: 0;
-  top: 10px;
-  -webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-          transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  bottom: 3px;
+  -webkit-transform: translate3d(0, 5px, 0) scale(1);
+          transform: translate3d(0, 5px, 0) scale(1);
+  -webkit-transition: -webkit-transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+          transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;
+  -webkit-transform-origin: left top;
+      -ms-transform-origin: left top;
+          transform-origin: left top;
 }
 
 .group input:focus ~ label,
 .group textarea:focus ~ label {
-  top: -13px;
-  -webkit-transform: scale(0.75);
-      -ms-transform: scale(0.75);
-          transform: scale(0.75);
-  left: -17px;
+  -webkit-transform: translate3d(0, -20px, 0) scale(0.75);
+          transform: translate3d(0, -20px, 0) scale(0.75);
   color: #5fc7ae;
 }
 
 .group input.used ~ label,
 .group textarea.used ~ label {
-  display: none;
+  -webkit-transform: translate3d(0, -20px, 0) scale(0.75);
+          transform: translate3d(0, -20px, 0) scale(0.75);
+  display: block;
 }
 
 .group input.used:focus ~ label,
@@ -1211,7 +1217,6 @@ p {
 }
 
 .modal-programm .group input:focus ~ label {
-  left: -11px;
   color: #949494;
 }
 
@@ -1245,10 +1250,6 @@ p {
 
 .modal-programm .group-day label {
   left: 14px;
-}
-
-.modal-programm .group-day input:focus ~ label {
-  left: 0;
 }
 
 .modal-programm .modal-footer {
@@ -1306,18 +1307,6 @@ p {
 
 #modalMessage .modal-content .modal-footer input[type="submit"] {
   background-color: #5fc7ae;
-}
-
-#modalMessage .group textarea:focus ~ label {
-  left: -11px;
-}
-
-#modalUserEdit .group input[type="email"]:focus ~ label {
-  left: -5px;
-}
-
-#modalUserEdit .group textarea:focus ~ label {
-  left: -11px;
 }
 
 #modalUserEdit .group input:focus ~ label {
@@ -4482,6 +4471,168 @@ body {
   margin-bottom: 40px;
 }
 
+.single-page-user-setting .page-content-anketa {
+  background-color: #fff;
+  max-width: 1056px;
+  margin: -83px auto;
+  padding: 0;
+}
+
+.single-page-user-setting .page-content-anketa section {
+  padding: 50px 48px 64px;
+}
+
+.single-page-user-setting .page-content-anketa section:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.single-page-user-setting .page-content-anketa h3 {
+  text-transform: none;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.single-page-user-setting .page-content-anketa p {
+  font-size: 16px;
+}
+
+.single-page-user-setting .page-content-anketa ul:not(.dropdown-menu) {
+  margin: 0 0 22px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.single-page-user-setting .page-content-anketa ul:not(.dropdown-menu) li {
+  position: relative;
+  padding-left: 30px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.single-page-user-setting .page-content-anketa ul:not(.dropdown-menu) li:before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  background-color: #5fc7ae;
+  border-radius: 50%;
+}
+
+.single-page-user-setting .page-content-anketa .dropdown-list {
+  margin-bottom: 11px;
+}
+
+.single-page-user-setting .page-content-anketa .dropdown-list-toggle {
+  padding: 10px 30px 0 0;
+}
+
+.single-page-user-setting .page-content-anketa .dropdown-list-toggle-units {
+  width: 100%;
+}
+
+.single-page-user-setting .page-content-anketa .group {
+  margin-bottom: 25px;
+}
+
+.single-page-user-setting .page-content-anketa .group label {
+  line-height: 18px;
+}
+
+.single-page-user-setting .page-content-anketa .group input,
+.single-page-user-setting .page-content-anketa .group textarea {
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.single-page-user-setting .page-content-anketa .rkmd-radio {
+  color: #949494;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "LatoLight", Arial, sans-serif;
+  letter-spacing: 0;
+  margin-bottom: 9px;
+}
+
+.single-page-user-setting .page-content-anketa .rkmd-radio label {
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.single-page-user-setting .page-content-anketa .column {
+  float: left;
+}
+
+.single-page-user-setting .page-content-anketa .recomend .column {
+  width: 75%;
+}
+
+.single-page-user-setting .page-content-anketa .general p {
+  font-size: 14px;
+  font-family: "LatoLight", Arial, sans-serif;
+  margin-bottom: 0;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:first-of-type {
+  width: 25%;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:nth-of-type(2) {
+  width: 25%;
+  margin-left: 10%;
+  padding-top: 29px;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type {
+  width: 30%;
+  margin-left: 10%;
+  padding-top: 40px;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type p {
+  margin-bottom: 15px;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .dropdown-list-toggle {
+  padding: 0px 30px 0 0;
+  width: 50%;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea {
+  min-height: 52px;
+  padding-right: 0;
+  -webkit-transition: margin-top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+          transition: margin-top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea ~ label {
+  top: 0;
+  bottom: auto;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea:focus,
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea.used {
+  margin-top: 30px;
+}
+
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea.used ~ label,
+.single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea:focus ~ label {
+  -webkit-transform: translate3d(0, -30px, 0) scale(0.75);
+          transform: translate3d(0, -30px, 0) scale(0.75);
+}
+
+.single-page-user-setting .page-content-anketa .health .column {
+  width: 48%;
+}
+
+.single-page-user-setting .page-content-anketa .health .column:first-of-type {
+  margin-right: 1%;
+}
+
+.single-page-user-setting .page-content-anketa .health .column:last-of-type {
+  margin-left: 1%;
+}
+
 @media (max-width: 480px) {
   .single-page-user-setting .right-menu-block {
     width: 100%;
@@ -4920,15 +5071,6 @@ body {
   padding: 70px 48px;
   border-radius: 2px;
   box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.08), 0 0 1px 2px rgba(0, 0, 0, 0.13);
-}
-
-.form-praxis .group input:focus ~ label,
-.form-praxis .group textarea:focus ~ label {
-  left: -27px;
-}
-
-.form-praxis .group-comment input:focus ~ label {
-  left: -13px;
 }
 
 .form-praxis .group-comment {
