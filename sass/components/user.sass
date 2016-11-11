@@ -316,7 +316,9 @@
 					.group textarea.used ~ label,
 					.group textarea:focus ~ label
 						transform: translate3d(0, -30px, 0) scale(0.75)
-		.health
+		.health,
+		.lifestyle,
+		.about
 			.column
 				width: 48%
 				&:first-of-type
@@ -324,6 +326,47 @@
 				&:last-of-type
 					margin-left: 1%
 		.lifestyle
+			.column:last-of-type
+				margin-top: 66px
+			.column-half
+				float: left
+				width: 49%
+				&:last-of-type
+					margin-left: 3%
+					width: 48%
+		.about
+			textarea
+				padding-right: 0
+			textarea.used ~ label,
+			textarea:focus ~ label
+				transform: translate3d(0, -30px, 0) scale(0.75)
+			.column:first-of-type
+				textarea
+					margin-top: 36px
+					min-height: 52px
+					padding-right: 0
+				textarea ~ label
+					top: 0
+					bottom: auto
+			.column:last-of-type
+				.group
+					margin-bottom: 10px
+				textarea.used ~ label,
+				textarea:focus ~ label
+					top: 0
+					bottom: auto
+					transform: translate3d(0, -7px, 0) scale(0.75)
+		.activity
+			p
+				font-size: 14px
+				font-family: "LatoLight", Arial, sans-serif
+				margin-bottom: 0
+				&:last-of-type
+					margin-bottom: 34px
+
+
+
+
 
 
 

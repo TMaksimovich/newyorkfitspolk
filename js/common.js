@@ -36,7 +36,7 @@ $(function() {
 	});
 
 	//выпадающий список
-	$(".dropdown-list li>span").on('touchstart click', function(){
+	$(".dropdown-list").on('touchstart click', 'li>span', function(){
 		var textList = $(this).text();
 		$(this).closest(".dropdown-list").find(".dropdown-list-toggle").html(textList + '<b class="caret"></b>').addClass('active');
 	});
@@ -60,7 +60,7 @@ $(function() {
 	});
 
 	//переключатель на странице плана тренировок
-	$('.plan-training-content .toggle-block .toggle-checkbox').on('click', function(){
+	$('.plan-training-content .toggle-block').on('click', '.toggle-checkbox', function(){
 	    if ($(this).is(":checked")) {
 	        $(this).closest('.toggle-block').find('p').html('Да');
 	    }
@@ -70,7 +70,7 @@ $(function() {
 	});
 
 	//переключатель на странице участника
-	$('#modalUserEdit .toggle-block .toggle-checkbox').on('click', function(){
+	$('#modalUserEdit .toggle-block').on('click', '.toggle-checkbox', function(){
 	    if ($(this).is(":checked")) {
 	        $(this).closest('.toggle-block').find('p').html('Активный');
 	    }
@@ -80,7 +80,7 @@ $(function() {
 	});
 
 	// активный блок на странице Режим тренировки
-	$('.new-block-praxis .dropdown-list').on('click', function(){
+	$('.new-block-praxis').on('click', '.dropdown-list', function(){
 		if($(this).find('.dropdown-list-toggle').hasClass('active')) {
 			$(this).closest('.new-block-praxis')
 				   .find('.add-praxis')
