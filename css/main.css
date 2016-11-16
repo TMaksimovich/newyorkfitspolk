@@ -4574,22 +4574,6 @@ body {
   margin-bottom: 0;
 }
 
-.single-page-user-setting .page-content-anketa .general .column:first-of-type {
-  width: 25%;
-}
-
-.single-page-user-setting .page-content-anketa .general .column:nth-of-type(2) {
-  width: 25%;
-  margin-left: 10%;
-  padding-top: 29px;
-}
-
-.single-page-user-setting .page-content-anketa .general .column:last-of-type {
-  width: 30%;
-  margin-left: 10%;
-  padding-top: 40px;
-}
-
 .single-page-user-setting .page-content-anketa .general .column:last-of-type p {
   margin-bottom: 15px;
 }
@@ -4620,41 +4604,6 @@ body {
 .single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea:focus ~ label {
   -webkit-transform: translate3d(0, -30px, 0) scale(0.75);
           transform: translate3d(0, -30px, 0) scale(0.75);
-}
-
-.single-page-user-setting .page-content-anketa .health .column,
-.single-page-user-setting .page-content-anketa .lifestyle .column,
-.single-page-user-setting .page-content-anketa .about .column,
-.single-page-user-setting .page-content-anketa .agreement .column {
-  width: 48%;
-}
-
-.single-page-user-setting .page-content-anketa .health .column:first-of-type,
-.single-page-user-setting .page-content-anketa .lifestyle .column:first-of-type,
-.single-page-user-setting .page-content-anketa .about .column:first-of-type,
-.single-page-user-setting .page-content-anketa .agreement .column:first-of-type {
-  margin-right: 1%;
-}
-
-.single-page-user-setting .page-content-anketa .health .column:last-of-type,
-.single-page-user-setting .page-content-anketa .lifestyle .column:last-of-type,
-.single-page-user-setting .page-content-anketa .about .column:last-of-type,
-.single-page-user-setting .page-content-anketa .agreement .column:last-of-type {
-  margin-left: 1%;
-}
-
-.single-page-user-setting .page-content-anketa .lifestyle .column:last-of-type {
-  margin-top: 66px;
-}
-
-.single-page-user-setting .page-content-anketa .lifestyle .column-half {
-  float: left;
-  width: 49%;
-}
-
-.single-page-user-setting .page-content-anketa .lifestyle .column-half:last-of-type {
-  margin-left: 3%;
-  width: 48%;
 }
 
 .single-page-user-setting .page-content-anketa .about textarea {
@@ -4713,28 +4662,6 @@ body {
   font-size: 14px;
   font-family: "LatoLight", Arial, sans-serif;
   margin-bottom: 15px;
-}
-
-.single-page-user-setting .page-content-anketa .nutrition .column,
-.single-page-user-setting .page-content-anketa .work .column {
-  margin-top: 5px;
-}
-
-.single-page-user-setting .page-content-anketa .nutrition .column:first-of-type,
-.single-page-user-setting .page-content-anketa .work .column:first-of-type {
-  margin-right: 1%;
-  width: 38%;
-}
-
-.single-page-user-setting .page-content-anketa .nutrition .column:last-of-type,
-.single-page-user-setting .page-content-anketa .work .column:last-of-type {
-  margin-left: 2%;
-  width: 58%;
-}
-
-.single-page-user-setting .page-content-anketa .nutrition .column:last-of-type .rkmd-radio,
-.single-page-user-setting .page-content-anketa .work .column:last-of-type .rkmd-radio {
-  margin-bottom: 35px;
 }
 
 .single-page-user-setting .page-content-anketa .nutrition .rkmd-radio p,
@@ -4827,9 +4754,91 @@ body {
   margin-bottom: 44px;
 }
 
+#dropbox {
+  background-color: #f4f4f4;
+  border-radius: 2px;
+  border: 1px solid #e3e3e3;
+  text-align: center;
+  min-height: 330px;
+  line-height: 330px;
+  padding: 15px 15px 35px;
+  overflow: hidden;
+}
+
+#dropbox .message {
+  font-size: 16px;
+  font-family: "LatoLight", Arial, sans-serif;
+  color: #949494;
+}
+
+#dropbox .preview {
+  float: left;
+  width: 25%;
+  height: 295px;
+  padding: 0 15px;
+  overflow: hidden;
+}
+
+#dropbox .preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#dropbox .imageHolder {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 480px) {
   .single-page-user-setting .right-menu-block {
     width: 100%;
+  }
+  .single-page-user-setting .page-content-anketa .health h3 {
+    margin-bottom: 40px;
+  }
+  .single-page-user-setting .page-content-anketa .health .group {
+    margin-bottom: 60px;
+  }
+  .single-page-user-setting .page-content-anketa .about .column:first-of-type textarea {
+    margin-top: 16px;
+    min-height: 70px;
+  }
+  .single-page-user-setting .page-content-anketa .about textarea.used ~ label,
+  .single-page-user-setting .page-content-anketa .about textarea:focus ~ label {
+    -webkit-transform: translate3d(0, -43px, 0) scale(0.75);
+            transform: translate3d(0, -43px, 0) scale(0.75);
+  }
+  .single-page-user-setting .page-content-anketa .target .group {
+    margin-bottom: 50px;
+  }
+  .single-page-user-setting .page-content-anketa .work .column:last-of-type .group {
+    margin-top: 30px;
+    margin-bottom: 45px;
+  }
+  .single-page-user-setting .page-content-anketa .agreement h3 {
+    margin-bottom: 40px;
+  }
+  .single-page-user-setting .page-content-anketa .agreement .group {
+    margin-bottom: 80px;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .rkmd-radio label + p,
+  .single-page-user-setting .page-content-anketa .work .rkmd-radio label + p {
+    width: 85%;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .rkmd-radio p span,
+  .single-page-user-setting .page-content-anketa .work .rkmd-radio p span {
+    width: 25%;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .rkmd-radio p span + span,
+  .single-page-user-setting .page-content-anketa .work .rkmd-radio p span + span {
+    width: 60%;
+  }
+  #dropbox .message {
+    font-size: 12px;
   }
 }
 
@@ -4920,6 +4929,9 @@ body {
   .page-user {
     overflow-y: auto;
   }
+  .single-page-user-setting .container-fluid {
+    padding: 0;
+  }
   .single-page-user-setting .page-content {
     margin-top: 0;
     padding: 0;
@@ -4930,6 +4942,108 @@ body {
   .single-page-user-setting.single-page-food .page-text-comments {
     margin-top: 30px;
     top: 0;
+  }
+  .single-page-user-setting .page-content-anketa {
+    margin: 0 -12px;
+    box-shadow: none;
+  }
+  .single-page-user-setting .page-content-anketa section {
+    padding: 50px 15px 50px 25px;
+  }
+  .single-page-user-setting .page-content-anketa .recomend .column,
+  .single-page-user-setting .page-content-anketa .general .column,
+  .single-page-user-setting .page-content-anketa .health .column,
+  .single-page-user-setting .page-content-anketa .lifestyle .column,
+  .single-page-user-setting .page-content-anketa .about .column,
+  .single-page-user-setting .page-content-anketa .work .column,
+  .single-page-user-setting .page-content-anketa .agreement .column,
+  .single-page-user-setting .page-content-anketa .final .column {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .single-page-user-setting .page-content-anketa .general .column:first-of-type {
+    width: 25%;
+  }
+  .single-page-user-setting .page-content-anketa .general .column:nth-of-type(2) {
+    width: 25%;
+    margin-left: 10%;
+    padding-top: 29px;
+  }
+  .single-page-user-setting .page-content-anketa .general .column:last-of-type {
+    width: 30%;
+    margin-left: 10%;
+    padding-top: 40px;
+  }
+  .single-page-user-setting .page-content-anketa .lifestyle .column:last-of-type {
+    margin-top: 66px;
+  }
+  .single-page-user-setting .page-content-anketa .lifestyle .column-half {
+    float: left;
+    width: 49%;
+  }
+  .single-page-user-setting .page-content-anketa .lifestyle .column-half:last-of-type {
+    margin-left: 3%;
+    width: 48%;
+  }
+  .single-page-user-setting .page-content-anketa .health .column,
+  .single-page-user-setting .page-content-anketa .lifestyle .column,
+  .single-page-user-setting .page-content-anketa .about .column,
+  .single-page-user-setting .page-content-anketa .agreement .column {
+    width: 48%;
+  }
+  .single-page-user-setting .page-content-anketa .health .column:first-of-type,
+  .single-page-user-setting .page-content-anketa .lifestyle .column:first-of-type,
+  .single-page-user-setting .page-content-anketa .about .column:first-of-type,
+  .single-page-user-setting .page-content-anketa .agreement .column:first-of-type {
+    margin-right: 1%;
+  }
+  .single-page-user-setting .page-content-anketa .health .column:last-of-type,
+  .single-page-user-setting .page-content-anketa .lifestyle .column:last-of-type,
+  .single-page-user-setting .page-content-anketa .about .column:last-of-type,
+  .single-page-user-setting .page-content-anketa .agreement .column:last-of-type {
+    margin-left: 1%;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .column,
+  .single-page-user-setting .page-content-anketa .work .column {
+    margin-top: 5px;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .column:first-of-type,
+  .single-page-user-setting .page-content-anketa .work .column:first-of-type {
+    margin-right: 1%;
+    width: 38%;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .column:last-of-type,
+  .single-page-user-setting .page-content-anketa .work .column:last-of-type {
+    margin-left: 2%;
+    width: 58%;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .column:last-of-type .rkmd-radio,
+  .single-page-user-setting .page-content-anketa .work .column:last-of-type .rkmd-radio {
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1080px) {
+  .single-page-user-setting .page-content-anketa .lifestyle .group,
+  .single-page-user-setting .page-content-anketa .agreement h3 {
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1140px) {
+  .single-page-user-setting .page-content-anketa .general .column:last-of-type .group textarea {
+    min-height: 67px;
+  }
+  .single-page-user-setting .page-content-anketa .health .group {
+    margin-bottom: 40px;
+  }
+  .single-page-user-setting .page-content-anketa .nutrition .rkmd-radio label + p,
+  .single-page-user-setting .page-content-anketa .work .rkmd-radio label + p {
+    width: 88%;
   }
 }
 
