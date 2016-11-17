@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru" class="no-js css-menubar"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Страничка участника - Отчеты</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/mmenu/dist/css/jquery-mmenu.min.css">
+  <link rel="stylesheet" href="libs/animsition/animsition.min.css">
+  <link rel="stylesheet" href="libs/asscrollable/asScrollable.min.css">
+  <link rel="stylesheet" href="libs/Waves-0.7.5/dist/waves.min.css">
+  <link rel="stylesheet" href="libs/scrollbar/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+  <script src="libs/breakpoints/breakpoints.min.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+
+</head>
+
+<body class="site-navbar-small block-scroll-y">
+  <nav class="site-navbar navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle navbar-toggle-left waves waves-effect waves-light"
+      data-toggle="menubar">
+        <i class="icon hamburger hamburger-arrow-left">
+          <span class="sr-only">Меню</span>
+          <span class="hamburger-bar"></span>
+        </i>
+      </button>
+
+      <div class="navbar-brand navbar-brand-center">
+        <img class="navbar-brand-logo" src="img/logo.png">
+      </div>
+
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Верхнее меню -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+
+        <div class="navbar-brand navbar-left">
+          <img class="navbar-brand-logo navbar-brand-logo-black" src="img/logo-black.png">
+        </div>
+
+        <!-- Правое меню с настройками -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"
+            data-animation="scale-up">
+              <i class="icon md-notifications" aria-hidden="true"></i>
+              <span class="badge badge-default">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-notifications">
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a class="navbar-user dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"
+            data-animation="scale-up">
+              <i class="material-icons">account_circle</i>
+              <span class="hello-user">Привет, Вика!</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-user">
+              <li>
+                <a href="#"><i class="icon md-view-setting" aria-hidden="true"></i> Настройки учетной записи</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon md-home" aria-hidden="true"></i> Перейти на сайт</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon md-power" aria-hidden="true"></i> Выйти</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        <!-- Правое меню с настройками  -->
+      </div>
+      <!-- End Верхнее меню -->
+    </div>
+  </nav>
+
+  <!-- Боковое меню -->
+  <div class="site-menubar site-menubar-dark">
+    <ul class="site-menu">
+      <li class="site-menu-item">
+        <a class="animsition-link" href="index.html">
+          <i class="site-menu-icon md-view-group" aria-hidden="true"></i>
+          <span class="site-menu-title">Группы</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item active">
+        <a class="animsition-link" href="user.html">
+          <i class="site-menu-icon md-view-user" aria-hidden="true"></i>
+          <span class="site-menu-title">Участники</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item has-sub">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-setting" aria-hidden="true"></i>
+          <span class="site-menu-title">Настройка программ</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="programms.html">
+              <span class="site-menu-title">Программы</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="rules.html">
+              <span class="site-menu-title">Правила курса</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item has-sub">
+            <a href="javascript:void(0)">
+              <span class="site-menu-title">Рекомендации</span>
+              <span class="site-menu-arrow"></span>
+            </a>
+            <ul class="site-menu-sub">
+              <li class="site-menu-item">
+                <a class="animsition-link" href="recomend-sport-food.html">
+                  <span class="site-menu-title">Спортивное питание</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="recomend-eating.html">
+                  <span class="site-menu-title">Как питаться</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="recomend-how-training.html">
+                  <span class="site-menu-title">Как тренироваться</span>
+                </a>
+              </li>
+              <li class="site-menu-item">
+                <a class="animsition-link" href="faq.html">
+                  <span class="site-menu-title">FAQ</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="training.html">
+              <span class="site-menu-title">Тренировки</span>
+            </a>
+          </li>
+          <li class="site-menu-item">
+            <a class="animsition-link" href="praxis.html">
+              <span class="site-menu-title">План тренировок</span>
+            </a>
+          </li>
+          <li class="site-menu-item">
+            <a class="animsition-link" href="food.html">
+              <span class="site-menu-title">Питание</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!-- End Боковое меню -->
+
+  <!-- Основной контент странички -->
+  <div class="page single-page-user-setting">
+    <div class="container-fluid">
+      <div class="row page-info-user">
+
+        <div class="col-xs-13 col-sm-6">
+          <ul class="breadcrumbs">
+            <li><a href="user.html">Участники</a></li>
+            <li><a href="single-user.html">Александра Мирошниченко</a></li>
+            <li class="active">Отчеты</li>
+          </ul>
+
+          <h1 class="page-title">Отчеты</h1>
+        </div>
+
+        <div class="col-xs-13 col-sm-6 menu-user-column right-position right">
+          <div class="meta-user">
+            <p class="name-user">Александра Мирошниченко</p>
+            <a href="mailto:alex-mirosha@mail.ru" class="email-user">alex-mirosha@mail.ru</a>
+          </div>
+          <div class="menu-user">
+            <div class="photo">
+              <img src="img/user.jpg" alt="Александра Мирошниченко">
+              <!-- если аватарки нет, то -->
+              <i class="material-icons">face</i>
+            </div>
+            <button><i class="material-icons">menu</i></button>
+          </div>
+
+          <div class="right-menu-block">
+            <button class="close"><i class="material-icons">close</i></button>
+            <ul>
+              <li>
+                <a href="single-user-setting.html"><i class="material-icons">tune</i> Управление</a>
+              </li>
+              <li class="active">
+                <a href="single-user-report.html"><i class="material-icons">description</i> Отчеты</a>
+              </li>
+              <li>
+                <a href="single-user-dashboard.html"><i class="material-icons">dashboard</i> Обзорная доска</a>
+              </li>
+              <li>
+                <a href="single-user-plan.html"><i class="material-icons">accessibility</i> План тренировок</a>
+              </li>
+              <li>
+                <a href="single-user-food.html"><i class="material-icons">room_service</i> План питания</a>
+              </li>
+              <li>
+                <a href="single-user-anketa.html"><i class="material-icons">list</i> Анкета</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="row page-text-content page-content-report">
+        <!-- Табы -->
+        <div class="col-xs-13 tabs">
+          <ul class="tabs__caption">
+            <li class="active">Ежедневный отчет</li>
+            <li>Итоговый отчет</li>
+          </ul>
+
+          <div class="tabs__content active">
+            <form class="row">
+
+              <div class="col-xs-13 col-sm-6">
+                <div class="form-group">
+                  <span class="start-datepicker">Дата отчета</span>
+                  <div class="input-date-control">
+                    <input class="datepicker form-control" type="text" value="15.07.2016"/>
+                    <span class="caret"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-food">
+                <h2>Питание (перечисли какие продукты употребляла)</h2>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Завтрак</label>
+                </div>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Перекус 1 (утром)</label>
+                </div>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Обед</label>
+                </div>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Перекус 2 (после обеда)</label>
+                </div>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Ужин</label>
+                </div>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Примечание (Если ты съела что-то лишнее, напиши что, когда и какие эмоции испытывала в этот момент)</label>
+                </div>
+
+                <div class="group">
+                  <textarea></textarea><span class="bar"></span>
+                  <label>Спортивное питание (Напиши что принимала в этот день)</label>
+                </div>
+
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Какие витамины принимала (например, рыбий жир, мультитабс)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-third">
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Сколько воды выпила (л)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-third">
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Ккал за день по питанию</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-third">
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Ккал за день сожгла за тренировку</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-third">
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Сколько белков за день (гр)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-third">
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Сколько жиров за день (гр)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-third">
+                <div class="group">
+                  <input type="text"><span class="bar"></span>
+                  <label>Сколько углеводов за день (гр)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13">
+                <h2>Самочувствие</h2>
+                <p>По шкале от 0 до 5 отметь следующее:</p>
+
+                <ul class="health-list">
+                  <li>
+                    <span class="health-title">Аппетит</span>
+                    <span>0 – нет аппетита, 5 – очень голодна</span>
+                  </li>
+                  <li>
+                    <span class="health-title">Качество сна</span>
+                    <span>0 – бессонница, 5 – отлично сплю</span>
+                  </li>
+                  <li>
+                    <span class="health-title">Усталость</span>
+                    <span>0 – не устала, 5  - измотана</span>
+                  </li>
+                  <li>
+                    <span class="health-title">Желание тренироваться</span>
+                    <span>0 – не хочу совсем, 5  - лечу на занятия</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-xs-13 column-fourth">
+                <div class="group">
+                  <input type="number" min="0" max="5"><span class="bar"></span>
+                  <label>Аппетит (от 0 до 5)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-fourth">
+                <div class="group">
+                  <input type="number" min="0" max="5"><span class="bar"></span>
+                  <label>Сон (от 0 до 5)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-fourth">
+                <div class="group">
+                  <input type="number" min="0" max="5"><span class="bar"></span>
+                  <label>Усталость (от 0 до 5)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 column-fourth">
+                <div class="group">
+                  <input type="number" min="0" max="5"><span class="bar"></span>
+                  <label>Желание тренироваться (от 0 до 5)</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 pulse">
+                <h2>Пульс</h2>
+                <p>Зафиксируй пульс сразу после пробуждения. <br>На запястье подержи палец 15 секунд, считая удары, а потом умножь кол-во ударов на 4</p>
+
+                <div class="column-fourth">
+                  <div class="group">
+                    <input type="number" min="0"><span class="bar"></span>
+                    <label>Пульс (ударов в минуту)</label>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="tabs__content">
+
+          </div>
+        </div>
+        <!-- end Табы -->
+      </div>
+
+      <div class="row page-text-comments">
+        <form>
+          <div class="row">
+            <div class="col-xs-13 col-sm-4">
+              <h2>Написать сообщение</h2>
+            </div>
+
+            <div class="col-xs-13 col-sm-9 menu-user-column right-position right">
+              <div class="meta-user">
+                <p class="name-user">Александра Мирошниченко</p>
+                <a href="mailto:alex-mirosha@mail.ru" class="email-user">alex-mirosha@mail.ru</a>
+              </div>
+
+              <div class="menu-user">
+                <div class="photo">
+                  <img src="img/user.jpg" alt="Александра Мирошниченко">
+                  <!-- если аватарки нет, то -->
+                  <i class="material-icons">face</i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-13">
+              <div class="group">
+                <textarea></textarea><span class="bar"></span>
+                <label>Примечание (Если ты съела что-то лишнее, напиши что, когда и какие эмоции испытывала в этот момент)</label>
+              </div>
+            </div>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+   <!-- End Основной контент странички -->
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap-datepicker.js"></script>
+  <script src="libs/asscrollable/jquery.asScrollable.all.min.js"></script>
+  <script src="libs/animsition/animsition.min.js"></script>
+  <script src="libs/asscroll/jquery-asScroll.min.js"></script>
+  <script src="libs/mmenu/dist/js/jquery.mmenu.min.all.js"></script>
+  <script src="libs/menu-side/core.min.js"></script>
+  <script src="libs/menu-side/site.min.js"></script>
+  <script src="libs/menu-side/menubar.min.js"></script>
+  <script src="libs/menu-side/asscrollable.min.js"></script>
+  <script src="libs/Waves-0.7.5/dist/waves.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/jquery.autosize.js"></script>
+  <script src="js/common.js"></script>
+
+  <script>
+    (function(document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function() {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+
+
+</body>
+</html>

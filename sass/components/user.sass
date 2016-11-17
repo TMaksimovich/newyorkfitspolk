@@ -403,6 +403,50 @@
 				font-size: 14px
 				font-family: "LatoLight", Arial, sans-serif
 				margin-bottom: 44px
+
+	// Отчеты
+	.page-content-report
+		padding: 53px 20px 20px
+		.tabs__content.active
+			padding-bottom: 24px
+		.datepicker
+			font-size: 16px
+		h2
+			font-size: 24px
+			text-transform: none
+			margin-top: 25px
+			margin-bottom: 15px
+		p
+			margin-top: 0
+			margin-bottom: 10px
+			font-size: 14px
+			line-height: 18px
+			font-family: "LatoLight", Arial, sans-serif
+		.health-list
+			margin-top: 0
+			margin-bottom: 20px
+			list-style: none
+			padding-left: 0
+			font-size: 14px
+			font-family: "LatoLight", Arial, sans-serif
+			li
+				margin-bottom: 5px
+			span
+				display: inline-block
+				vertical-align: top
+			.health-title
+				width: 21%
+				color: $sub_text_color
+		.group
+			textarea
+				&.used ~ label,
+				&:focus ~ label
+					top: 37px
+					transform: translate3d(0, -45px, 0) scale(0.75)
+		.pulse
+			p
+				margin-bottom: 20px
+
 #dropbox
 	background-color: #f4f4f4
 	border-radius: 2px
@@ -632,6 +676,20 @@
 						width: 58%
 						.rkmd-radio
 							margin-bottom: 35px
+		.page-content-report
+			.column-third
+				width: 33%
+			.column-fourth
+				width: 24%
+				label
+					font-size: 15px
+			.column-fourth,
+			.column-third
+				display: inline-block
+				vertical-align: top
+				float:none
+			.group
+				margin-bottom: 23px
 
 @media (min-width:992px) and (max-width:1080px)
 	.single-page-user-setting

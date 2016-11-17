@@ -4754,6 +4754,67 @@ body {
   margin-bottom: 44px;
 }
 
+.single-page-user-setting .page-content-report {
+  padding: 53px 20px 20px;
+}
+
+.single-page-user-setting .page-content-report .tabs__content.active {
+  padding-bottom: 24px;
+}
+
+.single-page-user-setting .page-content-report .datepicker {
+  font-size: 16px;
+}
+
+.single-page-user-setting .page-content-report h2 {
+  font-size: 24px;
+  text-transform: none;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.single-page-user-setting .page-content-report p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "LatoLight", Arial, sans-serif;
+}
+
+.single-page-user-setting .page-content-report .health-list {
+  margin-top: 0;
+  margin-bottom: 20px;
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+  font-family: "LatoLight", Arial, sans-serif;
+}
+
+.single-page-user-setting .page-content-report .health-list li {
+  margin-bottom: 5px;
+}
+
+.single-page-user-setting .page-content-report .health-list span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.single-page-user-setting .page-content-report .health-list .health-title {
+  width: 21%;
+  color: #949494;
+}
+
+.single-page-user-setting .page-content-report .group textarea.used ~ label,
+.single-page-user-setting .page-content-report .group textarea:focus ~ label {
+  top: 37px;
+  -webkit-transform: translate3d(0, -45px, 0) scale(0.75);
+          transform: translate3d(0, -45px, 0) scale(0.75);
+}
+
+.single-page-user-setting .page-content-report .pulse p {
+  margin-bottom: 20px;
+}
+
 #dropbox {
   background-color: #f4f4f4;
   border-radius: 2px;
@@ -5024,6 +5085,24 @@ body {
   .single-page-user-setting .page-content-anketa .nutrition .column:last-of-type .rkmd-radio,
   .single-page-user-setting .page-content-anketa .work .column:last-of-type .rkmd-radio {
     margin-bottom: 35px;
+  }
+  .single-page-user-setting .page-content-report .column-third {
+    width: 33%;
+  }
+  .single-page-user-setting .page-content-report .column-fourth {
+    width: 24%;
+  }
+  .single-page-user-setting .page-content-report .column-fourth label {
+    font-size: 15px;
+  }
+  .single-page-user-setting .page-content-report .column-fourth,
+  .single-page-user-setting .page-content-report .column-third {
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+  }
+  .single-page-user-setting .page-content-report .group {
+    margin-bottom: 23px;
   }
 }
 
