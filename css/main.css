@@ -4764,6 +4764,7 @@ body {
 
 .single-page-user-setting .page-content-report .datepicker {
   font-size: 16px;
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .single-page-user-setting .page-content-report h2 {
@@ -4804,6 +4805,15 @@ body {
   color: #949494;
 }
 
+.single-page-user-setting .page-content-report .group input,
+.single-page-user-setting .page-content-report .group textarea {
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.single-page-user-setting .page-content-report .group textarea {
+  padding-right: 0;
+}
+
 .single-page-user-setting .page-content-report .group textarea.used ~ label,
 .single-page-user-setting .page-content-report .group textarea:focus ~ label {
   top: 37px;
@@ -4815,7 +4825,94 @@ body {
   margin-bottom: 20px;
 }
 
-#dropbox {
+.single-page-user-setting .page-text-comments {
+  background-color: #fff;
+  border-radius: 2px;
+  min-height: 1px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: -17px auto;
+  max-width: 876px;
+  overflow: hidden;
+  margin-bottom: 67px;
+}
+
+.single-page-user-setting .page-text-comments h2 {
+  font-size: 20px;
+  font-family: "LatoLight", Arial, sans-serif;
+  text-transform: uppercase;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.single-page-user-setting .page-text-comments textarea {
+  padding-right: 0;
+  min-height: 70px;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.single-page-user-setting .page-text-comments textarea.used ~ label,
+.single-page-user-setting .page-text-comments textarea:focus ~ label {
+  top: 37px;
+  -webkit-transform: translate3d(0, -45px, 0) scale(0.75);
+          transform: translate3d(0, -45px, 0) scale(0.75);
+}
+
+.single-page-user-setting .page-text-comments .btn-default {
+  margin-top: 38px;
+  background-color: #5fc7ae !important;
+}
+
+.single-page-user-setting .page-text-comments input[type="submit"] {
+  font-style: normal;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.single-page-user-setting .page-text-comments .menu-user-column {
+  margin-top: 12px;
+}
+
+.single-page-user-setting .page-text-comments .menu-user-column .name-user,
+.single-page-user-setting .page-text-comments .menu-user-column .email-user {
+  color: #585858;
+}
+
+.single-page-user-setting .page-text-comments .menu-user-column .name-user {
+  margin-top: 0;
+}
+
+.single-page-user-setting .page-text-comments .menu-user-column .photo-user {
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  margin-left: 30px;
+  background-color: #def1f0;
+  color: #5fc7ae;
+}
+
+.single-page-user-setting .page-text-comments .menu-user-column .photo-user img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-page-user-setting .page-text-comments .menu-user-column .photo-user i {
+  line-height: 42px;
+}
+
+#files {
+  display: none;
+}
+
+#list {
   background-color: #f4f4f4;
   border-radius: 2px;
   border: 1px solid #e3e3e3;
@@ -4826,13 +4923,7 @@ body {
   overflow: hidden;
 }
 
-#dropbox .message {
-  font-size: 16px;
-  font-family: "LatoLight", Arial, sans-serif;
-  color: #949494;
-}
-
-#dropbox .preview {
+#list span {
   float: left;
   width: 25%;
   height: 295px;
@@ -4840,15 +4931,7 @@ body {
   overflow: hidden;
 }
 
-#dropbox .preview img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#dropbox .imageHolder {
-  display: inline-block;
-  position: relative;
+#list span img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -4943,6 +5026,27 @@ body {
   .single-page-user-setting .page-training-content {
     top: 0;
   }
+  .single-page-user-setting .page-content-report {
+    padding: 20px 0;
+  }
+  .single-page-user-setting .page-content-report .health-list li {
+    margin-bottom: 20px;
+  }
+  .single-page-user-setting .page-content-report .health-list .health-title {
+    width: 100%;
+  }
+  .single-page-user-setting .page-text-comments {
+    padding: 0 10px;
+  }
+  .single-page-user-setting .page-text-comments .menu-user-column {
+    margin-bottom: 15px;
+  }
+  .single-page-user-setting .page-text-comments .menu-user-column .meta-user {
+    width: 80%;
+  }
+  .single-page-user-setting .page-text-comments .menu-user-column .photo-user {
+    margin-left: 10px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -4984,6 +5088,11 @@ body {
   .single-page-user-setting .modal-dialog {
     width: 546px;
   }
+  .single-page-user-setting .page-text-comments {
+    width: 85%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+    padding: 30px 30px 65px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -5022,6 +5131,9 @@ body {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+  .single-page-user-setting .page-content-report .group {
+    margin-bottom: 45px;
   }
 }
 

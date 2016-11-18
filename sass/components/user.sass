@@ -411,6 +411,7 @@
 			padding-bottom: 24px
 		.datepicker
 			font-size: 16px
+			border-bottom: 1px solid #bdbdbd
 		h2
 			font-size: 24px
 			text-transform: none
@@ -438,7 +439,11 @@
 				width: 21%
 				color: $sub_text_color
 		.group
+			input,
 			textarea
+				border-bottom: 1px solid #bdbdbd
+			textarea
+				padding-right: 0
 				&.used ~ label,
 				&:focus ~ label
 					top: 37px
@@ -446,8 +451,68 @@
 		.pulse
 			p
 				margin-bottom: 20px
+	.page-text-comments
+		background-color: #fff
+		border-radius: 2px
+		min-height: 1px
+		position: relative
+		left: 0
+		right: 0
+		margin: -17px auto
+		max-width: 876px
+		overflow: hidden
+		margin-bottom: 67px
+		h2
+			font-size: 20px
+			font-family: "LatoLight", Arial, sans-serif
+			text-transform: uppercase
+			margin-top: 15px
+			margin-bottom: 15px
+			font-weight: normal
+		textarea
+			padding-right: 0
+			min-height: 70px
+			border-bottom: 1px solid #bdbdbd
+			&.used ~ label,
+			&:focus ~ label
+				top: 37px
+				transform: translate3d(0, -45px, 0) scale(0.75)
+		.btn-default
+			margin-top: 38px
+			background-color: $main_bg !important
+		input[type="submit"]
+			font-style: normal
+			padding: 0
+			text-transform: uppercase
+		.menu-user-column
+			margin-top: 12px
+			.name-user,
+			.email-user
+				color: $text_color
+			.name-user
+				margin-top: 0
+			.photo-user
+				width: 42px
+				height: 42px
+				line-height: 42px
+				text-align: center
+				border-radius: 50%
+				display: inline-block
+				vertical-align: middle
+				overflow: hidden
+				margin-left: 30px
+				background-color: $main_bg_light
+				color: $main_bg
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+				i
+					line-height: 42px
 
-#dropbox
+#files
+	display: none
+#list
 	background-color: #f4f4f4
 	border-radius: 2px
 	border: 1px solid #e3e3e3
@@ -456,11 +521,7 @@
 	line-height: 330px
 	padding: 15px 15px 35px
 	overflow: hidden
-	.message
-		font-size: 16px
-		font-family: "LatoLight", Arial, sans-serif
-		color: $sub_text_color
-	.preview
+	span
 		float: left
 		width: 25%
 		height: 295px
@@ -470,13 +531,6 @@
 			width: 100%
 			height: 100%
 			object-fit: cover
-	.imageHolder
-		display: inline-block
-		position: relative
-		width: 100%
-		height: 100%
-		object-fit: cover
-
 
 @media (max-width:480px)
 	.single-page-user-setting .right-menu-block
@@ -559,6 +613,21 @@
 				box-shadow: none
 		.page-training-content
 			top: 0
+		.page-content-report
+			padding: 20px 0
+			.health-list
+				li
+					margin-bottom: 20px
+				.health-title
+					width: 100%
+		.page-text-comments
+			padding: 0 10px
+			.menu-user-column
+				margin-bottom: 15px
+				.meta-user
+					width: 80%
+				.photo-user
+					margin-left: 10px
 
 @media (min-width:768px) and (max-width:991px)
 	.single-page-user-setting
@@ -595,6 +664,10 @@
 	.single-page-user-setting
 		.modal-dialog
 			width: 546px
+		.page-text-comments
+			width: 85%
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13)
+			padding: 30px 30px 65px
 
 
 @media (max-width:991px)
@@ -629,6 +702,9 @@
 					width: 100%
 					margin-left: 0
 					margin-right: 0
+		.page-content-report
+			.group
+				margin-bottom: 45px
 
 @media (min-width:992px)
 	.single-page-user-setting

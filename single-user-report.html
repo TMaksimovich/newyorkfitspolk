@@ -255,7 +255,7 @@
           <div class="tabs__content active">
             <form class="row">
 
-              <div class="col-xs-13 col-sm-6">
+              <div class="col-xs-13 col-sm-7 col-md-6">
                 <div class="form-group">
                   <span class="start-datepicker">Дата отчета</span>
                   <div class="input-date-control">
@@ -419,6 +419,99 @@
           </div>
 
           <div class="tabs__content">
+            <form class="row">
+
+              <div class="col-xs-13 col-sm-7 col-md-6">
+                <div class="form-group">
+                  <span class="start-datepicker">Дата отчета</span>
+                  <div class="input-date-control">
+                    <input class="datepicker form-control" type="text" value="15.07.2016"/>
+                    <span class="caret"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xs-13 info-column">
+                <h2>Общая информация</h2>
+
+                <div class="col-xs-13 column-third">
+                  <div class="group">
+                    <input type="text"><span class="bar"></span>
+                    <label>Вес (кг)</label>
+                  </div>
+                </div>
+
+                <div class="col-xs-13 column-third">
+                  <div class="group">
+                    <input type="text"><span class="bar"></span>
+                    <label>Объем груди (см)</label>
+                  </div>
+                </div>
+
+                <div class="col-xs-13 column-third">
+                  <div class="group">
+                    <input type="text"><span class="bar"></span>
+                    <label>Объем талии (см)</label>
+                  </div>
+                </div>
+
+                <div class="col-xs-13 column-third">
+                  <div class="group">
+                    <input type="text"><span class="bar"></span>
+                    <label>Объем бедер (см)</label>
+                  </div>
+                </div>
+
+                <div class="col-xs-13 column-third">
+                  <div class="group">
+                    <input type="text"><span class="bar"></span>
+                    <label>Объем плеча (см)</label>
+                  </div>
+                </div>
+
+                <div class="col-xs-13 column-third">
+                  <div class="group">
+                    <input type="text"><span class="bar"></span>
+                    <label>Объем бедра (см)</label>
+                  </div>
+                </div>
+
+                <div class="group">
+                  <textarea></textarea><span class="bar"></span>
+                  <label>Что поменялось в зеркале? Опиши, видишь ли прогресс. Как и что изменилось</label>
+                </div>
+
+                <div class="group">
+                  <textarea></textarea><span class="bar"></span>
+                  <label>Как проходят тренировки? Становишься ли ты сильнее, выносливее? Что ты чувствуешь во время тренировки? Опиши проблемы или непонятные чувств</label>
+                </div>
+
+                <div class="group">
+                  <textarea></textarea><span class="bar"></span>
+                  <label>Как проходит питание по плану? Легко ли следовать инструкциям? Легко ли отказаться от вредностей? Поддерживает ли семья? Сколько раз в неделю ты закупаешь продукты? Сколько раз  в неделю ты ешь в ресторанах? Есть ли вздутие, запоры, задержки?</label>
+                </div>
+              </div>
+
+              <div class="col-xs-13 photo-column">
+                <h2>Фотографии на дату отчета</h2>
+                <p>Прикрепи свои фотографии в полный рост в нижнем белье: спереди, сзади и сбоку</p>
+
+                <label class="btn-default btn-default-white waves waves-effect waves-grey">Добавить
+                  <input type="file" id="files" name="files[]" multiple />
+                </label>
+                <output id="list"></output>
+              </div>
+
+              <div class="col-xs-13">
+                <h2>Вопросы к тренеру</h2>
+
+                <div class="group">
+                  <textarea></textarea><span class="bar"></span>
+                  <label>Сообщение</label>
+                </div>
+              </div>
+
+            </form>
 
           </div>
         </div>
@@ -428,23 +521,22 @@
       <div class="row page-text-comments">
         <form>
           <div class="row">
-            <div class="col-xs-13 col-sm-4">
+            <div class="col-xs-13 col-sm-5">
               <h2>Написать сообщение</h2>
             </div>
 
-            <div class="col-xs-13 col-sm-9 menu-user-column right-position right">
+            <div class="col-xs-13 col-sm-8 menu-user-column right-position right">
               <div class="meta-user">
                 <p class="name-user">Александра Мирошниченко</p>
                 <a href="mailto:alex-mirosha@mail.ru" class="email-user">alex-mirosha@mail.ru</a>
               </div>
 
-              <div class="menu-user">
-                <div class="photo">
-                  <img src="img/user.jpg" alt="Александра Мирошниченко">
-                  <!-- если аватарки нет, то -->
-                  <i class="material-icons">face</i>
-                </div>
+              <div class="photo-user">
+                <img src="img/user.jpg" alt="Александра Мирошниченко">
+                <!-- если аватарки нет, то -->
+                <i class="material-icons">face</i>
               </div>
+
             </div>
           </div>
 
@@ -452,8 +544,10 @@
             <div class="col-xs-13">
               <div class="group">
                 <textarea></textarea><span class="bar"></span>
-                <label>Примечание (Если ты съела что-то лишнее, напиши что, когда и какие эмоции испытывала в этот момент)</label>
+                <label>Сообщение</label>
               </div>
+
+               <input type="submit" class="btn-default waves waves-effect waves-light" value="Отправить">
             </div>
           </div>
         </form>
@@ -488,6 +582,7 @@
   <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/form.js"></script>
   <script src="js/jquery.autosize.js"></script>
+  <script src="js/image.js"></script>
   <script src="js/common.js"></script>
 
   <script>

@@ -734,9 +734,10 @@
           <h3>Фотографии до начала тренировок</h3>
           <p>Прикрепи свои фотографии в полный рост в нижнем белье: спереди, сзади и сбоку</p>
 
-          <div id="dropbox">
-            <span class="message">Перенесите сюда изображения для загрузки</span>
-          </div>
+          <label class="btn-default btn-default-white waves waves-effect waves-grey">Добавить
+            <input type="file" id="files" name="files[]" multiple />
+          </label>
+          <output id="list"></output>
 
         </section>
 
@@ -818,7 +819,7 @@
   <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/form.js"></script>
   <script src="js/jquery.autosize.js"></script>
-  <script src="js/jquery.filedrop.js"></script>
+  <script src="js/image.js"></script>
   <script src="js/common.js"></script>
 
   <script>
