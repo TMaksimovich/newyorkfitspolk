@@ -4744,6 +4744,10 @@ body {
   text-transform: uppercase;
 }
 
+.single-page-user-setting .page-content-anketa .gallery {
+  padding: 50px 48px 40px;
+}
+
 .single-page-user-setting .page-content-anketa .gallery h3 {
   margin-bottom: 0;
 }
@@ -4751,7 +4755,6 @@ body {
 .single-page-user-setting .page-content-anketa .gallery p {
   font-size: 14px;
   font-family: "LatoLight", Arial, sans-serif;
-  margin-bottom: 44px;
 }
 
 .single-page-user-setting .page-content-report {
@@ -4823,6 +4826,22 @@ body {
 
 .single-page-user-setting .page-content-report .pulse p {
   margin-bottom: 20px;
+}
+
+.single-page-user-setting .page-content-report .info-column .info-food {
+  margin-top: 30px;
+}
+
+.single-page-user-setting .page-content-report .info-column .info-food textarea.used ~ label,
+.single-page-user-setting .page-content-report .info-column .info-food textarea:focus ~ label {
+  -webkit-transform: translate3d(0, -65px, 0) scale(0.75);
+          transform: translate3d(0, -65px, 0) scale(0.75);
+}
+
+.single-page-user-setting .page-content-report .info-column .info-training textarea.used ~ label,
+.single-page-user-setting .page-content-report .info-column .info-training textarea:focus ~ label {
+  -webkit-transform: translate3d(0, -51px, 0) scale(0.75);
+          transform: translate3d(0, -51px, 0) scale(0.75);
 }
 
 .single-page-user-setting .page-text-comments {
@@ -4912,6 +4931,10 @@ body {
   display: none;
 }
 
+.label-files {
+  margin-top: 35px;
+}
+
 #list {
   background-color: #f4f4f4;
   border-radius: 2px;
@@ -4920,6 +4943,8 @@ body {
   min-height: 330px;
   line-height: 330px;
   padding: 15px 15px 35px;
+  margin-top: 18px;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 
@@ -4981,8 +5006,32 @@ body {
   .single-page-user-setting .page-content-anketa .work .rkmd-radio p span + span {
     width: 60%;
   }
-  #dropbox .message {
-    font-size: 12px;
+  .single-page-user-setting .page-content-report .info-column .info-food textarea {
+    min-height: 130px;
+    -webkit-transition: margin-top 0.2s ease;
+            transition: margin-top 0.2s ease;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-food textarea:focus,
+  .single-page-user-setting .page-content-report .info-column .info-food textarea.used {
+    margin-top: 107px;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-food textarea.used ~ label,
+  .single-page-user-setting .page-content-report .info-column .info-food textarea:focus ~ label {
+    -webkit-transform: translate3d(0, -136px, 0) scale(0.75);
+            transform: translate3d(0, -136px, 0) scale(0.75);
+  }
+  .single-page-user-setting .page-content-report .info-column .info-training textarea {
+    -webkit-transition: margin-top 0.2s ease;
+            transition: margin-top 0.2s ease;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-training textarea:focus,
+  .single-page-user-setting .page-content-report .info-column .info-training textarea.used {
+    margin-top: 60px;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-training textarea.used ~ label,
+  .single-page-user-setting .page-content-report .info-column .info-training textarea:focus ~ label {
+    -webkit-transform: translate3d(0, -93px, 0) scale(0.75);
+            transform: translate3d(0, -93px, 0) scale(0.75);
   }
 }
 
@@ -4998,6 +5047,14 @@ body {
   }
   .single-page-user-setting .page-content .account-info .meta-user-info span {
     width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .single-page-user-setting .page-content-report .info-column .info-progress textarea.used ~ label,
+  .single-page-user-setting .page-content-report .info-column .info-progress textarea:focus ~ label {
+    -webkit-transform: translate3d(0, -77px, 0) scale(0.75);
+            transform: translate3d(0, -77px, 0) scale(0.75);
   }
 }
 
@@ -5047,6 +5104,11 @@ body {
   .single-page-user-setting .page-text-comments .menu-user-column .photo-user {
     margin-left: 10px;
   }
+  #list span {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -5081,6 +5143,9 @@ body {
   .single-page-user-setting .page-content .user-info,
   .single-page-user-setting .page-content .account-info {
     min-height: 610px;
+  }
+  #list span {
+    width: 50%;
   }
 }
 
@@ -5134,6 +5199,33 @@ body {
   }
   .single-page-user-setting .page-content-report .group {
     margin-bottom: 45px;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-food textarea {
+    min-height: 60px;
+    -webkit-transition: margin-top 0.2s ease;
+            transition: margin-top 0.2s ease;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-food textarea:focus,
+  .single-page-user-setting .page-content-report .info-column .info-food textarea.used {
+    margin-top: 60px;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-food textarea.used ~ label,
+  .single-page-user-setting .page-content-report .info-column .info-food textarea:focus ~ label {
+    -webkit-transform: translate3d(0, -94px, 0) scale(0.75);
+            transform: translate3d(0, -94px, 0) scale(0.75);
+  }
+  .single-page-user-setting .page-content-report .info-column .info-training textarea {
+    -webkit-transition: margin-top 0.2s ease;
+            transition: margin-top 0.2s ease;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-training textarea:focus,
+  .single-page-user-setting .page-content-report .info-column .info-training textarea.used {
+    margin-top: 20px;
+  }
+  .single-page-user-setting .page-content-report .info-column .info-training textarea.used ~ label,
+  .single-page-user-setting .page-content-report .info-column .info-training textarea:focus ~ label {
+    -webkit-transform: translate3d(0, -78px, 0) scale(0.75);
+            transform: translate3d(0, -78px, 0) scale(0.75);
   }
 }
 
