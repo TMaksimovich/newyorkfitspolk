@@ -126,6 +126,17 @@ body
 	content: '\E88A'
 .md-power:before
 	content: '\E154'
+.md-view-calendar:before
+	content: '\E916'
+.md-view-food:before
+	content: '\EB49'
+.md-view-dashboard:before
+	content: '\E871'
+.md-view-report:before
+	content: '\E873'
+.md-view-rules:before
+	content: '\E88E'
+
 .md-notifications
 	color: #454545
 
@@ -286,13 +297,21 @@ body
 		.navbar-toolbar>li>a
 			padding-top: 17px
 			padding-bottom: 19px
+			color: inherit
+		.navbar-food-item
+			margin-right: 20px
 		.navbar-nav>li>a.navbar-user,
-		.navbar-toolbar>li>a.navbar-user
+		.navbar-toolbar>li>a.navbar-user,
 			padding-top: 19px
 			padding-bottom: 19px
+		.navbar-toolbar>li>a.navbar-calendar,
+		.navbar-toolbar>li>a.navbar-food
+			padding: 21px 10px 19px
 		.navbar-toolbar-right>li
 			display: inline-block
 			vertical-align: top
+
+
 	.site-menubar,
 	.slidePanel-left,
 	.slidePanel-right

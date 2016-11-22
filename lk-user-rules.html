@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru" class="no-js css-menubar"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>ЛК участника. Правила курса</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/mmenu/dist/css/jquery-mmenu.min.css">
+  <link rel="stylesheet" href="libs/animsition/animsition.min.css">
+  <link rel="stylesheet" href="libs/asscrollable/asScrollable.min.css">
+  <link rel="stylesheet" href="libs/Waves-0.7.5/dist/waves.min.css">
+  <link rel="stylesheet" href="libs/scrollbar/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+  <script src="libs/breakpoints/breakpoints.min.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+
+</head>
+
+<body class="site-navbar-small block-scroll-y">
+  <nav class="site-navbar navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle navbar-toggle-left waves waves-effect waves-light"
+      data-toggle="menubar">
+        <i class="icon hamburger hamburger-arrow-left">
+          <span class="sr-only">Меню</span>
+          <span class="hamburger-bar"></span>
+        </i>
+      </button>
+
+      <div class="navbar-brand navbar-brand-center">
+        <img class="navbar-brand-logo" src="img/logo.png">
+      </div>
+
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Верхнее меню -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+
+        <div class="navbar-brand navbar-left">
+          <img class="navbar-brand-logo navbar-brand-logo-black" src="img/logo-black.png">
+        </div>
+
+        <!-- Правое меню с настройками -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+
+          <li>
+            <a href="lk-user-calendar.html" class="navbar-calendar">
+              <i class="material-icons">date_range</i>
+            </a>
+          </li>
+
+          <li class="navbar-food-item">
+            <a href="lk-user-single-food.html" class="navbar-food">
+              <i class="material-icons">room_service</i>
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"
+            data-animation="scale-up">
+              <i class="icon md-notifications" aria-hidden="true"></i>
+              <span class="badge badge-default">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-notifications">
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a class="navbar-user dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"
+            data-animation="scale-up">
+              <i class="material-icons">account_circle</i>
+              <span class="hello-user">Привет, Александра!</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-user">
+              <li>
+                <a href="#"><i class="icon md-view-setting" aria-hidden="true"></i> Настройки учетной записи</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon md-home" aria-hidden="true"></i> Перейти на сайт</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon md-power" aria-hidden="true"></i> Выйти</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        <!-- Правое меню с настройками  -->
+      </div>
+      <!-- End Верхнее меню -->
+    </div>
+  </nav>
+
+  <!-- Боковое меню -->
+  <div class="site-menubar site-menubar-dark">
+    <ul class="site-menu">
+      <li class="site-menu-item">
+        <a class="animsition-link" href="lk-user-calendar.html">
+          <i class="site-menu-icon md-view-calendar" aria-hidden="true"></i>
+          <span class="site-menu-title">Календарь</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item has-sub">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-food" aria-hidden="true"></i>
+          <span class="site-menu-title">Питание</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-single-food.html">
+              <span class="site-menu-title">План питания</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-sport-food.html">
+              <span class="site-menu-title">Спортивное питание</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-eating.html">
+              <span class="site-menu-title">Как питаться</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="site-menu-item">
+        <a class="animsition-link" href="lk-user-dashboard.html">
+          <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+          <span class="site-menu-title">Обзор</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item">
+        <a class="animsition-link" href="lk-user-report.html">
+          <i class="site-menu-icon md-view-report" aria-hidden="true"></i>
+          <span class="site-menu-title">Отчеты</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item has-sub active">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-rules" aria-hidden="true"></i>
+          <span class="site-menu-title">Общие правила</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item active">
+            <a class="animsition-link" href="lk-user-rules.html">
+              <span class="site-menu-title">Правила курса</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-how-training.html">
+              <span class="site-menu-title">Как тренироваться</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-faq.html">
+              <span class="site-menu-title">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="site-menu-item has-sub">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-user" aria-hidden="true"></i>
+          <span class="site-menu-title">Персональные данные</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-setting.html">
+              <span class="site-menu-title">Настройки учетной записи</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-anketa.html">
+              <span class="site-menu-title">Анкета</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+  <!-- End Боковое меню -->
+
+  <!-- Основной контент странички -->
+  <div class="page single-page-rules">
+    <div class="page-content container-fluid">
+      <div class="row page-info-rules">
+
+        <div class="col-xs-13">
+          <ul class="breadcrumbs">
+            <li class="active">Правила курса</li>
+          </ul>
+        </div>
+
+        <div class="col-xs-13">
+          <h1 class="page-title">Правила курса</h1>
+        </div>
+      </div>
+
+      <div class="row page-text-content">
+        <div class="col-xs-13">
+          <h2>ЧТО ВХОДИТ В ПРОГРАММУ</h2>
+          <ul>
+            <li>индивидуальный план питания</li>
+            <li>индивидуальный план тренировок</li>
+            <li>отчеты</li>
+            <li>календарь с графиком тренировок, который можно настроить под свой режим</li>
+            <li>общие рекомендации по питанию</li>
+            <li>общие рекомендации по тренировкам</li>
+          </ul>
+          <h2>ПАМЯТКА, ЗАЧЕМ МЫ ТУТ СОБРАЛИСЬ И ЧТО ХОТИМ ПОЛУЧИТЬ ОТ КУРСА</h2>
+          <p>Самая унылая вещь – это неумение читать текст. Ну да, нас всех изрядно подпортил интернет и высокая плотность информации. Мозг не справляется с большим объемом текста и тд. Но очень прошу: читайте. Я написала все максимально подробно. Какие аминокислоты. Кому можно. Можно ли чечевицу. Можно ли то и это. Это все есть. Посидите подольше над каждым файлом, потратьте время. Это индивидуальная работа с каждым, но каждый должен осознать, что это РА-БО-ТА! Было бы печально не прийти к результату, пропустив какой-то пункт.</p>
+
+          <div class="message-block">
+            <p>Основная ошибка многих клиентов (моих и других): не доел (переел), не доработал в зале. Что значит не доесть и переесть – понятно – схомячить больше или меньше, чем сказано. А не доработать – это не уползти с тренировки. Просто некому контролировать их. Оказывается, ты сам для себя не достаточный аргумент.</p>
+          </div>
+
+          <p>Выкидываем из головы мысль о том, что есть уникальная пилюля от похудения или поддержания красивой формы. Тем более, у каждого своя картинка в голове. Покупая какую-то программу, ты покупаешь доверие и работу с конкретным человеком, которому ты почему-то решила довериться. Что послужило критерием выбора? Масса факторов: до и после, разумные тексты про еду и нагрузки, собственный пример, проверка на себе каких-то советов, стиль общения в сети… Да мало ли что. Главное, что ты теперь на пути к созданию себя. Первое, что я хочу тебе сообщить, - в фитнесе главное – это мозги. Что это значит? Что нужно ставить разумные цели. Поставив цель «накачать мышцы», «похудеть наконец», «создать рельеф», «научиться питаться» ты должна именно хотеть это сделать. Для этого ты должна понимать, что нужно. Всегда одно и то же: работа с весами (те самые тренажеры и гантели), дробное частое питание, которым мы разгоняем обмен веществ, желание измениться. Это всё. Никаких запредельных способов нет. Другой вопрос как мы это делаем.</p>
+          <h2>ЗАЧЕМ НУЖНЫ ОТЧЕТЫ И КОГДА ИХ ЗАПОЛНЯТЬ</h2>
+          <p>Выкидываем из головы мысль о том, что есть уникальная пилюля от похудения или поддержания красивой формы. Тем более, у каждого своя картинка в голове. Покупая какую-то программу, ты покупаешь доверие и работу с конкретным человеком, которому ты почему-то решила довериться. Что послужило критерием выбора? Масса факторов: до и после, разумные тексты про еду и нагрузки, собственный пример, проверка на себе каких-то советов, стиль общения в сети… Да мало ли что. Главное, что ты теперь на пути к созданию себя. Первое, что я хочу тебе сообщить, - в фитнесе главное – это мозги. Что это значит? Что нужно ставить разумные цели. Поставив цель «накачать мышцы», «похудеть наконец», «создать рельеф», «научиться питаться» ты должна именно хотеть это сделать. Для этого ты должна понимать, что нужно. Всегда одно и то же: работа с весами (те самые тренажеры и гантели), дробное частое питание, которым мы разгоняем обмен веществ, желание измениться. Это всё. Никаких запредельных способов нет. Другой вопрос как мы это делаем.</p>
+          <h2>ЧТО БУДЕТ, ЕСЛИ ПРОПУСКАТЬ ОТЧЕТЫ И ТРЕНИРОВКИ</h2>
+          <p>Выкидываем из головы мысль о том, что есть уникальная пилюля от похудения или поддержания красивой формы. Тем более, у каждого своя картинка в голове. Покупая какую-то программу, ты покупаешь доверие и работу с конкретным человеком, которому ты почему-то решила довериться. Что послужило критерием выбора?</p>
+          <p>Масса факторов: до и после, разумные тексты про еду и нагрузки, собственный пример, проверка на себе каких-то советов, стиль общения в сети… Да мало ли что. Главное, что ты теперь на пути к созданию себя. Первое, что я хочу тебе сообщить, - в фитнесе главное – это мозги. Что это значит? Что нужно ставить разумные цели. Поставив цель «накачать мышцы», «похудеть наконец», «создать рельеф», «научиться питаться» ты должна именно хотеть это сделать. Для этого ты должна понимать, что нужно. Всегда одно и то же: работа с весами (те самые тренажеры и гантели), дробное частое питание, которым мы разгоняем обмен веществ, желание измениться. Это всё. Никаких запредельных способов нет. Другой вопрос как мы это делаем.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+   <!-- End Основной контент странички -->
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap-datepicker.js"></script>
+  <script src="libs/asscrollable/jquery.asScrollable.all.min.js"></script>
+  <script src="libs/animsition/animsition.min.js"></script>
+  <script src="libs/asscroll/jquery-asScroll.min.js"></script>
+  <script src="libs/mmenu/dist/js/jquery.mmenu.min.all.js"></script>
+  <script src="libs/menu-side/core.min.js"></script>
+  <script src="libs/menu-side/site.min.js"></script>
+  <script src="libs/menu-side/menubar.min.js"></script>
+  <script src="libs/menu-side/asscrollable.min.js"></script>
+  <script src="libs/Waves-0.7.5/dist/waves.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/jquery.autosize.js"></script>
+  <script src="js/image.js"></script>
+  <script src="js/common.js"></script>
+
+  <script>
+    (function(document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function() {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+
+
+</body>
+</html>

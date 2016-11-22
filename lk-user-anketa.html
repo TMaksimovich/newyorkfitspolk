@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru" class="no-js css-menubar"> <!--<![endif]-->
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>ЛК участника. Анкета</title>
+	<meta name="description" content="">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="libs/mmenu/dist/css/jquery-mmenu.min.css">
+  <link rel="stylesheet" href="libs/animsition/animsition.min.css">
+  <link rel="stylesheet" href="libs/asscrollable/asScrollable.min.css">
+  <link rel="stylesheet" href="libs/Waves-0.7.5/dist/waves.min.css">
+  <link rel="stylesheet" href="libs/scrollbar/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/media.css">
+
+	<script src="libs/modernizr/modernizr.js"></script>
+  <script src="libs/breakpoints/breakpoints.min.js"></script>
+  <script>
+    Breakpoints();
+  </script>
+
+</head>
+
+<body class="site-navbar-small block-scroll-y">
+  <nav class="site-navbar navbar navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+
+      <button type="button" class="navbar-toggle navbar-toggle-left waves waves-effect waves-light"
+      data-toggle="menubar">
+        <i class="icon hamburger hamburger-arrow-left">
+          <span class="sr-only">Меню</span>
+          <span class="hamburger-bar"></span>
+        </i>
+      </button>
+
+      <div class="navbar-brand navbar-brand-center">
+        <img class="navbar-brand-logo" src="img/logo.png">
+      </div>
+
+    </div>
+
+    <div class="navbar-container container-fluid">
+      <!-- Верхнее меню -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+
+        <div class="navbar-brand navbar-left">
+          <img class="navbar-brand-logo navbar-brand-logo-black" src="img/logo-black.png">
+        </div>
+
+        <!-- Правое меню с настройками -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+
+          <li>
+            <a href="lk-user-calendar.html" class="navbar-calendar">
+              <i class="material-icons">date_range</i>
+            </a>
+          </li>
+
+          <li class="navbar-food-item">
+            <a href="lk-user-single-food.html" class="navbar-food">
+              <i class="material-icons">room_service</i>
+            </a>
+          </li>
+
+          <li class="dropdown">
+            <a data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"
+            data-animation="scale-up">
+              <i class="icon md-notifications" aria-hidden="true"></i>
+              <span class="badge badge-default">3</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-notifications">
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+              <li>Lorem ipsum dolor sit amet.</li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a class="navbar-user dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false"
+            data-animation="scale-up">
+              <i class="material-icons">account_circle</i>
+              <span class="hello-user">Привет, Александра!</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-user">
+              <li>
+                <a href="#"><i class="icon md-view-setting" aria-hidden="true"></i> Настройки учетной записи</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon md-home" aria-hidden="true"></i> Перейти на сайт</a>
+              </li>
+              <li>
+                <a href="#"><i class="icon md-power" aria-hidden="true"></i> Выйти</a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+        <!-- Правое меню с настройками  -->
+      </div>
+      <!-- End Верхнее меню -->
+    </div>
+  </nav>
+
+  <!-- Боковое меню -->
+  <div class="site-menubar site-menubar-dark">
+    <ul class="site-menu">
+      <li class="site-menu-item">
+        <a class="animsition-link" href="lk-user-calendar.html">
+          <i class="site-menu-icon md-view-calendar" aria-hidden="true"></i>
+          <span class="site-menu-title">Календарь</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item has-sub">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-food" aria-hidden="true"></i>
+          <span class="site-menu-title">Питание</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-single-food.html">
+              <span class="site-menu-title">План питания</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-sport-food.html">
+              <span class="site-menu-title">Спортивное питание</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-eating.html">
+              <span class="site-menu-title">Как питаться</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="site-menu-item">
+        <a class="animsition-link" href="lk-user-dashboard.html">
+          <i class="site-menu-icon md-view-dashboard" aria-hidden="true"></i>
+          <span class="site-menu-title">Обзор</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item">
+        <a class="animsition-link" href="lk-user-report.html">
+          <i class="site-menu-icon md-view-report" aria-hidden="true"></i>
+          <span class="site-menu-title">Отчеты</span>
+        </a>
+      </li>
+
+      <li class="site-menu-item has-sub">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-rules" aria-hidden="true"></i>
+          <span class="site-menu-title">Общие правила</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-rules.html">
+              <span class="site-menu-title">Правила курса</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-how-training.html">
+              <span class="site-menu-title">Как тренироваться</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-faq.html">
+              <span class="site-menu-title">FAQ</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="site-menu-item has-sub active">
+        <a href="javascript:void(0)">
+          <i class="site-menu-icon md-view-user" aria-hidden="true"></i>
+          <span class="site-menu-title">Персональные данные</span>
+          <span class="site-menu-arrow"></span>
+        </a>
+        <ul class="site-menu-sub">
+          <li class="site-menu-item">
+            <a class="animsition-link" href="lk-user-setting.html">
+              <span class="site-menu-title">Настройки учетной записи</span>
+            </a>
+          </li>
+
+          <li class="site-menu-item active">
+            <a class="animsition-link" href="lk-user-anketa.html">
+              <span class="site-menu-title">Анкета</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+    </ul>
+  </div>
+  <!-- End Боковое меню -->
+
+  <!-- Основной контент странички -->
+  <div class="page single-page-user-setting">
+    <div class="container-fluid">
+      <div class="row page-info-user">
+
+        <div class="col-xs-13 col-sm-6">
+          <ul class="breadcrumbs">
+            <li class="active">Анкета</li>
+          </ul>
+
+          <h1 class="page-title">Анкета</h1>
+        </div>
+      </div>
+
+      <form class="row page-content page-content-anketa">
+        <section class="recomend clearfix">
+          <div class="column">
+            <h3>Рекомендации по заполнению</h3>
+            <p>Для того, чтобы заполнить анкету тебе понадобится:</p>
+            <ul>
+              <li>Быть честной и открытой. Довериться мне, как специалисту, который может помочь в достижении твоих целей</li>
+              <li>Немного свободного времени. В среднем заполнение анкеты занимает 20 минут</li>
+              <li>Сделать несколько фотографий и загрузить их в специальный раздел анкеты (приготовь смартфон или фотоаппарат)</li>
+              <li>Ответить на все вопросы в анкете</li>
+            </ul>
+            <p>Информация, внесенная тобой, до окончательной отправки анкеты сохраняется автоматически и ты всегда сможешь вернуться к заполнению с того момента, где ты остановилась.</p>
+          </div>
+        </section>
+
+        <section class="general clearfix">
+          <h3>Общие вопросы</h3>
+          <div class="column">
+            <p>Удобные единицы измерения</p>
+
+            <div class="dropdown dropdown-list">
+              <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle dropdown-list-toggle-units" data-toggle="dropdown">Килограммы
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><span class="waves">Фунты</span></li>
+                <li><span class="waves">Килограммы</span></li>
+              </ul>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Рост (см)</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Вес (кг)</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Обхват груди (см)</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Обхват талии (см)</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Обхват бедер (см)</label>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Сколько тебе лет?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>В каком городе ты живешь?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Куришь ли ты?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Употребляешь алкоголь?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Есть ли у тебя дети? Сколько?</label>
+            </div>
+          </div>
+
+          <div class="column">
+            <p>Какой режим тренировок расчитывать?</p>
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-general">
+                <span class="radio"></span>
+              </label>
+              Программа для дома
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-general" checked="">
+                <span class="radio"></span>
+              </label>
+              Программа для зала
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-general">
+                <span class="radio"></span>
+              </label>
+              Программа для дома и зала
+            </div>
+
+            <p>Сколько дней в неделю будешь заниматься? <br>(Рекомендую 3, но не более 4-х)</p>
+            <div class="dropdown dropdown-list">
+              <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown">3 дня
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><span class="waves">1 день</span></li>
+                <li><span class="waves">2 дня</span></li>
+                <li><span class="waves">3 дня</span></li>
+                <li><span class="waves">4 дня</span></li>
+                <li><span class="waves">5 дней</span></li>
+                <li><span class="waves">6 дней</span></li>
+                <li><span class="waves">7 дней</span></li>
+              </ul>
+            </div>
+
+            <div class="group">
+              <textarea></textarea><span class="bar"></span>
+              <label>Есть ли дома кардиотренажер? <br>Какой спортинвентарь у тебя есть, я постараюсь включить его в программу</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="health clearfix">
+          <h3>О здоровье</h3>
+
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Теряла ли ты когда-нибудь сознание? Во время тренировок или по какой-то другой причине?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Давление обычно: нормальное, пониженное, повышенное?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Есть ли хронические заболевания? (Например, давление, диабет, рак, высокий холестерин)?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Принимаешь ли какие-либо лекарства? Какие?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Были ли операции? Когда и почему?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Нет ли противопоказаний для тренировок?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Постоянный ли цикл месячных?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Пропадали ли месячные после какого-то питания и нагрузок?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Понимашь ли ты, что цикл может запаздывать из-за кардинальной смены деятельности (с дивана в зал)?</label>
+            </div>
+
+          </div>
+
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Есть ли особые жалобы на суставы или кости, которые возникают именно при занятиях спортом?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Случалось ли испытывать боль в груди во время тренировок?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Возникает ли боль в груди при отсутствии тренировок? Возникает ли боль в груди по какой-то другой причине?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>В каких местах возникает боль при выполнении упражнений?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Какие это упражнения?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Есть ли сколиоз?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Были ли когда-то переломы, травмы? Какие и когда были?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Принимаешь ли ты витамины? Какие?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Когда ты последний раз посещала терапевта, сдавала кровь? (Если давно, то рекомендую сдать анализы и провериться)</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="lifestyle clearfix">
+          <h3>Образ жизни</h3>
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Профессия? Образ жизни</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Сколько часов в день ты сидишь?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Какие у тебя хобби?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Сколько воды выпиваешь за день, не считая кофе и чай?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Занимаешься ли ты спортом (теннис, плаванье, футбол)</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Какую обувь ты носишь на работу?</label>
+            </div>
+          </div>
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Возникают ли у тебя стрессы на работе или дома?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Сколько часов ты спишь?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Стаж тренировок в зале/дома (сроки). Сколько лет без перерывов </label>
+            </div>
+
+            <div class="group column-half">
+              <input type="text"><span class="bar"></span>
+              <label>Есть ли командировки или частые дальние поездки?</label>
+            </div>
+
+            <div class="group column-half">
+              <input type="text"><span class="bar"></span>
+              <label>Ты домохозяйка?</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="about clearfix">
+          <h3>Рассказ о себе</h3>
+          <div class="column">
+            <div class="group">
+              <textarea></textarea><span class="bar"></span>
+              <label>Расскажи о себе: характер, привычки, режим, стиль жизни, убеждения, все, что ты считаешь нужным, что я должна знать о тебе</label>
+            </div>
+          </div>
+          <div class="column">
+            <div class="group">
+              <textarea></textarea><span class="bar"></span>
+              <label>Опиши свой рацион в течение дня. Укажи калораж</label>
+            </div>
+
+            <div class="group">
+              <textarea></textarea><span class="bar"></span>
+              <label>Любимые продукты, от которых у тебя "срывает" голову?</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="activity clearfix">
+          <h3>Оценка твоей активности</h3>
+          <p>Под физической активностью подразумевается все, что угодно (танцы, прогулки, спорт) по меньшей мере 20 минут 3-5 раз в неделю. <br>Под правильным питанием понимается еда без бутербродов, алкоголя, сладостей, пищевого мусора.</p>
+
+          <div class="rkmd-radio radio-ripple input-ripple">
+            <label class="input-radio input-checkbox-radio radio-aquamarine">
+              <input type="radio" name="radio-activity">
+              <span class="radio"></span>
+            </label>
+            Я не активна физически, не ем правильно
+          </div>
+
+          <div class="rkmd-radio radio-ripple input-ripple">
+            <label class="input-radio input-checkbox-radio radio-aquamarine">
+              <input type="radio" name="radio-activity">
+              <span class="radio"></span>
+            </label>
+            Я не активна физически, но стараюсь питаться правильно
+          </div>
+
+          <div class="rkmd-radio radio-ripple input-ripple">
+            <label class="input-radio input-checkbox-radio radio-aquamarine">
+              <input type="radio" name="radio-activity">
+              <span class="radio"></span>
+            </label>
+            Я активна физически, но не ем правильно, и готова начать заниматься и правильно питаться
+          </div>
+
+          <div class="rkmd-radio radio-ripple input-ripple">
+            <label class="input-radio input-checkbox-radio radio-aquamarine">
+              <input type="radio" name="radio-activity">
+              <span class="radio"></span>
+            </label>
+            Я уже последние 6 месяцев активно занимаюсь и пытаюсь правильно питаться
+          </div>
+
+          <div class="rkmd-radio radio-ripple input-ripple">
+            <label class="input-radio input-checkbox-radio radio-aquamarine">
+              <input type="radio" name="radio-activity">
+              <span class="radio"></span>
+            </label>
+            Я физически активна и правильно питаюсь больше 6 месяцев
+          </div>
+        </section>
+
+        <section class="target clearfix">
+          <h3>Твои цели (в спорте и питании)</h3>
+
+          <div class="group">
+            <input type="text"><span class="bar"></span>
+            <label>Текущая ситуация? (Пример: сижу в офисе, вешу 100 кг, хочу похудеть)</label>
+          </div>
+
+          <div class="group">
+            <input type="text"><span class="bar"></span>
+            <label>Краткосрочная цель? (Пример, бегать по 30 мин 3 раза в неделю или сократить калораж на 500 ккал)</label>
+          </div>
+
+          <div class="group">
+            <input type="text"><span class="bar"></span>
+            <label>Долгосрочная цель? (Пример: потерять 50 кг за год, пробежать марафон через год)</label>
+          </div>
+        </section>
+
+        <section class="nutrition clearfix">
+          <h3>Твои пожелания к питанию</h3>
+          <p>Ты можешь выбрать любой план, все они эффективны. Внимательно прочитай особенности каждого типа питания</p>
+
+          <div class="column">
+            <p>Какое ты хочешь подобрать питание?</p>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-nutrition">
+                <span class="radio"></span>
+              </label>
+              <p>Строгое (чистое, правильное)</p>
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-nutrition">
+                <span class="radio"></span>
+              </label>
+              <p>Строгое, но я оставлю любимые продукты, без которых я жить точно не смогу</p>
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-nutrition">
+                <span class="radio"></span>
+              </label>
+              <p>Привычное мне. Хочу доказать, что я похудею и сделаю качественное тело на супах, вине, бутербродах и шоколаде</p>
+            </div>
+
+          </div>
+          <div class="column">
+            <p>Выбери тип питания</p>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-nutrition-type">
+                <span class="radio"></span>
+              </label>
+              <p>Низкоуглеводный (высокожировой) -  обеспечен быстрый результат за 12 недель</p>
+
+              <p><span>Плюсы:</span> <span>быстрое похудение</span></p>
+              <p><span>Минусы:</span> <span>нельзя держать дольше 3-х месяцев не в ущерб здоровью</span></p>
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-nutrition-type">
+                <span class="radio"></span>
+              </label>
+              <p>Питание по соматотипу (в зависимости от типа фигуры)</p>
+
+              <p><span>Плюсы:</span> <span>учитываются генетические особенности организма</span></p>
+              <p><span>Минусы:</span> <span>существующие методы определения соматотипа слишком обобщенные и не персонализированные</span></p>
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-nutrition-type">
+                <span class="radio"></span>
+              </label>
+              <p>Изокалорийный (+/- 300-500 ккал для снижения или повышения веса)</p>
+
+              <p><span>Плюсы:</span> <span>комфортный, щадящий тип питания</span></p>
+              <p><span>Минусы:</span> <span>не рассчитан на быстрое похудение</span></p>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="work clearfix">
+          <h3>Твои пожелания к работе в целом</h3>
+          <p>Если ты просто худеешь, то ни о каком рельефе речи не идет. <br>
+          Этапы просты как мир: сначала похудение, потом набор мышц за счет массы, потом уже рельеф</p>
+
+          <div class="column">
+            <p>Когда планируешь тренироваться?</p>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-time">
+                <span class="radio"></span>
+              </label>
+              Утром
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-time">
+                <span class="radio"></span>
+              </label>
+              Вечером
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Есть возможность на работе есть из лоточков или придется меню подстраивать под столовую?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Нет никаких препятствий носить с собой еду, заготовленную с вечера 3 месяца?</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="gallery">
+          <h3>Фотографии до начала тренировок</h3>
+          <p>Прикрепи свои фотографии в полный рост в нижнем белье: спереди, сзади и сбоку</p>
+
+          <label class="label-files btn-default btn-default-white waves waves-effect waves-grey">Добавить
+            <input type="file" id="files" name="files[]" multiple />
+          </label>
+          <output id="list"></output>
+
+        </section>
+
+        <section class="agreement clearfix">
+          <h3>Согласие на работу со мной</h3>
+
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Осознаешь ли ты, что при отсутствии живого тренера рядом вся техника безопасности ложится на твои плечи?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Обещаешь ли оповещать меня о головокружениях, аллергиях, обмороках, дискомфортах (запоры, поносы, и т.д), которые тебя беспокоят?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Обязуешься ли ты не публиковать эту программу и не передавать третим лицам?</label>
+            </div>
+          </div>
+
+          <div class="column">
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Осознаешь ли ты, что в питании трудно изобрести велосипед, и построить тело можно только преверенными методами?</label>
+            </div>
+
+            <div class="group">
+              <input type="text"><span class="bar"></span>
+              <label>Понимаешь ли ты, что обращаешься за программой к тренеру, который полностью доверят представленной тобой информации?</label>
+            </div>
+          </div>
+        </section>
+
+        <section class="final clearfix">
+          <div class="column">
+            <h3>Поздравляю! Самая скучная часть работы закончилась!</h3>
+            <p>В течение 3-х суток я рассмотрю твою анкету, подготовлю персональную тренировку и план питания, которые ты увидишь в личном кабинете. </p>
+
+            <p>А пока проверь, что у тебя имеются дома:</p>
+            <ul>
+              <li>Пищевые пластиковые контейнеры</li>
+              <li>Пароварка или мультиварка или духовка, а также набор кастрюль</li>
+              <li>Кухоннные весы</li>
+            </ul>
+            <p>До связи!</p>
+
+            <input type="submit" class="btn-default waves waves-effect waves-light" value="Отправить анкету">
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
+   <!-- End Основной контент странички -->
+
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <script src="libs/bootstrap/js/bootstrap-datepicker.js"></script>
+  <script src="libs/asscrollable/jquery.asScrollable.all.min.js"></script>
+  <script src="libs/animsition/animsition.min.js"></script>
+  <script src="libs/asscroll/jquery-asScroll.min.js"></script>
+  <script src="libs/mmenu/dist/js/jquery.mmenu.min.all.js"></script>
+  <script src="libs/menu-side/core.min.js"></script>
+  <script src="libs/menu-side/site.min.js"></script>
+  <script src="libs/menu-side/menubar.min.js"></script>
+  <script src="libs/menu-side/asscrollable.min.js"></script>
+  <script src="libs/Waves-0.7.5/dist/waves.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/jquery.autosize.js"></script>
+  <script src="js/image.js"></script>
+  <script src="js/common.js"></script>
+
+  <script>
+    (function(document, window, $) {
+      'use strict';
+
+      var Site = window.Site;
+      $(document).ready(function() {
+        Site.run();
+      });
+    })(document, window, jQuery);
+  </script>
+
+
+</body>
+</html>
