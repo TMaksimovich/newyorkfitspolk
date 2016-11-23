@@ -1865,7 +1865,7 @@ body {
 .site-menu-title {
   font-size: 16px;
   display: inline-block;
-  max-width: 160px;
+  max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -3922,6 +3922,10 @@ body {
   background-size: cover;
 }
 
+.lk-user-rules .page-text-content, .lk-user-rules .single-page-food .page-text-comments, .single-page-food .lk-user-rules .page-text-comments {
+  padding-top: 5px;
+}
+
 .page-text-content, .single-page-food .page-text-comments {
   background-color: #fff;
   border-radius: 2px;
@@ -4958,6 +4962,11 @@ body {
   line-height: 42px;
 }
 
+.lk-user-report .page-info-user {
+  background: url(../img/bg_report.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
 #files {
   display: none;
 }
@@ -5423,6 +5432,10 @@ body {
 
 .single-page-food .page-text-comments h3 {
   margin-top: 27px;
+}
+
+.lk-user-sport-food .page-text-content, .lk-user-sport-food .single-page-food .page-text-comments, .single-page-food .lk-user-sport-food .page-text-comments {
+  padding-top: 36px;
 }
 
 @media (max-width: 767px) {
