@@ -93,20 +93,14 @@
 		margin-bottom: 30px
 	.group-desc
 		margin-right: 18px
-	.dropdown
+	.custom-select
 		margin-bottom: 23px
-		.dropdown-list-toggle
+		.custom-select-trigger
 			border-bottom: 1px solid $sub_text_color
 			padding: 10px 0 5px
 			width: 100%
 			position: relative
-			.caret
-				position: absolute
-				right: 0
-				top: 0
-				bottom: 0
-				margin: auto
-				margin-left: 0
+			display: inline-block
 	.group-day
 		label
 			left: 14px
@@ -152,6 +146,15 @@
 			padding: 0 19px 32px
 			input[type="submit"]
 				background-color: $main_bg
+		textarea
+			padding-top: 0
+		textarea ~ label
+			bottom: 0
+			top: 24px
+		.group textarea.used ~ label,
+		.group textarea:focus ~ label,
+			transform: translate3d(0, -20px, 0) scale(0.75)
+			top: 0
 
 #modalUserEdit
 	.group input:focus ~ label
@@ -190,6 +193,15 @@
 	.modal-programm
 		.toggle-block
 			margin-top: 26px
+		textarea
+			padding-top: 0
+		textarea ~ label
+			bottom: 0
+			top: 24px
+		.group textarea.used ~ label,
+		.group textarea:focus ~ label,
+			transform: translate3d(0, -20px, 0) scale(0.75)
+			top: 0
 
 #modalTrainingButton
 	.modal-content

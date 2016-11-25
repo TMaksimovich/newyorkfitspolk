@@ -211,32 +211,24 @@
               <h3 class="col-xs-3">ФИЛЬТР</h3>
               <div class="col-xs-13 col-sm-5">
                 <span>Категория тренировок</span>
-                <div class="dropdown dropdown-list">
-                  <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown">Все
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><span class="waves">В зале</span></li>
-                    <li><span class="waves">Дома</span></li>
-                    <li><span class="waves">Все</span></li>
-                  </ul>
-                </div>
+                <select name="sources" id="sources-cat" class="custom-select sources" placeholder="Все">
+                  <option value="В зале">В зале</option>
+                  <option value="Дома">Дома</option>
+                  <option value="Все">Все</option>
+                </select>
               </div>
+
               <div class="col-xs-13 col-sm-5">
                 <span>Тип тренировок</span>
-                <div class="dropdown dropdown-list">
-                  <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown">Все
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><span class="waves">Силовые</span></li>
-                    <li><span class="waves">Кардио</span></li>
-                    <li><span class="waves">Все</span></li>
-                  </ul>
-                </div>
+                <select name="sources" id="sources-type" class="custom-select sources" placeholder="Все">
+                  <option value="Силовые">Силовые</option>
+                  <option value="Кардио">Кардио</option>
+                  <option value="Все">Все</option>
+                </select>
               </div>
             </div>
           </div>
+
           <div class="table-content table-content-training">
             <div class="table-row table-row-th">
               <div class="table-th table-number">№</div>

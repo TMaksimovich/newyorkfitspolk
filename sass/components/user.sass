@@ -202,7 +202,7 @@
 	.page-training-content
 		top: -83px
 		margin-bottom: 0
-		.dropdown-list .dropdown-list-toggle
+		.cs-border .cs-placeholder
 			padding: 10px 30px 0px 0
 		.title-block
 			text-transform: uppercase
@@ -237,7 +237,7 @@
 			margin-bottom: 24px
 		p
 			font-size: 16px
-		ul:not(.dropdown-menu)
+		ul:not(.custom-options)
 			margin: 0 0 22px
 			padding-left: 0
 			list-style: none
@@ -255,9 +255,9 @@
 					height: 9px
 					background-color: $main_bg
 					border-radius: 50%
-		.dropdown-list
+		.cs-border
 			margin-bottom: 11px
-		.dropdown-list-toggle
+		.cs-placeholder
 			padding: 10px 30px 0 0
 		.dropdown-list-toggle-units
 			width: 100%
@@ -287,12 +287,14 @@
 			p
 				font-size: 14px
 				font-family: "LatoLight", Arial, sans-serif
-				margin-bottom: 0
+				margin-bottom: 15px
+			.custom-select-trigger
+				display: inline-block
+				width: 100%
 			.column
 				&:last-of-type
-					p
-						margin-bottom: 15px
-					.dropdown-list-toggle
+					.dropdown-list-toggle,
+					.cs-placeholder
 						padding: 0px 30px 0 0
 						width: 50%
 					.group textarea

@@ -80,8 +80,8 @@ $(function() {
 	});
 
 	// активный блок на странице Режим тренировки
-	$('.new-block-praxis').on('click', '.dropdown-list', function(){
-		if($(this).find('.dropdown-list-toggle').hasClass('active')) {
+	$('.new-block-praxis').on('click', '.custom-select-wrapper', function(){
+		if($(this).find('.custom-select').addClass('active')) {
 			$(this).closest('.new-block-praxis')
 				   .find('.add-praxis')
 				   .addClass('active')

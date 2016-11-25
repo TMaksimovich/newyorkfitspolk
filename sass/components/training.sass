@@ -83,23 +83,22 @@
 		font-size: 13px
 		color: #949494
 		padding-right: 20px
-	.dropdown-list
+	.custom-select
 		display: inline-block
 		vertical-align: middle
 		padding-top: 5px
 		min-width: 125px
-		a
+		.custom-select-trigger
 			padding: 0
 			width: 100%
 			position: relative
 			color: $text_color
-			.caret
-				position: absolute
-				right: 0
-				bottom: 8px
+	.custom-select-wrapper
+		display: inline-block
+		vertical-align: middle
 .plan-training-content
-	.filter .dropdown-list
-		min-width: 175px
+	.filter .custom-select
+		min-width: 125px
 
 .form-praxis
 	background-color: #fff
@@ -191,7 +190,7 @@
 					color: #454545
 					cursor: pointer
 	.new-block-praxis
-		.dropdown-list-toggle.active
+		.custom-select.active .custom-select-trigger
 			color: #383838
 			font-family: "LatoRegular", sans-serif
 
@@ -224,7 +223,7 @@
 			display: none
 		span
 			width: 54%
-		.dropdown-list
+		.custom-select
 			width: 40%
 	.single-training-content
 		box-shadow: none
@@ -232,9 +231,6 @@
 		.training-item
 			padding-left: 0
 			padding-right: 0
-	.plan-training-content
-		.filter .dropdown-list
-			min-width: 40%
 	.form-praxis
 		padding: 45px 0
 		box-shadow: none
@@ -266,15 +262,15 @@
 			box-shadow: none
 
 @media (max-width: 991px) and (min-width: 782px)
-	.filter .dropdown-list
+	.filter .custom-select
 		min-width: 78px
 
 @media (max-width: 1080px) and (min-width: 992px)
-	.filter .dropdown-list
+	.filter .custom-select
 		min-width: 82px
 
 @media (max-width: 1120px) and (min-width: 1081px)
-	.filter .dropdown-list
+	.filter .custom-select
 		min-width: 110px
 
 @media (max-width: 1190px) and (min-width: 992px)

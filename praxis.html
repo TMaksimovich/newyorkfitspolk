@@ -211,17 +211,12 @@
               <h3 class="col-xs-3">ФИЛЬТР</h3>
               <div class="col-xs-13 col-sm-9">
                 <span>Категория тренировок</span>
-                <div class="dropdown dropdown-list">
-                  <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown">Все
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li><span class="waves">В зале</span></li>
-                    <li><span class="waves">Дома</span></li>
-                    <li><span class="waves">Дома и в зале</span></li>
-                    <li><span class="waves">Все</span></li>
-                  </ul>
-                </div>
+                <select name="sources" id="sources-cat" class="custom-select sources" placeholder="Все">
+                  <option value="В зале">В зале</option>
+                  <option value="Дома">Дома</option>
+                  <option value="Дома и в зале">Дома и в зале</option>
+                  <option value="Все">Все</option>
+                </select>
               </div>
             </div>
           </div>

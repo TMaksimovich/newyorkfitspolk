@@ -250,15 +250,11 @@
           <h3>Общие вопросы</h3>
           <div class="column">
             <p>Удобные единицы измерения</p>
-
-            <div class="dropdown dropdown-list">
-              <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle dropdown-list-toggle-units" data-toggle="dropdown">Килограммы
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><span class="waves">Фунты</span></li>
-                <li><span class="waves">Килограммы</span></li>
-              </ul>
+            <div class="group">
+              <select name="sources" id="sources" class="custom-select sources" placeholder="Килограммы">
+                <option value="Фунты">Фунты</option>
+                <option value="Килограммы" selected>Килограммы</option>
+              </select>
             </div>
 
             <div class="group">
@@ -341,19 +337,16 @@
             </div>
 
             <p>Сколько дней в неделю будешь заниматься? <br>(Рекомендую 3, но не более 4-х)</p>
-            <div class="dropdown dropdown-list">
-              <a href="#" class="btn btn-simple dropdown-toggle dropdown-list-toggle" data-toggle="dropdown">3 дня
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><span class="waves">1 день</span></li>
-                <li><span class="waves">2 дня</span></li>
-                <li><span class="waves">3 дня</span></li>
-                <li><span class="waves">4 дня</span></li>
-                <li><span class="waves">5 дней</span></li>
-                <li><span class="waves">6 дней</span></li>
-                <li><span class="waves">7 дней</span></li>
-              </ul>
+            <div class="group">
+              <select name="sources" id="sources-day" class="custom-select sources" placeholder="3 дня">
+                <option value="1 день">1 день</option>
+                <option value="2 дня">2 дня</option>
+                <option value="3 дня" selected>3 дня</option>
+                <option value="4 дня">4 дня</option>
+                <option value="5 дней">5 дней</option>
+                <option value="6 дней">6 дней</option>
+                <option value="7 дней">7 дней</option>
+              </select>
             </div>
 
             <div class="group">
@@ -819,7 +812,6 @@
       });
     })(document, window, jQuery);
   </script>
-
 
 </body>
 </html>

@@ -81,20 +81,6 @@
 	.required-text
 		color: $danger
 		font-size: 11px
-		// position: absolute
-		// left: 0
-		// top: 46px
-		// top: 25px
-		// transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms
-		// z-index: -5
-		// opacity: 0
-	// .has-error:focus + .error-text
-	// 	top: 46px
-	// 	transform: scale(1)
-	// 	left: 0
-	// 	color: $danger
-	// 	z-index: 10
-	// 	opacity: 1
 	.required:focus ~ label
 		color: $danger
 	input.has-error:focus ~ label
@@ -315,3 +301,78 @@
 		background: #5fc7ae
 	&:active:before
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.31), 0 0 0 20px rgba(138, 227, 205, 0.2)
+
+
+// Select
+select
+	display: none
+div.custom-select
+	position: relative
+	outline: none
+	cursor: pointer
+	& > span
+		border-bottom: 1px solid #bdbdbd
+		padding: 10px 30px 3px 0
+		border-radius: 0
+		font-size: 16px
+		font-family: "LatoLight", sans-serif
+		color: #949494
+		text-transform: none
+		z-index: 10
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			right: 0
+			top: 44%
+			display: inline-block
+			width: 0
+			height: 0
+			margin-left: 2px
+			vertical-align: middle
+			border-top: 4px dashed
+			border-top: 4px solid \9
+			border-right: 4px solid transparent
+			border-left: 4px solid transparent
+	&.opened
+		& > span
+			border-bottom: 2px solid $main_bg
+			&:after
+				border-bottom: 4px dashed
+				border-bottom: 4px solid \9
+				border-right: 4px solid transparent
+				border-left: 4px solid transparent
+				border-top: none
+		.custom-options
+			transform: translateY(20px)
+			opacity: 1
+			z-index: 20
+	.custom-options
+		position: absolute
+		left: 0
+		float: left
+		min-width: 160px
+		margin: 2px 0 0
+		list-style: none
+		font-size: 14px
+		text-align: left
+		background-color: #fff
+		background-clip: padding-box
+		display: block
+		opacity: 0
+		transition: all 0.3s cubic-bezier(0.79, -0.07, 0.14, 1.03)
+		transform-origin: 0 0
+		transform: translateY(0)
+		border: none
+		top: 12px
+		border-radius: 2px
+		padding: 0
+		box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1)
+		z-index: -1
+		li
+			padding: 14px 20px
+			font-size: 16px
+			display: block
+			color: #383838
+		li:hover
+			background: #f5f3ec
