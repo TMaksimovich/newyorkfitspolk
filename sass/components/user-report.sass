@@ -1,0 +1,694 @@
+.single-page-user-setting
+	.page-info-user
+		background: url(../img/bg_user.jpg) 0 0 no-repeat
+		background-size: cover
+		min-height: 240px
+		padding: 15px 8px
+
+	// Анкета
+	.page-content-anketa
+		background-color: #fff
+		max-width: 1056px
+		margin: -83px auto 66px
+		padding: 0
+		box-shadow: 0 2px 4px 0 rgba(0,0,0,.08), 0 1px 2px 0 rgba(0,0,0,.13)
+		section
+			padding: 50px 48px 64px
+			&:nth-of-type(even)
+				background-color: #f9f9f9
+		h3
+			text-transform: none
+			font-size: 24px
+			margin-bottom: 24px
+			font-weight: normal
+			font-family: "LatoLight", Arial, sans-serif
+		p
+			font-size: 16px
+		ul:not(.custom-options)
+			margin: 0 0 22px
+			padding-left: 0
+			list-style: none
+			li
+				position: relative
+				padding-left: 30px
+				font-size: 16px
+				margin-bottom: 10px
+				&:before
+					content: ''
+					position: absolute
+					top: 7px
+					left: 0
+					width: 9px
+					height: 9px
+					background-color: $main_bg
+					border-radius: 50%
+		.cs-border
+			margin-bottom: 11px
+		.cs-placeholder
+			padding: 10px 30px 0 0
+		.dropdown-list-toggle-units
+			width: 100%
+		.group
+			margin-bottom: 25px
+			label
+				line-height: 18px
+			input,
+			textarea
+				border-bottom: 1px solid #bdbdbd
+		.rkmd-radio
+			color: $sub_text_color
+			font-size: 16px
+			font-weight: normal
+			font-family: "LatoLight", Arial, sans-serif
+			letter-spacing: 0
+			margin-bottom: 9px
+			label
+				margin-bottom: 0
+				vertical-align: middle
+		.column
+			float: left
+		.recomend
+			.column
+				width: 75%
+		.general
+			p
+				font-size: 14px
+				font-family: "LatoLight", Arial, sans-serif
+				margin-bottom: 15px
+			.custom-select-trigger
+				display: inline-block
+				width: 100%
+			.column
+				&:last-of-type
+					.dropdown-list-toggle,
+					.cs-placeholder
+						padding: 0px 30px 0 0
+						width: 50%
+					.group textarea
+						min-height: 52px
+						padding-right: 0
+						transition: margin-top .3s cubic-bezier(.25,.8,.25,1)
+					.group textarea ~ label
+						top: 0
+						bottom: auto
+					.group textarea:focus,
+					.group textarea.used
+						margin-top: 30px
+					.group textarea.used ~ label,
+					.group textarea:focus ~ label
+						transform: translate3d(0, -30px, 0) scale(0.75)
+		.about
+			textarea
+				padding-right: 0
+			textarea.used ~ label,
+			textarea:focus ~ label
+				transform: translate3d(0, -30px, 0) scale(0.75)
+			.column:first-of-type
+				textarea
+					margin-top: 36px
+					min-height: 52px
+					padding-right: 0
+				textarea ~ label
+					top: 0
+					bottom: auto
+			.column:last-of-type
+				.group
+					margin-bottom: 10px
+				textarea.used ~ label,
+				textarea:focus ~ label
+					top: 0
+					bottom: auto
+					transform: translate3d(0, -7px, 0) scale(0.75)
+		.activity
+			p
+				font-size: 14px
+				font-family: "LatoLight", Arial, sans-serif
+				margin-bottom: 0
+				&:last-of-type
+					margin-bottom: 34px
+		.target
+			padding-bottom: 40px
+		.nutrition
+			padding-bottom: 28px
+		.nutrition,
+		.work
+			p
+				font-size: 14px
+				font-family: "LatoLight", Arial, sans-serif
+				margin-bottom: 15px
+			.rkmd-radio
+				p
+					display: inline-block
+					vertical-align: top
+					margin-top: 6px
+					margin-bottom: 0
+					width: 100%
+					font-size: 16px
+					line-height: 18px
+					color: $sub_text_color
+					span
+						color: $text_color
+						display: inline-block
+						vertical-align: top
+						width: 15%
+						margin-left: 37px
+						&+span
+							width: 75%
+							margin-left: 0
+				label + p
+					margin-bottom: 10px
+					width: 90%
+		.work
+			padding-bottom: 35px
+			h3
+				margin-bottom: 10px
+			.column
+				p
+					margin-top: 0
+				&:last-of-type
+					margin-top: 7px
+					.group
+						margin-bottom: 30px
+		.agreement
+			padding-bottom: 17px
+			.group
+				margin-bottom: 48px
+		.final
+			.column
+				width: 67%
+			h3+p
+				margin-bottom: 45px
+			.btn-default
+				margin-top: 26px
+				background-color: $main_bg !important
+			input[type="submit"]
+				font-style: normal
+				padding: 0
+				text-transform: uppercase
+		.gallery
+			padding: 50px 48px 40px
+			h3
+				margin-bottom: 0
+			p
+				font-size: 14px
+				font-family: "LatoLight", Arial, sans-serif
+
+	// Отчеты
+	.page-content-report
+		padding: 53px 20px 20px
+		.tabs__content.active
+			padding-bottom: 24px
+		.datepicker
+			font-size: 16px
+			border-bottom: 1px solid #bdbdbd
+			height: 30px
+		h2
+			font-size: 24px
+			text-transform: none
+			margin-top: 25px
+			margin-bottom: 15px
+		p
+			margin-top: 0
+			margin-bottom: 10px
+			font-size: 14px
+			line-height: 18px
+			font-family: "LatoLight", Arial, sans-serif
+		.health-list
+			margin-top: 0
+			margin-bottom: 20px
+			list-style: none
+			padding-left: 0
+			font-size: 14px
+			font-family: "LatoLight", Arial, sans-serif
+			li
+				margin-bottom: 5px
+			span
+				display: inline-block
+				vertical-align: top
+			.health-title
+				width: 21%
+				color: $sub_text_color
+		.group
+			input,
+			textarea
+				border-bottom: 1px solid #bdbdbd
+			textarea
+				padding-right: 0
+				&.used ~ label,
+				&:focus ~ label
+					top: 37px
+					transform: translate3d(0, -45px, 0) scale(0.75)
+		.pulse
+			p
+				margin-bottom: 20px
+		.info-column
+			.info-food
+				margin-top: 30px
+				textarea.used ~ label,
+				textarea:focus ~ label
+					transform: translate3d(0, -65px, 0) scale(0.75)
+			.info-training
+				textarea.used ~ label,
+				textarea:focus ~ label
+					transform: translate3d(0, -51px, 0) scale(0.75)
+	.page-text-comments
+		background-color: #fff
+		border-radius: 2px
+		min-height: 1px
+		position: relative
+		left: 0
+		right: 0
+		margin: -17px auto
+		max-width: 876px
+		overflow: hidden
+		margin-bottom: 67px
+		h2
+			font-size: 20px
+			font-family: "LatoLight", Arial, sans-serif
+			text-transform: uppercase
+			margin-top: 15px
+			margin-bottom: 15px
+			font-weight: normal
+		textarea
+			padding-right: 0
+			min-height: 70px
+			border-bottom: 1px solid #bdbdbd
+			&.used ~ label,
+			&:focus ~ label
+				top: 37px
+				transform: translate3d(0, -45px, 0) scale(0.75)
+		.btn-default
+			margin-top: 38px
+			background-color: $main_bg !important
+		input[type="submit"]
+			font-style: normal
+			padding: 0
+			text-transform: uppercase
+		.menu-user-column
+			margin-top: 12px
+			.name-user,
+			.email-user
+				color: $text_color
+			.name-user
+				margin-top: 0
+			.photo-user
+				width: 42px
+				height: 42px
+				line-height: 42px
+				text-align: center
+				border-radius: 50%
+				display: inline-block
+				vertical-align: middle
+				overflow: hidden
+				margin-left: 30px
+				background-color: $main_bg_light
+				color: $main_bg
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+				i
+					line-height: 42px
+
+// ЛК участника. Отчет
+.lk-user-report
+	.page-info-user
+		background: url(../img/bg_report.jpg) 0 0 no-repeat
+		background-size: cover
+#files
+	display: none
+.label-files
+	margin-top: 35px
+#list
+	background-color: #f4f4f4
+	border-radius: 2px
+	border: 1px solid #e3e3e3
+	text-align: center
+	min-height: 330px
+	line-height: 330px
+	padding: 15px 15px 35px
+	margin-top: 18px
+	margin-bottom: 30px
+	overflow: hidden
+	span
+		float: left
+		width: 25%
+		height: 295px
+		padding: 0 15px
+		overflow: hidden
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+@media (max-width:480px)
+	.single-page-user-setting .right-menu-block
+		width: 100%
+	.single-page-user-setting
+		.page-content-anketa
+			.health
+				h3
+					margin-bottom: 40px
+				.group
+					margin-bottom: 60px
+			.about
+				.column:first-of-type textarea
+					margin-top: 16px
+					min-height: 70px
+				textarea.used ~ label,
+				textarea:focus ~ label
+					transform: translate3d(0, -43px, 0) scale(0.75)
+			.target
+				.group
+					margin-bottom: 50px
+			.work
+				.column:last-of-type
+					.group
+						margin-top: 30px
+						margin-bottom: 45px
+			.agreement
+				h3
+					margin-bottom: 40px
+				.group
+					margin-bottom: 80px
+			.nutrition,
+			.work
+				.rkmd-radio
+					label + p
+						width: 85%
+					p span
+						width: 25%
+					p span + span
+						width: 60%
+		.page-content-report
+			.info-column
+				.info-food
+					textarea
+						min-height: 130px
+						transition: margin-top 0.2s ease
+						&:focus,
+						&.used
+							margin-top: 107px
+						&.used ~ label,
+						&:focus ~ label
+							transform: translate3d(0, -136px, 0) scale(0.75)
+				.info-training
+					textarea
+						transition: margin-top 0.2s ease
+						&:focus,
+						&.used
+							margin-top: 60px
+						&.used ~ label,
+						&:focus ~ label
+							transform: translate3d(0, -93px, 0) scale(0.75)
+
+@media (min-width:481px) and (max-width:991px)
+	.single-page-user-setting
+		.page-content-report
+			.info-column
+				.info-food
+					textarea
+						min-height: 60px
+						transition: margin-top 0.2s ease
+						&:focus,
+						&.used
+							margin-top: 60px
+						&.used ~ label,
+						&:focus ~ label
+							transform: translate3d(0, -94px, 0) scale(0.75)
+				.info-training
+					textarea
+						transition: margin-top 0.2s ease
+						&:focus,
+						&.used
+							margin-top: 20px
+						&.used ~ label,
+						&:focus ~ label
+							transform: translate3d(0, -78px, 0) scale(0.75)
+
+@media (max-width:561px)
+	.single-page-user-setting
+		.page-content
+			.meta-user-media
+				.meta-user-name
+					width: 100%
+					padding-left: 0
+					padding-top: 15px
+			.meta-user-info
+				span,
+				p
+					width: 100%
+			.account-info
+				.meta-user-info
+					span
+						width: 100%
+
+@media (max-width:650px)
+	.single-page-user-setting
+		.page-content-report
+			.info-column
+				.info-progress
+					textarea
+						&.used ~ label,
+						&:focus ~ label
+							transform: translate3d(0, -77px, 0) scale(0.75)
+
+@media (max-width:767px)
+	.single-page-user-setting
+		.page-info-user
+			min-height: 181px
+		.page-title
+			padding-top: 55px
+		.menu-user-column
+			float: left
+			text-align: left
+		.menu-user
+			margin-top: 0
+		.page-content
+			.user-info,
+			.account-info
+				margin-right: 0
+				margin-left: 0
+				width: 100%
+				float: left
+				box-shadow: none
+		.page-training-content
+			top: 0
+		.page-content-report
+			padding: 20px 0
+			.health-list
+				li
+					margin-bottom: 20px
+				.health-title
+					width: 100%
+		.page-text-comments
+			padding: 0 10px
+			.menu-user-column
+				margin-bottom: 15px
+				.meta-user
+					width: 80%
+				.photo-user
+					margin-left: 10px
+	#list
+		span
+			width: 100%
+			height: auto
+			margin-bottom: 20px
+			img
+				display: block
+
+
+@media (min-width:768px) and (max-width:991px)
+	.single-page-user-setting
+		.page-content
+			.meta-user-media
+				.photo
+					width: 116px
+					height: 116px
+					i
+						line-height: 116px
+						font-size: 70px
+				.meta-user-name
+					width: 60%
+					padding-left: 15px
+					a
+						text-transform: none
+						letter-spacing: 0
+				.email-user
+					margin-bottom: 15px
+			.meta-user-info
+				span
+					width: 33%
+			.account-info
+				.meta-user-info
+					span
+						width: 48%
+					p
+						width: 50%
+			.user-info,
+			.account-info
+				min-height: 610px
+	#list
+		span
+			width: 50%
+
+@media (min-width: 768px)
+	.single-page-user-setting
+		.modal-dialog
+			width: 546px
+		.page-text-comments
+			width: 85%
+			box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13)
+			padding: 30px 30px 65px
+
+
+@media (max-width:991px)
+	.page-user
+		overflow-y: auto
+	.single-page-user-setting
+		.container-fluid
+			padding: 0
+		.page-content
+			margin-top: 0
+			padding: 0
+		.page-text-content
+			top: 0
+		&.single-page-food
+			.page-text-comments
+				margin-top: 30px
+				top: 0
+		.page-content-anketa
+			margin: 0 -12px
+			box-shadow: none
+			section
+				padding: 50px 15px 50px 25px
+			.recomend,
+			.general,
+			.health,
+			.lifestyle,
+			.about,
+			.work,
+			.agreement,
+			.final
+				.column
+					width: 100%
+					margin-left: 0
+					margin-right: 0
+		.page-content-report
+			.group
+				margin-bottom: 45px
+
+@media (min-width:992px)
+	.single-page-user-setting
+		.page-content-anketa
+			.general
+				.column
+					&:first-of-type
+						width: 25%
+					&:nth-of-type(2)
+						width: 25%
+						margin-left: 10%
+						padding-top: 29px
+					&:last-of-type
+						width: 30%
+						margin-left: 10%
+						padding-top: 40px
+			.lifestyle
+				.column:last-of-type
+					margin-top: 66px
+				.column-half
+					float: left
+					width: 49%
+					&:last-of-type
+						margin-left: 3%
+						width: 48%
+			.health,
+			.lifestyle,
+			.about,
+			.agreement
+				.column
+					width: 48%
+					&:first-of-type
+						margin-right: 1%
+					&:last-of-type
+						margin-left: 1%
+			.nutrition,
+			.work
+				.column
+					margin-top: 5px
+					&:first-of-type
+						margin-right: 1%
+						width: 38%
+					&:last-of-type
+						margin-left: 2%
+						width: 58%
+						.rkmd-radio
+							margin-bottom: 35px
+		.page-content-report
+			.column-third
+				width: 33%
+			.column-fourth
+				width: 24%
+				label
+					font-size: 15px
+			.column-fourth,
+			.column-third
+				display: inline-block
+				vertical-align: top
+				float:none
+			.group
+				margin-bottom: 23px
+
+@media (min-width:992px) and (max-width:1080px)
+	.single-page-user-setting
+		.page-content-anketa
+			.lifestyle .group,
+			.agreement h3
+				margin-bottom: 40px
+
+@media (min-width:992px) and (max-width:1140px)
+	.single-page-user-setting
+		.page-content-anketa
+			.general
+				.column:last-of-type
+					.group
+						textarea
+							min-height: 67px
+			.health
+				.group
+					margin-bottom: 40px
+			.nutrition,
+			.work
+				.rkmd-radio
+					label + p
+						width: 88%
+
+
+@media (min-width:992px) and (max-width:1300px)
+	.single-page-user-setting
+		.page-content
+			.meta-user-media
+				.photo
+					width: 120px
+					height: 120px
+					i
+						line-height: 120px
+						font-size: 70px
+				.meta-user-name
+					padding-left: 15px
+			.user-info,
+			.account-info
+				min-height: 601px
+
+@media (min-width:1200px) and (max-width:1300px)
+	.single-page-user-setting
+		.page-content
+			.meta-user-media
+				.photo
+					width: 150px
+					height: 150px
+					i
+						line-height: 150px
+						font-size: 90px
+
+

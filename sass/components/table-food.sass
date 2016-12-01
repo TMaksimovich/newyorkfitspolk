@@ -1,0 +1,107 @@
+//Таблица на странице Плана питания
+.single-page-food
+	.table-content-food
+		display: table
+		.table-row
+			display: table-row
+		.table-th
+			display: table-cell
+			font-size: 16px
+			color: $sub_text_color
+			font-family: "LatoLight", Arial, sans-serif
+			text-align: left
+		.table-icon
+			width: 15%
+			text-align: center
+			p
+				font-size: 12px
+				font-family: "LatoLight", Arial, sans-serif
+				color: $sub_text_color
+				text-transform: uppercase
+				padding-bottom: 32px
+				position: relative
+				margin: 0
+				&:after
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 0
+					right: 0
+					margin: auto
+					width: 32px
+					height: 32px
+					background: url(../img/sprite.png) no-repeat
+			&.icon-breakfast p:after
+				background-position: 0 -16px
+			&.icon-snack p:after
+				background-position: -40px -16px
+			&.icon-lunch p:after
+				background-position: -74px -18px
+			&.icon-dinner p:after
+				background-position: -114px -16px
+		.table-elements
+			width: 35%
+			ul
+				list-style: none
+				li
+					margin-bottom: 5px
+					padding-left: 27px
+					position: relative
+					&:before
+						content: ''
+						width: 7px
+						height: 7px
+						border-radius: 50%
+						background-color: $main_bg
+						position: absolute
+						top: 9px
+						left: 0
+		.table-product
+			width: 50%
+			p
+				width: 67%
+				display: inline-block
+				vertical-align: top
+				margin-top: 0
+			.btn-flat
+				float: right
+		.table-td
+			display: table-cell
+
+@media (max-width:767px)
+	.single-page-food
+		.table-content-food
+			display: block
+			width: 550px
+			.table-row
+				display: block
+				margin-bottom: 10px
+			.table-th,
+			.table-td
+				display: inline-block
+				vertical-align: top
+			.table-icon
+				width: 80px
+				padding-top: 18px
+			.table-elements
+				width: 150px
+				ul
+					padding-left: 0
+			.table-product
+				width: 300px
+				p
+					width: 100%
+					padding-left: 10px
+					margin-bottom: 0
+					padding-top: 18px
+				.btn-flat
+					float: left
+			.table-th.table-product
+				padding-left: 10px
+
+
+@media (min-width:768px) and (max-width:991px)
+	.table-content-food
+		.table-elements
+			ul
+				padding-left: 0
