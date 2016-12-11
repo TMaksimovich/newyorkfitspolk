@@ -1207,6 +1207,63 @@ div.custom-select .custom-options li:hover {
   }
 }
 
+#modalCalendar ol {
+  padding-left: 31px;
+  margin-top: 0;
+  font-size: 16px;
+}
+
+#modalCalendar li {
+  margin-bottom: 10px;
+}
+
+#modalCalendar .modal-header {
+  padding: 25px 25px 25px 40px;
+}
+
+#modalCalendar .modal-body {
+  padding: 0 25px 25px;
+}
+
+#modalCalendar p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+#modalCalendar span {
+  font-size: 14px;
+  color: #949494;
+  line-height: 15px;
+  padding-bottom: 15px;
+}
+
+#modalCalendar .place-calendar span,
+#modalCalendar .edit-calendar span {
+  display: block;
+}
+
+#modalCalendar .training-calendar span {
+  display: inline-block;
+  width: 75%;
+  margin-right: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  #modalCalendar .modal-header {
+    padding: 25px 15px 25px 15px;
+  }
+  #modalCalendar .modal-body {
+    padding: 0 15px 25px;
+  }
+  #modalCalendar ol {
+    padding-left: 15px;
+  }
+  #modalCalendar img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 .label {
   display: inline-block;
   vertical-align: middle;
@@ -2234,7 +2291,7 @@ body {
 }
 
 .page-info-group, .page-info-rules, .page-info-faq,
-.page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training {
+.page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2268,7 +2325,7 @@ body {
     display: none;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training {
+  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar {
     background-position: 75% 0;
   }
   .page-title {
@@ -2277,7 +2334,7 @@ body {
   .page-group-content, .single-training-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-info-food, .page-single-group .page-info-training {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-info-food, .page-single-group .page-info-training, .page-single-group .page-info-calendar {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2302,7 +2359,7 @@ body {
     overflow-y: auto;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training {
+  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar {
     background-position: 75% top;
     background-size: cover;
     min-height: 295px;
@@ -2584,14 +2641,14 @@ body {
 
 @media (max-width: 767px) {
   .single-page-rules .page-info-rules, .page-faq .page-info-rules,
-  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
-  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
-  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .single-page-food .page-info-food {
+  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .page-calendar .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
+  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .page-calendar .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
+  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .page-calendar .page-info-sport-food, .single-page-food .page-info-food {
     position: relative;
     background-size: cover;
   }
   .single-page-rules .page-text-content, .page-faq .page-text-content,
-  .page-sport-food .page-text-content, .single-page-food .page-text-content, .single-page-food .page-text-comments {
+  .page-sport-food .page-text-content, .single-page-food .page-text-content, .page-calendar .page-text-content, .single-page-food .page-text-comments {
     top: 0;
     width: 100%;
     padding-top: 40px;
@@ -2600,9 +2657,9 @@ body {
 
 @media (min-width: 768px) {
   .single-page-rules .page-info-rules, .page-faq .page-info-rules,
-  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
-  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
-  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .single-page-food .page-info-food {
+  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .page-calendar .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
+  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .page-calendar .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
+  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .page-calendar .page-info-sport-food, .single-page-food .page-info-food {
     position: fixed;
     width: 100%;
   }
@@ -3778,6 +3835,299 @@ body {
   .single-training-content .training-item {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+.page-info-calendar {
+  background: url(../img/bg_calendar.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+  background-color: #fff;
+  border-radius: 2px;
+  min-height: 1px;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1056px;
+  overflow: hidden;
+  margin-bottom: 67px;
+  padding: 32px 50px;
+}
+
+.page-calendar .calendar-rules {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 13px;
+}
+
+.page-calendar .question {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.page-calendar .question i {
+  color: #5fc7ae;
+  font-size: 29px;
+}
+
+.page-calendar .question + span {
+  font-family: "LatoLight", Arial, sans-serif;
+}
+
+.page-calendar .input-ripple {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: normal;
+  color: #585858;
+  margin-left: 20px;
+}
+
+.page-calendar .input-radio {
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+#calendar table {
+  width: 100%;
+}
+
+#calendar .fc-day-header {
+  width: 10%;
+  text-align: center;
+}
+
+#calendar .fc-day-header span {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: "LatoLight", Arial, sans-serif;
+}
+
+#calendar .fc-day-top {
+  width: 10%;
+}
+
+#calendar .fc-widget-content.fc-state-highlight {
+  box-shadow: inset 0.5px 0 0 2px #5fc7ae;
+  border: 0;
+}
+
+#calendar .fc-day-number {
+  font-size: 40px;
+  text-align: center;
+  float: none;
+  display: block;
+  color: #494949;
+}
+
+#calendar .fc-title {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+#calendar .fc-event-container {
+  text-align: center;
+}
+
+#calendar tr > td > .fc-day-grid-event {
+  width: 62px;
+  text-align: center;
+  display: inline-block;
+  margin: 1px auto;
+  border: 0;
+  line-height: 14px;
+  padding: 3px 0;
+  border-radius: 9px;
+  transition: 0.2s opacity ease;
+}
+
+#calendar tr > td > .force:hover,
+#calendar tr > td > .force:active,
+#calendar tr > td > .report:hover,
+#calendar tr > td > .report:active,
+#calendar tr > td > .kardio:hover,
+#calendar tr > td > .kardio:active {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+#calendar tr > td > .force:focus,
+#calendar tr > td > .report:focus,
+#calendar tr > td > .kardio:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+#calendar tr > td > .force {
+  background-color: #5fc7ae;
+}
+
+#calendar tr > td > .report {
+  background-color: #fbc02d;
+}
+
+#calendar tr > td > .kardio {
+  background-color: #ff80ab;
+}
+
+#calendar tr > td > .relax {
+  background-color: #e1e1e1;
+}
+
+#calendar .rkmd-checkbox {
+  display: none;
+  position: absolute;
+  margin-left: 0;
+  bottom: 4px;
+  height: 26px;
+  z-index: 100;
+}
+
+#calendar .rkmd-checkbox .input-checkbox {
+  margin-bottom: 0;
+  margin-left: 0;
+  height: 26px;
+}
+
+#calendar .fc-toolbar {
+  position: absolute;
+  left: 15px;
+}
+
+#calendar .fc-toolbar h2 {
+  margin: 0;
+  padding: 0 42px;
+  font-size: 13px;
+  font-family: "LatoRegular", Arial, sans-serif;
+}
+
+#calendar .fc-button-group button {
+  position: absolute;
+  top: 2px;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+#calendar .fc-button-group button .fc-icon {
+  background: url(../img/sprite.png) -159px -1px no-repeat;
+  width: 6px;
+  height: 10px;
+  display: block;
+}
+
+#calendar .fc-button-group .fc-prev-button {
+  left: 0;
+}
+
+#calendar .fc-button-group .fc-next-button {
+  right: 0;
+}
+
+#calendar .fc-button-group .fc-next-button .fc-icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 320px) {
+  .page-calendar .page-info-calendar {
+    background-position: right;
+  }
+  .page-calendar .calendar-rules {
+    margin-left: 0;
+  }
+  #calendar {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-calendar .page-info-calendar {
+    position: relative;
+    background-size: cover;
+  }
+  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+    top: 0;
+    width: 100%;
+    padding: 40px 0 0;
+  }
+  .page-calendar .calendar-rules {
+    display: block;
+    margin-top: 0;
+  }
+  .page-calendar .btn-calendar-edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .page-calendar .question {
+    display: block;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .page-calendar .input-ripple {
+    margin-left: 10px;
+  }
+  .page-calendar form {
+    overflow-x: auto;
+  }
+  #calendar {
+    width: 795px;
+    overflow-x: auto;
+  }
+  #calendar .fc-toolbar {
+    top: 124px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 65%;
+    max-width: 200px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-calendar .page-info-calendar {
+    position: fixed;
+    width: 100%;
+  }
+  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+    top: 210px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
+    padding: 20px 15px 40px;
+  }
+  #calendar .fc-toolbar {
+    top: 75px;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+    top: 158px;
+    width: 85%;
+  }
+  .page-calendar .calendar-rules {
+    margin-left: 28%;
+  }
+  #calendar {
+    margin-top: 38px;
+  }
+  #calendar .fc-toolbar {
+    top: 22px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-calendar .calendar-rules {
+    margin-left: 25%;
   }
 }
 

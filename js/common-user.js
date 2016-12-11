@@ -75,36 +75,346 @@ $(function() {
     })
 
 
-	//всплывающие подсказки
+	// календарь
 	$(function() {
-	  var $tooltip = $('.tooltip');
 
-	  $tooltip.each(function() {
-	    var el = $(this);
-	    var title = el.attr('title');
-	    if (title && title != '') {
-	      el.attr('title', '').append('<span>' + title + '</span>');
-	      var width = el.find('span').width();
-	      var height = el.find('span').height();
-	      el.hover(
-	        function() {
-	          el.find('span')
-	            .clearQueue()
-	            .delay(200)
-	            .animate({width: 150}, 200).show(200)
-	            .animate({width: 150}, 200);
-	        },
-	        function() {
-	          el.find('span')
-	            .animate({width: 150}, 150)
-	            .animate({width: 'hide', height: 'hide'}, 150);
+	    var date = new Date();
+	    var d = date.getDate();
+	    var m = date.getMonth();
+	    var y = date.getFullYear();
+
+
+	// RESIZE HANDLING START
+	    function resizeCalendar() {
+	        var currentView = $('#calendar').fullCalendar('getView');
+	        if(currentView.name === 'agendaWeek' || currentView.name === 'agendaDay') {
+	            currentView.setHeight(9999);
 	        }
-	      ).mouseleave(function() {
-	        if (el.children().is(':hidden')) el.find('span').clearQueue();
-	      });
 	    }
-	  });
+	    $(window).on('resize', resizeCalendar);
+
+
+
+	    $('#calendar').fullCalendar({
+	        viewDisplay: resizeCalendar,
+	        header: {
+	            left: 'prev,next',
+	            center: 'title',
+	            right: ''
+	        },
+	        contentHeight: 700,
+	        editable: false,
+	        eventStartEditable: false,
+	        columnFormat: 'dddd',
+	        fixedWeekCount: false,
+	        displayEventTime: false,
+		    dayRender: function( date, cell ) {
+		    	cell.append('<div class="rkmd-checkbox checkbox-ripple input-ripple">'+
+                '<label class="input-checkbox input-checkbox-radio checkbox-aquamarine">'+
+                  '<input type="checkbox"><span class="checkbox"></span>'+
+                '</label></div>');
+		    },
+		    eventAfterRender: function (event, element, view) {
+			    var col=element.closest('td').index()+1;
+			    var $cellh=element.closest('table').find('thead td:nth-child('+col+')');
+			    if ($cellh.hasClass('fc-other-month') == true)
+			            element.css('opacity', 0.4)
+			},
+	        events: [
+	            {
+	                title: 'Отчет',
+	                start: '2016, 09, 26',
+	                url: '#',
+	                className: 'report'
+	            },
+	            {
+	                title: 'Отчет',
+	                start: '2016, 10, 10',
+	                url: '#',
+	                className: 'report'
+	            },
+	            {
+	                title: 'Отчет',
+	                start: '2016, 10, 24',
+	                url: '#',
+	                className: 'report'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 09, 26',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 01',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 04',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 07',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 13',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 16',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 18',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 22',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 24',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 10, 26',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 11, 01',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Кардио',
+	                start: '2016, 11, 05',
+	                url: '#',
+	                className: 'kardio'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 09, 27',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 09, 30',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 05',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 08',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 11',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 14',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 17',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 20',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 25',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 10, 30',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Отдых',
+	                start: '2016, 11, 04',
+	                allDay: false,
+	                className: 'relax'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 09, 28',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 09, 29',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 02',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 03',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 06',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 09',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 10',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 12',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 15',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 19',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 21',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 23',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 27',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 28',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 29',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 10, 31',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 11, 02',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 11, 03',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            },
+	            {
+	                title: 'Силовые',
+	                start: '2016, 11, 06',
+	     			allDay: false,
+	                url: '#',
+	                className: 'force'
+	            }
+	        ]
+	    });
 	});
+
+
 
 	$(window).scroll(function() {
 		var page_w = $("html").width();
