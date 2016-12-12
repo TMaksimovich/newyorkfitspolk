@@ -93,8 +93,6 @@ $(function() {
 	    }
 	    $(window).on('resize', resizeCalendar);
 
-
-
 	    $('#calendar').fullCalendar({
 	        viewDisplay: resizeCalendar,
 	        header: {
@@ -118,7 +116,32 @@ $(function() {
 			    var col=element.closest('td').index()+1;
 			    var $cellh=element.closest('table').find('thead td:nth-child('+col+')');
 			    if ($cellh.hasClass('fc-other-month') == true)
-			            element.css('opacity', 0.4)
+			            element.css('opacity', 0.4);
+			},
+			eventAfterAllRender: function (view) {
+				$('.fc-day').change(function(){
+					var check = $('input[type="checkbox"]').is(':checked');
+
+					if(check) {
+						$('.fc-view-container').addClass('active-month');
+						$(this).closest('.fc-week').addClass('active-week');
+					}
+					else{
+						$('.fc-view-container').removeClass('active-month');
+						$('.fc-week').removeClass('active-week');
+					}
+				});
+
+				$(".fc-day").click(function () {
+					var checkLength = $('input[type=checkbox]:checked').length;
+
+						for(var i = 0; i<checkLength; i++) {
+							if(checkLength === 3) {
+								$(this).siblings().find('input[type=checkbox]').removeAttr("checked");
+						}
+
+					}
+				});
 			},
 	        events: [
 	            {

@@ -8,7 +8,7 @@
 
 	<meta charset="utf-8">
 
-	<title>ЛК участника. Календарь. Выбран только один вид тренировки</title>
+	<title>ЛК участника. Календарь. Выбран только один вид тренировки. Режим редактирования</title>
 	<meta name="description" content="">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -216,7 +216,7 @@
   <!-- End Боковое меню -->
 
   <!-- Основной контент странички -->
-  <div class="page page-calendar page-calendar-one">
+  <div class="page page-calendar page-calendar-one page-calendar-edit">
     <div class="page-content container-fluid">
       <div class="row page-info-calendar">
 
@@ -237,7 +237,11 @@
             <span class="question btn-modal" data-toggle="modal" data-target="#modalCalendar"><i class="material-icons">help</i></span>
           </div>
 
-          <a href="lk-user-calendar-edit.html" class="btn-calendar-edit btn-default waves waves-effect waves-light right-position">Изменить</a>
+          <div class="btn-calendar right-position">
+            <a href="lk-user-calendar.html" class="btn-flat waves-effect waves-grey">Отмена</a>
+
+            <a href="lk-user-calendar.html" class="btn-save btn-default waves waves-effect waves-light">Сохранить</a>
+          </div>
 
           <div id="calendar"></div>
         </form>
@@ -246,7 +250,7 @@
   </div>
    <!-- End Основной контент странички -->
 
-   <!-- Модальное окно -->
+    <!-- Модальное окно -->
   <form class="modal fade" id="modalCalendar" tabindex="-1" role="dialog" aria-labelledby="modalCalendarLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">

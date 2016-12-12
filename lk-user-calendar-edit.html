@@ -8,7 +8,7 @@
 
 	<meta charset="utf-8">
 
-	<title>ЛК участника. Календарь. Выбран только один вид тренировки</title>
+	<title>ЛК участника. Календарь. Режим редактирования</title>
 	<meta name="description" content="">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -216,7 +216,7 @@
   <!-- End Боковое меню -->
 
   <!-- Основной контент странички -->
-  <div class="page page-calendar page-calendar-one">
+  <div class="page page-calendar page-calendar-edit">
     <div class="page-content container-fluid">
       <div class="row page-info-calendar">
 
@@ -235,9 +235,30 @@
         <form class="col-xs-13">
           <div class="calendar-rules">
             <span class="question btn-modal" data-toggle="modal" data-target="#modalCalendar"><i class="material-icons">help</i></span>
+            <span>Тренировки:</span>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              Дома
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-training" checked>
+                <span class="radio"></span>
+              </label>
+            </div>
+
+            <div class="rkmd-radio radio-ripple input-ripple">
+              В зале
+              <label class="input-radio input-checkbox-radio radio-aquamarine">
+                <input type="radio" name="radio-training">
+                <span class="radio"></span>
+              </label>
+            </div>
           </div>
 
-          <a href="lk-user-calendar-edit.html" class="btn-calendar-edit btn-default waves waves-effect waves-light right-position">Изменить</a>
+          <div class="btn-calendar right-position">
+            <a href="lk-user-calendar.html" class="btn-flat waves-effect waves-grey">Отмена</a>
+
+            <a href="lk-user-calendar.html" class="btn-save btn-default waves waves-effect waves-light">Сохранить</a>
+          </div>
 
           <div id="calendar"></div>
         </form>
@@ -258,6 +279,11 @@
 
         <div class="modal-body">
           <ol>
+            <li class="place-calendar">
+              <p>Настройка места тренировок</p>
+              <span>Если в твоем плане тренировок выбран режим “дома и в зале”, тогда в персональном календаре ты можешь настраивать, в каком месте тренироваться.</span>
+              <img src="img/calendar_1.png" height="36" width="279" alt="Настройка места тренировок">
+            </li>
             <li class="training-calendar">
               <p>Тренировки</p>
               <span>Нажми на любую тренировку, что бы перейти к занятиям. И не забывай заполнять итоговый отчет.</span>

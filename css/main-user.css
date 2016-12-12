@@ -3893,6 +3893,10 @@ body {
   margin-left: 5px;
 }
 
+.page-calendar .btn-save {
+  margin-left: 35px;
+}
+
 #calendar table {
   width: 100%;
 }
@@ -4036,6 +4040,36 @@ body {
   transform: rotate(180deg);
 }
 
+.page-calendar-edit #calendar .rkmd-checkbox {
+  display: block;
+}
+
+.page-calendar-edit #calendar .active-month .fc-bg td,
+.page-calendar-edit #calendar .active-month .fc-day-header {
+  background-color: #eee;
+}
+
+.page-calendar-edit #calendar .active-month .rkmd-checkbox {
+  display: none;
+}
+
+.page-calendar-edit #calendar .active-week .fc-bg td {
+  background-color: #fff;
+}
+
+.page-calendar-edit #calendar .active-week .rkmd-checkbox {
+  display: block;
+}
+
+.page-calendar-edit .fc-bg td,
+.page-calendar-edit .fc-day-header {
+  background-color: #fff;
+}
+
+.page-calendar-edit .page-text-content, .page-calendar-edit .single-page-food .page-text-comments, .single-page-food .page-calendar-edit .page-text-comments {
+  background-color: #eee;
+}
+
 @media (min-width: 320px) {
   .page-calendar .page-info-calendar {
     background-position: right;
@@ -4090,6 +4124,20 @@ body {
     width: 65%;
     max-width: 200px;
     text-align: center;
+  }
+  .page-calendar-one #calendar .fc-toolbar {
+    top: 70px;
+  }
+  .page-calendar-edit {
+    background-color: #eee;
+  }
+  .page-calendar-edit .page-content {
+    background-color: #eee;
+  }
+  .page-calendar-edit .btn-calendar {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 

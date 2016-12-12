@@ -43,6 +43,8 @@
 	.input-radio
 		vertical-align: middle
 		margin-left: 5px
+	.btn-save
+		margin-left: 35px
 #calendar
 	table
 		width: 100%
@@ -140,6 +142,28 @@
 			.fc-icon
 				transform: rotate(180deg)
 
+.page-calendar-edit
+	#calendar
+		.rkmd-checkbox
+			display: block
+		.active-month
+			.fc-bg td,
+			.fc-day-header
+				background-color: #eee
+			.rkmd-checkbox
+				display: none
+		.active-week
+			.fc-bg td
+				background-color: #fff
+			.rkmd-checkbox
+				display: block
+	.fc-bg td,
+	.fc-day-header
+		background-color: #fff
+	.page-text-content
+		background-color: #eee
+
+
 
 @media (min-width:320px)
 	.page-calendar
@@ -185,6 +209,18 @@
 			width: 65%
 			max-width: 200px
 			text-align: center
+	.page-calendar-one
+		#calendar
+			.fc-toolbar
+				top: 70px
+	.page-calendar-edit
+		background-color: #eee
+		.page-content
+			background-color: #eee
+		.btn-calendar
+			position: absolute
+			top: 0
+			right: 0
 
 
 @media (min-width:768px)
