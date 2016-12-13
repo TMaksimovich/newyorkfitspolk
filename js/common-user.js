@@ -146,289 +146,289 @@ $(function() {
 	        events: [
 	            {
 	                title: 'Отчет',
-	                start: '2016, 09, 26',
+	                start: '2016-09-26',
 	                url: '#',
 	                className: 'report'
 	            },
 	            {
 	                title: 'Отчет',
-	                start: '2016, 10, 10',
+	                start: '2016-10-10',
 	                url: '#',
 	                className: 'report'
 	            },
 	            {
 	                title: 'Отчет',
-	                start: '2016, 10, 24',
+	                start: '2016-10-24',
 	                url: '#',
 	                className: 'report'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 09, 26',
+	                start: '2016-09-26',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 01',
+	                start: '2016-10-01',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 04',
+	                start: '2016-10-04',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 07',
+	                start: '2016-10-07',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 13',
+	                start: '2016-10-13',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 16',
+	                start: '2016-10-16',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 18',
+	                start: '2016-10-18',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 22',
+	                start: '2016-10-22',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 24',
+	                start: '2016-10-24',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 10, 26',
+	                start: '2016-10-26',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 11, 01',
+	                start: '2016-11-01',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Кардио',
-	                start: '2016, 11, 05',
+	                start: '2016-11-05',
 	                url: '#',
 	                className: 'kardio'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 09, 27',
+	                start: '2016-09-27',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 09, 30',
+	                start: '2016-09-30',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 05',
+	                start: '2016-10-05',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 08',
+	                start: '2016-10-08',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 11',
+	                start: '2016-10-11',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 14',
+	                start: '2016-10-14',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 17',
+	                start: '2016-10-17',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 20',
+	                start: '2016-10-20',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 25',
+	                start: '2016-10-25',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 10, 30',
+	                start: '2016-10-30',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Отдых',
-	                start: '2016, 11, 04',
+	                start: '2016-11-04',
 	                allDay: false,
 	                className: 'relax'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 09, 28',
+	                start: '2016-09-28',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 09, 29',
+	                start: '2016-09-29',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 02',
+	                start: '2016-10-02',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 03',
+	                start: '2016-10-03',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 06',
+	                start: '2016-10-06',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 09',
+	                start: '2016-10-09',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 10',
+	                start: '2016-10-10',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 12',
+	                start: '2016-10-12',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 15',
+	                start: '2016-10-15',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 19',
+	                start: '2016-10-19',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 21',
+	                start: '2016-10-21',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 23',
+	                start: '2016-10-23',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 27',
+	                start: '2016-10-27',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 28',
+	                start: '2016-10-28',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 29',
+	                start: '2016-10-29',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 10, 31',
+	                start: '2016-10-31',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 11, 02',
+	                start: '2016-11-02',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 11, 03',
+	                start: '2016-11-03',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
 	            },
 	            {
 	                title: 'Силовые',
-	                start: '2016, 11, 06',
+	                start: '2016-11-06',
 	     			allDay: false,
 	                url: '#',
 	                className: 'force'
