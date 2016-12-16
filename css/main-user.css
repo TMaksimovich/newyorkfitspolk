@@ -2291,7 +2291,7 @@ body {
 }
 
 .page-info-group, .page-info-rules, .page-info-faq,
-.page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar {
+.page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar, .page-info-dashboard {
   background: url(../img/bg_fon.jpg) 0 0 no-repeat;
   background-size: cover;
   min-height: 239px;
@@ -2325,7 +2325,7 @@ body {
     display: none;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar {
+  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar, .page-info-dashboard {
     background-position: 75% 0;
   }
   .page-title {
@@ -2334,7 +2334,7 @@ body {
   .page-group-content, .single-training-content {
     top: 0;
   }
-  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-info-food, .page-single-group .page-info-training, .page-single-group .page-info-calendar {
+  .page-single-group .page-info-group, .page-single-group .page-info-rules, .page-single-group .page-info-faq, .page-single-group .page-info-sport-food, .page-single-group .page-info-food, .page-single-group .page-info-training, .page-single-group .page-info-calendar, .page-single-group .page-info-dashboard {
     min-height: 181px;
     background-position: 82% top;
     background-size: cover;
@@ -2359,7 +2359,7 @@ body {
     overflow-y: auto;
   }
   .page-info-group, .page-info-rules, .page-info-faq,
-  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar {
+  .page-info-sport-food, .single-page-food .page-info-food, .page-info-food, .page-info-training, .page-info-calendar, .page-info-dashboard {
     background-position: 75% top;
     background-size: cover;
     min-height: 295px;
@@ -2522,11 +2522,11 @@ body {
   background-size: cover;
 }
 
-.lk-user-rules .page-text-content, .lk-user-rules .single-page-food .page-text-comments, .single-page-food .lk-user-rules .page-text-comments {
+.lk-user-rules .page-text-content, .lk-user-rules .single-page-food .page-text-comments, .single-page-food .lk-user-rules .page-text-comments, .lk-user-rules .page-content-dashboard {
   padding-top: 5px;
 }
 
-.page-text-content, .single-page-food .page-text-comments {
+.page-text-content, .single-page-food .page-text-comments, .page-content-dashboard {
   background-color: #fff;
   border-radius: 2px;
   min-height: 1px;
@@ -2539,63 +2539,81 @@ body {
   margin-bottom: 67px;
 }
 
-.page-text-content h1, .single-page-food .page-text-comments h1 {
+.page-text-content h1, .single-page-food .page-text-comments h1, .page-content-dashboard h1 {
   font-size: 24px;
 }
 
-.page-text-content h2, .single-page-food .page-text-comments h2 {
+.page-text-content h2, .single-page-food .page-text-comments h2, .page-content-dashboard h2 {
   font-size: 20px;
 }
 
-.page-text-content h3, .single-page-food .page-text-comments h3 {
+.page-text-content h3, .single-page-food .page-text-comments h3, .page-content-dashboard h3 {
   font-size: 18px;
 }
 
 .page-text-content h4,
 .single-page-food .page-text-comments h4,
+.page-content-dashboard h4,
 .page-text-content h5,
 .single-page-food .page-text-comments h5,
+.page-content-dashboard h5,
 .page-text-content h6,
 .single-page-food .page-text-comments h6,
+.page-content-dashboard h6,
 .page-text-content p,
 .single-page-food .page-text-comments p,
+.page-content-dashboard p,
 .page-text-content a:not(.btn-flat),
 .single-page-food .page-text-comments a:not(.btn-flat),
+.page-content-dashboard a:not(.btn-flat),
 .page-text-content ol,
 .single-page-food .page-text-comments ol,
+.page-content-dashboard ol,
 .page-text-content ul,
 .single-page-food .page-text-comments ul,
-.page-text-content dl, .single-page-food .page-text-comments dl {
+.page-content-dashboard ul,
+.page-text-content dl, .single-page-food .page-text-comments dl, .page-content-dashboard dl {
   font-size: 16px;
 }
 
 .page-text-content p,
 .single-page-food .page-text-comments p,
+.page-content-dashboard p,
 .page-text-content b,
 .single-page-food .page-text-comments b,
+.page-content-dashboard b,
 .page-text-content strong,
 .single-page-food .page-text-comments strong,
+.page-content-dashboard strong,
 .page-text-content a,
 .single-page-food .page-text-comments a,
+.page-content-dashboard a,
 .page-text-content ol,
 .single-page-food .page-text-comments ol,
+.page-content-dashboard ol,
 .page-text-content ul,
 .single-page-food .page-text-comments ul,
-.page-text-content dl, .single-page-food .page-text-comments dl {
+.page-content-dashboard ul,
+.page-text-content dl, .single-page-food .page-text-comments dl, .page-content-dashboard dl {
   line-height: 24px;
 }
 
 .page-text-content h1,
 .single-page-food .page-text-comments h1,
+.page-content-dashboard h1,
 .page-text-content h2,
 .single-page-food .page-text-comments h2,
+.page-content-dashboard h2,
 .page-text-content h3,
 .single-page-food .page-text-comments h3,
+.page-content-dashboard h3,
 .page-text-content h4,
 .single-page-food .page-text-comments h4,
+.page-content-dashboard h4,
 .page-text-content h5,
 .single-page-food .page-text-comments h5,
-.page-text-content h6, .single-page-food .page-text-comments h6 {
+.page-content-dashboard h5,
+.page-text-content h6, .single-page-food .page-text-comments h6, .page-content-dashboard h6 {
   font-family: "LatoLight", Arial, sans-serif;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -2605,29 +2623,32 @@ body {
 
 .page-text-content ul,
 .single-page-food .page-text-comments ul,
-.page-text-content ol, .single-page-food .page-text-comments ol {
+.page-content-dashboard ul,
+.page-text-content ol, .single-page-food .page-text-comments ol, .page-content-dashboard ol {
   padding-left: 15px;
 }
 
-.page-text-content p, .single-page-food .page-text-comments p {
+.page-text-content p, .single-page-food .page-text-comments p, .page-content-dashboard p {
   margin-bottom: 20px;
 }
 
 .page-text-content strong,
 .single-page-food .page-text-comments strong,
+.page-content-dashboard strong,
 .page-text-content b,
 .single-page-food .page-text-comments b,
-.page-text-content dt, .single-page-food .page-text-comments dt {
+.page-content-dashboard b,
+.page-text-content dt, .single-page-food .page-text-comments dt, .page-content-dashboard dt {
   font-size: 18px;
   font-weight: normal;
   font-family: "LatoBold", Arial, sans-serif;
 }
 
-.page-text-content dt, .single-page-food .page-text-comments dt {
+.page-text-content dt, .single-page-food .page-text-comments dt, .page-content-dashboard dt {
   margin-bottom: 10px;
 }
 
-.page-text-content dd, .single-page-food .page-text-comments dd {
+.page-text-content dd, .single-page-food .page-text-comments dd, .page-content-dashboard dd {
   margin-bottom: 18px;
   margin-left: 0;
 }
@@ -2641,14 +2662,15 @@ body {
 
 @media (max-width: 767px) {
   .single-page-rules .page-info-rules, .page-faq .page-info-rules,
-  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .page-calendar .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
-  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .page-calendar .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
-  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .page-calendar .page-info-sport-food, .single-page-food .page-info-food {
+  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .page-calendar .page-info-rules, .page-dashboard .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
+  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .page-calendar .page-info-faq, .page-dashboard .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
+  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .page-calendar .page-info-sport-food, .page-dashboard .page-info-sport-food, .single-page-food .page-info-food {
     position: relative;
     background-size: cover;
   }
   .single-page-rules .page-text-content, .page-faq .page-text-content,
-  .page-sport-food .page-text-content, .single-page-food .page-text-content, .page-calendar .page-text-content, .single-page-food .page-text-comments {
+  .page-sport-food .page-text-content, .single-page-food .page-text-content, .page-calendar .page-text-content, .page-dashboard .page-text-content, .single-page-food .page-text-comments, .single-page-rules .page-content-dashboard, .page-faq .page-content-dashboard,
+  .page-sport-food .page-content-dashboard, .single-page-food .page-content-dashboard, .page-calendar .page-content-dashboard, .page-dashboard .page-content-dashboard {
     top: 0;
     width: 100%;
     padding-top: 40px;
@@ -2657,13 +2679,13 @@ body {
 
 @media (min-width: 768px) {
   .single-page-rules .page-info-rules, .page-faq .page-info-rules,
-  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .page-calendar .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
-  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .page-calendar .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
-  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .page-calendar .page-info-sport-food, .single-page-food .page-info-food {
+  .page-sport-food .page-info-rules, .single-page-food .page-info-rules, .page-calendar .page-info-rules, .page-dashboard .page-info-rules, .single-page-rules .page-info-faq, .page-faq .page-info-faq,
+  .page-sport-food .page-info-faq, .single-page-food .page-info-faq, .page-calendar .page-info-faq, .page-dashboard .page-info-faq, .single-page-rules .page-info-sport-food, .page-faq .page-info-sport-food,
+  .page-sport-food .page-info-sport-food, .single-page-food .page-info-sport-food, .page-calendar .page-info-sport-food, .page-dashboard .page-info-sport-food, .single-page-food .page-info-food {
     position: fixed;
     width: 100%;
   }
-  .page-text-content, .single-page-food .page-text-comments {
+  .page-text-content, .single-page-food .page-text-comments, .page-content-dashboard {
     top: 210px;
     width: 85%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
@@ -2672,7 +2694,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  .page-text-content, .single-page-food .page-text-comments {
+  .page-text-content, .single-page-food .page-text-comments, .page-content-dashboard {
     top: 158px;
   }
 }
@@ -3445,7 +3467,7 @@ body {
     margin-top: 0;
     padding: 0;
   }
-  .single-page-user-setting .page-text-content, .single-page-user-setting .single-page-food .page-text-comments, .single-page-food .single-page-user-setting .page-text-comments {
+  .single-page-user-setting .page-text-content, .single-page-user-setting .single-page-food .page-text-comments, .single-page-food .single-page-user-setting .page-text-comments, .single-page-user-setting .page-content-dashboard {
     top: 0;
   }
   .single-page-user-setting.single-page-food .page-text-comments {
@@ -3587,7 +3609,7 @@ body {
   background-size: cover;
 }
 
-.single-page-food .page-text-content, .single-page-food .page-text-comments {
+.single-page-food .page-text-content, .single-page-food .page-text-comments, .single-page-food .page-content-dashboard {
   max-width: 1056px;
   padding: 20px 15px;
 }
@@ -3601,7 +3623,7 @@ body {
   margin-top: 27px;
 }
 
-.lk-user-sport-food .page-text-content, .lk-user-sport-food .single-page-food .page-text-comments, .single-page-food .lk-user-sport-food .page-text-comments {
+.lk-user-sport-food .page-text-content, .lk-user-sport-food .single-page-food .page-text-comments, .single-page-food .lk-user-sport-food .page-text-comments, .lk-user-sport-food .page-content-dashboard {
   padding-top: 36px;
 }
 
@@ -3609,7 +3631,7 @@ body {
   .single-page-food .page-info-food {
     background-position: 75% bottom;
   }
-  .single-page-food .page-text-content, .single-page-food .page-text-comments {
+  .single-page-food .page-text-content, .single-page-food .page-text-comments, .single-page-food .page-content-dashboard {
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 0;
@@ -3625,7 +3647,7 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .single-page-food .page-text-content, .single-page-food .page-text-comments {
+  .single-page-food .page-text-content, .single-page-food .page-text-comments, .single-page-food .page-content-dashboard {
     padding: 20px 0;
   }
   .single-page-food .page-text-comments {
@@ -3843,7 +3865,7 @@ body {
   background-size: cover;
 }
 
-.page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+.page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments, .page-calendar .page-content-dashboard {
   background-color: #fff;
   border-radius: 2px;
   min-height: 1px;
@@ -4066,7 +4088,7 @@ body {
   background-color: #fff;
 }
 
-.page-calendar-edit .page-text-content, .page-calendar-edit .single-page-food .page-text-comments, .single-page-food .page-calendar-edit .page-text-comments {
+.page-calendar-edit .page-text-content, .page-calendar-edit .single-page-food .page-text-comments, .single-page-food .page-calendar-edit .page-text-comments, .page-calendar-edit .page-content-dashboard {
   background-color: #eee;
 }
 
@@ -4087,7 +4109,7 @@ body {
     position: relative;
     background-size: cover;
   }
-  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments, .page-calendar .page-content-dashboard {
     top: 0;
     width: 100%;
     padding: 40px 0 0;
@@ -4146,7 +4168,7 @@ body {
     position: fixed;
     width: 100%;
   }
-  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments, .page-calendar .page-content-dashboard {
     top: 210px;
     width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08), 0 1px 2px 0 rgba(0, 0, 0, 0.13);
@@ -4158,7 +4180,7 @@ body {
 }
 
 @media (min-width: 992px) {
-  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments {
+  .page-calendar .page-text-content, .page-calendar .single-page-food .page-text-comments, .single-page-food .page-calendar .page-text-comments, .page-calendar .page-content-dashboard {
     top: 158px;
     width: 85%;
   }
@@ -4176,6 +4198,60 @@ body {
 @media (min-width: 1200px) {
   .page-calendar .calendar-rules {
     margin-left: 25%;
+  }
+}
+
+.page-info-dashboard {
+  background: url(../img/bg_dashboard.jpg) 0 0 no-repeat;
+  background-size: cover;
+}
+
+.page-content-dashboard {
+  max-width: 100%;
+  width: 85%;
+  top: -84px;
+  font-size: 0;
+}
+
+.page-content-dashboard h3 {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+.dashboard-column {
+  padding: 0 15px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .page-info-dashboard {
+    background-position: right;
+  }
+  .page-content-dashboard {
+    padding: 20px 0 50px;
+    overflow-x: auto;
+  }
+  .dashboard-column {
+    width: 700px;
+  }
+}
+
+@media (min-width: 768px) {
+  .dashboard-column {
+    width: 100%;
+  }
+  .page-content-dashboard {
+    padding: 20px 20px 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dashboard-column {
+    width: 50%;
   }
 }
 

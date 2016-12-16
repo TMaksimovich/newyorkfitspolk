@@ -1,0 +1,41 @@
+.page-dashboard
+	@extend .single-page-rules
+.page-info-dashboard
+	@extend .page-info-group
+	background: url(../img/bg_dashboard.jpg) 0 0 no-repeat
+	background-size: cover
+.page-content-dashboard
+	@extend .page-text-content
+	max-width: 100%
+	width: 85%
+	top: -84px
+	font-size: 0
+	h3
+		margin-top: 25px
+		margin-bottom: 30px
+		margin-left: 10px
+		font-size: 24px
+.dashboard-column
+	padding: 0 15px
+	display: inline-block
+	vertical-align: top
+	margin-bottom: 32px
+
+@media (min-width:320px) and (max-width: 767px)
+	.page-info-dashboard
+		background-position: right
+	.page-content-dashboard
+		padding: 20px 0 50px
+		overflow-x: auto
+	.dashboard-column
+		width: 700px
+
+@media (min-width:768px)
+	.dashboard-column
+		width: 100%
+	.page-content-dashboard
+		padding: 20px 20px 50px
+
+@media (min-width:992px)
+	.dashboard-column
+		width: 50%

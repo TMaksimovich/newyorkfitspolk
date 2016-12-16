@@ -218,7 +218,7 @@
   <!-- Основной контент странички -->
   <div class="page page-dashboard">
     <div class="container-fluid">
-      <div class="row page-info-user">
+      <div class="row page-info-dashboard">
 
         <div class="col-xs-13 col-sm-6">
           <ul class="breadcrumbs">
@@ -230,24 +230,24 @@
       </div>
 
       <div class="row page-content page-content-dashboard">
-        <div class="col-xs-12 col-md-6">
+        <div class="dashboard-column">
           <h3>Динамика веса</h3>
-          <canvas id="chartWeight" height="300" width="450"></canvas>
+          <canvas id="chartWeight" height="300" width="500"></canvas>
         </div>
 
-        <div class="col-xs-12 col-md-6">
+        <div class="dashboard-column">
           <h3>Динамика объема</h3>
-          <canvas id="chartСapacity" height="300" width="450"></canvas>
+          <canvas id="chartСapacity" height="300" width="500"></canvas>
         </div>
 
-        <div class="col-xs-12 col-md-6">
+        <div class="dashboard-column">
           <h3>Самочувствие</h3>
-          <canvas id="chartHealth" height="300" width="450"></canvas>
+          <canvas id="chartHealth" height="300" width="500"></canvas>
         </div>
 
-        <div class="col-xs-12 col-md-6">
+        <div class="dashboard-column">
           <h3>Пульс</h3>
-          <canvas id="chartPulse" height="300" width="450"></canvas>
+          <canvas id="chartPulse" height="300" width="500"></canvas>
         </div>
       </div>
     </div>
@@ -282,6 +282,7 @@
   <script src="libs/calendario/fullcalendar.min.js"></script>
   <script src="libs/calendario/ru.js"></script>
   <script src="libs/Chart.min.js"></script>
+  <script src="js/common-dashboard.js"></script>
   <script src="js/common-user.js"></script>
 
   <script>
