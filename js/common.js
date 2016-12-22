@@ -157,8 +157,6 @@ $(function() {
 
 	});
 
-
-
 	$(window).scroll(function() {
 		var page_w = $("html").width();
 

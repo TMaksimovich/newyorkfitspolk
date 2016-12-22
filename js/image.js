@@ -17,7 +17,7 @@ function handleFileSelect(evt) {
           // Render thumbnail.
           var span = document.createElement('span');
           span.innerHTML = ['<img class="thumb" src="', e.target.result,
-                            '" title="', escape(theFile.name), '"/>'].join('');
+                            '" title="', escape(theFile.name), '"/> <i id="remove-image" class="material-icons">clear</i>'].join('');
           document.getElementById('list').insertBefore(span, null);
         };
       })(f);
