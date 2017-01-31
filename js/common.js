@@ -7,16 +7,6 @@ $(function() {
 		});
 	};
 
-	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
-
-	};
-
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 	//волны
@@ -97,7 +87,10 @@ $(function() {
 
 	    if ($.trim($praxisName.text()) !== "") {
 	        $(this).closest('.add-praxis')
-	        	   .find('.praxis-icon .material-icons')
+	        	   .find('.praxis-icon')
+	        	   .attr('data-toggle', 'modal')
+				   .attr('data-target', '#modalTrainingButton')
+	        	   .find('.material-icons')
 	        	   .addClass('tooltip active')
 	        	   .attr('title', 'Посмотреть тренировку')
 	    }
