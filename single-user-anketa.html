@@ -20,10 +20,9 @@
 
   <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="libs/mmenu/dist/css/jquery-mmenu.min.css">
-  <link rel="stylesheet" href="libs/animsition/animsition.min.css">
-  <link rel="stylesheet" href="libs/asscrollable/asScrollable.min.css">
   <link rel="stylesheet" href="libs/Waves-0.7.5/dist/waves.min.css">
   <link rel="stylesheet" href="libs/scrollbar/jquery.mCustomScrollbar.css">
+  <link rel="stylesheet" href="libs/fine-uploader/fine-uploader-new.min.css">
   <link rel="stylesheet" href="css/main.css">
 
 	<script src="libs/modernizr/modernizr.js"></script>
@@ -726,10 +725,58 @@
           <h3>Фотографии до начала тренировок</h3>
           <p>Прикрепи свои фотографии в полный рост в нижнем белье: спереди, сзади и сбоку</p>
 
-          <label class="label-files btn-default btn-default-white waves waves-effect waves-grey">Добавить
-            <input type="file" id="files" name="files[]" multiple />
-          </label>
-          <output id="list"></output>
+          <div id="fine-uploader-gallery"></div>
+          <!-- шаблон разметки для загруженных фото -->
+          <script type="text/template" id="qq-template-gallery">
+            <div class="qq-uploader-selector qq-uploader qq-gallery" qq-drop-area-text="Переместите сюда файлы">
+                <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
+                    <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
+                </div>
+                <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+                    <span class="qq-upload-drop-area-text-selector"></span>
+                </div>
+                <div class="qq-upload-button-selector qq-upload-button btn-default btn-default-white waves waves-effect waves-grey">
+                    <div>Добавить</div>
+                </div>
+                <span class="qq-drop-processing-selector qq-drop-processing">
+                    <span>Файлы загружаются</span>
+                    <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+                </span>
+                <ul class="qq-upload-list-selector qq-upload-list" role="region" aria-live="polite" aria-relevant="additions removals">
+                    <li>
+                        <div class="qq-thumbnail-wrapper">
+                            <img class="qq-thumbnail-selector" qq-server-scale>
+                        </div>
+                        <button type="button" class="qq-upload-cancel-selector qq-upload-cancel">X</button>
+                    </li>
+                </ul>
+
+                <dialog class="qq-alert-dialog-selector">
+                    <div class="qq-dialog-message-selector"></div>
+                    <div class="qq-dialog-buttons">
+                        <button type="button" class="qq-cancel-button-selector">Закрыть</button>
+                    </div>
+                </dialog>
+
+                <dialog class="qq-confirm-dialog-selector">
+                    <div class="qq-dialog-message-selector"></div>
+                    <div class="qq-dialog-buttons">
+                        <button type="button" class="qq-cancel-button-selector">Нет</button>
+                        <button type="button" class="qq-ok-button-selector">Да</button>
+                    </div>
+                </dialog>
+
+                <dialog class="qq-prompt-dialog-selector">
+                    <div class="qq-dialog-message-selector"></div>
+                    <input type="text">
+                    <div class="qq-dialog-buttons">
+                        <button type="button" class="qq-cancel-button-selector">Отмена</button>
+                        <button type="button" class="qq-ok-button-selector">Да</button>
+                    </div>
+                </dialog>
+            </div>
+          </script>
+          <!-- end шаблон разметки для загруженных фото -->
 
         </section>
 
@@ -811,7 +858,7 @@
   <script src="libs/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="js/form.js"></script>
   <script src="js/jquery.autosize.js"></script>
-  <script src="js/image.js"></script>
+  <script src="libs/fine-uploader/jquery.fine-uploader.min.js"></script>
   <script src="js/common.js"></script>
 
   <script>

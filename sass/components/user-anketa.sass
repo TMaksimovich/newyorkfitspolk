@@ -317,37 +317,54 @@
 	.page-info-user
 		background: url(../img/bg_report.jpg) 0 0 no-repeat
 		background-size: cover
-#files
-	display: none
-.label-files
-	margin-top: 35px
-#list
+// Загрузка фотографий
+.qq-uploader
 	background-color: #f4f4f4
 	border-radius: 2px
 	border: 1px solid #e3e3e3
 	text-align: center
 	min-height: 330px
-	line-height: 330px
+	max-height: 100%
 	padding: 15px 15px 35px
 	margin-top: 18px
 	margin-bottom: 30px
 	overflow: hidden
-	span
-		float: left
-		width: 25%
-		height: 295px
-		padding: 10px 15px 0
-		overflow: hidden
-		position: relative
-		img
+	.qq-upload-button
+		width: auto
+		margin-left: 15px
+	.qq-upload-list
+		box-shadow: none
+		max-height: 100%
+		li
+			background-color: transparent
+			color: #424242
+			border-bottom: none
+			border-top: none
+			float: left
+			width: 25%
+			height: 295px
+			padding-left: 15px !important
+			padding-right: 15px
+			padding-top: 10px
+			padding-bottom: 0
+			overflow: hidden
+			&:before
+				display: none
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		.qq-thumbnail-wrapper
 			width: 100%
 			height: 100%
-			object-fit: cover
-		i
-			position: absolute
-			top: 0
-			right: 9px
-			cursor: pointer
+	.qq-upload-cancel-selector
+		position: absolute
+		top: 0
+		right: 9px
+		cursor: pointer
+		background-color: #fff
+		border: none
+		outline: none
 
 @media (max-width:480px)
 	.single-page-user-setting
@@ -463,19 +480,21 @@
 					width: 80%
 				.photo-user
 					margin-left: 10px
-	#list
-		span
-			width: 100%
-			height: auto
-			margin-bottom: 20px
+	.qq-uploader
+		.qq-upload-list
+			li
+				width: 100%
+				height: auto
+				margin-bottom: 20px
 			img
 				display: block
 
 
 @media (min-width:768px) and (max-width:991px)
-	#list
-		span
-			width: 50%
+	.qq-uploader
+		.qq-upload-list
+			li
+				width: 50%
 
 @media (min-width: 768px)
 	.single-page-user-setting

@@ -431,6 +431,17 @@ $(function() {
 	    });
 	});
 
+	// анкета. Загрузка фотографий
+	$('#fine-uploader-gallery').fineUploader({
+        template: 'qq-template-gallery',
+        request: {
+            endpoint: '/server/uploads'
+        },
+        validation: {
+            allowedExtensions: ['jpeg', 'jpg', 'gif', 'png']
+        }
+    });
+
 
 
 	$(window).scroll(function() {
